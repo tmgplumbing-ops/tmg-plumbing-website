@@ -1,10 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const serviceOptions = [
-  'Power flushing', 'Underfloor heating', 'Leak detection', 'Demineralisation',
-  'Oil boiler installs', 'Plumbing & heating', 'Drinking water', 'Other',
-];
-const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare', 'Other'];
+import QuoteForm from '../components/QuoteForm.astro';
 ---
 <BaseLayout
   title="Contact TMG Plumbing & Heating | Waterford"
@@ -17,41 +13,10 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare', 'O
       <p class="text-navy/60 mb-8">Describe the issue and we'll respond the same day.</p>
 
       <!--
-        Wire this up to your form backend of choice (Formspree, Resend, a
-        serverless function, etc). Per section 7 of the brief: every
-        submission must (1) auto-reply to the enquirer and (2) email the
-        full details to info@tmgplumbing.ie. Swap the inline success message
-        below in for whatever your handler returns — don't redirect.
+        Submits directly into Zoho CRM as a Lead — the same pipeline the
+        current tmgplumbing.ie site uses. See src/components/QuoteForm.astro.
       -->
-      <form class="space-y-4" method="POST" action="#">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <input class="rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Name" name="name" required />
-          <input class="rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Phone" name="phone" required />
-        </div>
-        <input class="w-full rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Email" type="email" name="email" required />
-
-        <select class="w-full rounded bg-mist border border-navy/10 px-4 py-3 text-navy/70" name="county">
-          <option value="">County</option>
-          {counties.map((c) => <option value={c}>{c}</option>)}
-        </select>
-
-        <div>
-          <p class="text-sm text-navy/60 mb-2">Service</p>
-          <div class="flex flex-wrap gap-2">
-            {serviceOptions.map((s) => (
-              <label class="cursor-pointer">
-                <input type="radio" name="service" value={s} class="peer sr-only" />
-                <span class="block rounded-full border border-navy/20 px-4 py-2 text-sm text-navy/70 peer-checked:bg-orange peer-checked:text-white peer-checked:border-orange">{s}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-        <textarea class="w-full rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Describe the issue" name="message" rows="4"></textarea>
-
-        <button class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Send request</button>
-        <p class="text-xs text-navy/40">We reply the same day, Mon–Fri.</p>
-      </form>
+      <QuoteForm />
     </div>
 
     <!-- Right: contact cards -->
