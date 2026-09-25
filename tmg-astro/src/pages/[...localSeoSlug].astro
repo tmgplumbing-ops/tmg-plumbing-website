@@ -24,5 +24,5 @@ const canonicalURL = parent
   : undefined;
 ---
 <BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription} canonical={canonicalURL}>
-  <ServicePageBody data={entry.data} />
+  <ServicePageBody data={entry.data} noticeSlug={canonicalService} />
 </BaseLayout>
