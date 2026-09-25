@@ -4,6 +4,7 @@
 // Main content left, sticky sidebar right; same structure, different intro.
 import Schema from './Schema.astro';
 import { getEntry } from 'astro:content';
+import serviceNotices from '../data/service-notices.json';
 
 interface Props {
   data: {
@@ -17,8 +18,13 @@ interface Props {
     relatedServices: string[];
     county?: string;
   };
+  // Slug of the parent /services/ page (set on both the core service pages
+  // and their local-SEO variants) — used to look up an optional staff
+  // notice from Zoho's Website Pages module.
+  noticeSlug?: string;
 }
-const { data } = Astro.props;
+const { data, noticeSlug } = Astro.props;
+const notice = noticeSlug ? serviceNotices[noticeSlug] : undefined;
 const related = await Promise.all(
   (data.relatedServices ?? []).map((slug) => getEntry('services', slug))
 );
@@ -41,6 +47,12 @@ const related = await Promise.all(
     </div>
   </div>
 </section>
+
+{notice && (
+  <section class="mx-auto max-w-6xl px-4 pt-8">
+    <div class="rounded-card bg-orange/10 border border-orange/30 px-5 py-4 text-navy/80 text-sm" set:html={notice.body} />
+  </section>
+)}
 
 <section class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-[1fr_320px] gap-12">
   <!-- Main column -->
