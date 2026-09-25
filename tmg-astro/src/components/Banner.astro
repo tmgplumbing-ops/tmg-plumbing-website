@@ -1,0 +1,25 @@
+---
+// Site-wide announcement strip, driven by the "Banner" record staff manage
+// in Zoho CRM's Website Pages module (synced at build time by
+// scripts/sync-zoho.mjs into src/data/banner.json). Renders nothing when
+// there's no enabled banner, or the current date falls outside its
+// start/end window.
+import banner from '../data/banner.json';
+
+const today = new Date().toISOString().slice(0, 10);
+const withinWindow =
+  (!banner.startDate || banner.startDate <= today) && (!banner.endDate || today <= banner.endDate);
+const show = banner.enabled && withinWindow && banner.message;
+---
+{show && (
+  <div class="bg-orange text-white text-sm">
+    <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-center gap-2 text-center">
+      <span set:html={banner.message} />
+      {banner.linkUrl && (
+        <a href={banner.linkUrl} class="underline font-medium whitespace-nowrap">
+          Learn more
+        </a>
+      )}
+    </div>
+  </div>
+)}
