@@ -15,5 +15,5 @@ const { entry } = Astro.props;
 const { title, metaDescription } = entry.data;
 ---
 <BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription}>
-  <ServicePageBody data={entry.data} />
+  <ServicePageBody data={entry.data} noticeSlug={entry.slug} />
 </BaseLayout>
