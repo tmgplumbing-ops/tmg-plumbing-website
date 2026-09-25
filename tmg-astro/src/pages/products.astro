@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Heating Products | TMG Plumbing & Heating"
+  description="Heating products supplied by TMG Plumbing & Heating Services across Waterford & the South East."
+>
+  <section class="mx-auto max-w-4xl px-4 py-20 text-center">
+    <h1 class="text-3xl font-medium text-navy mb-4">Heating Products</h1>
+    <p class="text-navy/60 max-w-xl mx-auto">
+      Our product catalogue is being prepared. For product enquiries in the
+      meantime, please get in touch directly.
+    </p>
+    <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">
+      Contact us
+    </a>
+  </section>
+</BaseLayout>
+<!--
+  Marked "lower priority" in the redesign brief (section 4). When ready to
+  build out: this is also the natural place to introduce a small shop —
+  see the project README for the recommended approach (Snipcart, reusing
+  the Stripe integration from /pay, layered onto static product entries
+  here rather than standing up a separate commerce platform).
+-->

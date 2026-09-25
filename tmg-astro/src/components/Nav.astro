@@ -1,0 +1,60 @@
+---
+const services = [
+  { name: 'Power flushing', href: '/services/power-flushing' },
+  { name: 'Underfloor heating', href: '/services/underfloor-heating' },
+  { name: 'Leak detection', href: '/services/leak-detection' },
+  { name: 'Demineralisation', href: '/services/demineralisation' },
+  { name: 'Oil boiler installs', href: '/services/oil-boiler-installs' },
+  { name: 'Plumbing & heating', href: '/services/plumbing-heating' },
+  { name: 'Drinking water', href: '/services/drinking-water' },
+];
+const commercial = [
+  { name: 'Hotels', href: '/commercial/hotels' },
+  { name: 'Hospitals', href: '/commercial/hospitals' },
+  { name: 'Schools & colleges', href: '/commercial/schools-colleges' },
+  { name: 'Offices', href: '/commercial/office-buildings' },
+  { name: 'Industrial', href: '/commercial/industrial' },
+  { name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
+];
+---
+<!-- 4-item nav + persistent CTA, per section 4 of the brief. Dropdowns are
+     plain <details> so they work with zero JS (mobile-first, fast). -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-navy/10">
+  <div class="mx-auto max-w-6xl flex items-center justify-between px-4 h-16">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/images/logo-mark.png" alt="TMG Plumbing & Heating Services" class="w-10 h-10" width="40" height="40" />
+      <span class="hidden sm:block font-medium text-navy leading-tight text-sm">
+        PLUMBING<br />&amp; HEATING
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm text-navy/80">
+      <details class="relative group">
+        <summary class="list-none cursor-pointer hover:text-navy">Services</summary>
+        <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
+          {services.map((s) => (
+            <a href={s.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{s.name}</a>
+          ))}
+        </div>
+      </details>
+      <details class="relative group">
+        <summary class="list-none cursor-pointer hover:text-navy">Commercial</summary>
+        <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
+          <a href="/commercial" class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">Overview</a>
+          {commercial.map((c) => (
+            <a href={c.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{c.name}</a>
+          ))}
+        </div>
+      </details>
+      <a href="/about" class="hover:text-navy">About</a>
+      <a href="/blog" class="hover:text-navy">Blog</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="tel:051577089" class="hidden md:inline text-navy/80 hover:text-navy text-sm">051 577 089</a>
+      <a href="/contact" class="rounded bg-orange text-white text-sm font-medium px-4 py-2 hover:bg-orange-dark transition-colors">
+        Get a quote
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServicePageBody from '../../components/ServicePageBody.astro';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, metaDescription } = entry.data;
+---
+<BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription}>
+  <ServicePageBody data={entry.data} />
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Schema from '../../components/Schema.astro';
+
+export async function getStaticPaths() {
+  const sectors = await getCollection('commercial');
+  return sectors.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { title, metaDescription, intro, points } = entry.data;
+---
+<BaseLayout title={title} description={metaDescription}>
+  <Schema />
+  <section class="bg-navy border-b border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h1 class="text-3xl md:text-4xl font-medium text-white max-w-2xl">{title}</h1>
+      <p class="mt-4 text-white/70 max-w-xl">{intro}</p>
+      <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Enquire now</a>
+    </div>
+  </section>
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid sm:grid-cols-2 gap-4">
+      {points.map((p) => (
+        <div class="rounded-card bg-mist border border-navy/10 p-5 text-navy/70">{p}</div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

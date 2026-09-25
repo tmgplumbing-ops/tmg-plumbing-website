@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+<BaseLayout
+  title="Blog | TMG Plumbing & Heating"
+  description="Guidance on heating maintenance, power flushing, underfloor heating and more from TMG Plumbing & Heating Services."
+>
+  <section class="mx-auto max-w-4xl px-4 py-16">
+    <h1 class="text-3xl font-medium text-navy mb-8">Blog</h1>
+    <div class="space-y-6">
+      {posts.map((post) => (
+        <a href={`/blog/${post.slug}`} class="block rounded-card bg-mist border border-navy/10 p-6 hover:border-orange">
+          <p class="text-xs text-navy/40 mb-1">
+            {post.data.publishDate.toLocaleDateString('en-IE', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </p>
+          <p class="text-navy font-medium text-lg">{post.data.title}</p>
+          <p class="text-navy/60 text-sm mt-2">{post.data.excerpt}</p>
+          <p class="text-orange text-sm mt-4">Read more →</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

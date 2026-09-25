@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Schema from '../components/Schema.astro';
+
+const services = [
+  { name: 'Power flushing', href: '/services/power-flushing', desc: 'Clear sludge, restore even heat.' },
+  { name: 'Underfloor heating', href: '/services/underfloor-heating', desc: 'Installation and servicing.' },
+  { name: 'Leak detection', href: '/services/leak-detection', desc: 'Find leaks without tearing up floors.' },
+  { name: 'Demineralisation', href: '/services/demineralisation', desc: 'Cleaner water, longer system life.' },
+  { name: 'Oil boiler installs', href: '/services/oil-boiler-installs', desc: 'New installs and replacements.' },
+  { name: 'Plumbing & heating', href: '/services/plumbing-heating', desc: 'General plumbing and heating work.' },
+];
+const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
+---
+<BaseLayout
+  title="TMG Plumbing & Heating Services | Waterford & South East Ireland"
+  description="Specialist plumbing and heating across Waterford, Wexford, Kilkenny, Tipperary & Kildare. Domestic and commercial. Same-day response — call 051 577089."
+>
+  <Schema />
+
+  <!-- Hero -->
+  <section class="border-b border-navy/10 bg-mist">
+    <div class="mx-auto max-w-6xl px-4 py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-medium text-navy max-w-3xl leading-tight">
+        Specialist heating services in <span class="text-orange">South East Ireland.</span>
+      </h1>
+      <p class="mt-6 text-navy/70 max-w-xl text-lg">
+        Reliable residential and commercial plumbing and heating since 2006 —
+        power flushing, underfloor heating, leak detection and more.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
+        <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
+      <div class="mt-12 grid grid-cols-3 max-w-md gap-6 text-center">
+        <div><p class="text-2xl font-medium text-orange">20+</p><p class="text-xs text-navy/50">years experience</p></div>
+        <div><p class="text-2xl font-medium text-orange">5</p><p class="text-xs text-navy/50">counties covered</p></div>
+        <div><p class="text-2xl font-medium text-orange">1,000s</p><p class="text-xs text-navy/50">jobs completed</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust band -->
+  <section class="border-b border-navy/10 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-6 flex flex-wrap items-center justify-center gap-8 text-navy/40 text-sm">
+      <span>Guinness</span><span>Bulmers</span><span>SSE Airtricity</span><span>Waterford Distillery</span>
+    </div>
+  </section>
+
+  <!-- Services grid -->
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-medium text-navy mb-8">Services</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {services.map((s) => (
+        <a href={s.href} class="rounded-card bg-mist border border-navy/10 p-6 hover:border-orange transition-colors">
+          <p class="text-navy font-medium">{s.name}</p>
+          <p class="text-navy/50 text-sm mt-1">{s.desc}</p>
+          <p class="text-orange text-sm mt-4">Learn more →</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section class="mx-auto max-w-6xl px-4 py-16 border-t border-navy/10">
+    <h2 class="text-2xl font-medium text-navy mb-4">Where we work</h2>
+    <p class="text-navy/60 max-w-xl mb-6">
+      Domestic jobs across Waterford, Wexford, Kilkenny, Tipperary and Kildare.
+      Commercial contracts nationwide.
+    </p>
+    <div class="flex flex-wrap gap-2">
+      {counties.map((c) => (
+        <span class="rounded-full border border-navy/20 px-4 py-2 text-sm text-navy/70">{c}</span>
+      ))}
+    </div>
+  </section>
+
+  <!-- About teaser -->
+  <section class="mx-auto max-w-6xl px-4 py-16 border-t border-navy/10 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-2xl font-medium text-navy mb-4">About TMG</h2>
+      <p class="text-navy/60">
+        Founded by Tony McGuinness in 2006, TMG has grown into the South East's
+        leading plumbing and heating specialist, trusted by homeowners and
+        commercial clients across Ireland.
+      </p>
+      <a href="/about" class="inline-block mt-4 text-orange">Read our story →</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-navy border-t border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-16 text-center">
+      <h2 class="text-2xl md:text-3xl font-medium text-white mb-6">Need a heating specialist?</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
+        <a href="tel:051577089" class="rounded border border-white/20 text-white px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

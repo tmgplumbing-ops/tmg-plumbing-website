@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Schema from '../components/Schema.astro';
+---
+<BaseLayout
+  title="About TMG Plumbing & Heating | Waterford"
+  description="TMG Plumbing & Heating Services has provided residential and commercial heating solutions across the South East of Ireland since 2006."
+>
+  <Schema />
+  <section class="bg-mist border-b border-navy/10">
+    <div class="mx-auto max-w-4xl px-4 py-16">
+      <h1 class="text-3xl md:text-4xl font-medium text-navy">About TMG</h1>
+      <p class="mt-4 text-navy/70 max-w-2xl">
+        South East Ireland's plumbing and heating specialist since 2006.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 space-y-6 text-navy/80 leading-relaxed">
+    <p>
+      TMG Plumbing & Heating Services was founded by Tony McGuinness in 2006.
+      Since then, the company has grown into the South East's leading
+      specialist in domestic and commercial heating, serving homeowners
+      across Waterford, Wexford, Kilkenny, Tipperary and Kildare, and
+      commercial clients nationwide.
+    </p>
+    <p>
+      Our work covers power flushing, underfloor heating, leak detection,
+      demineralisation, oil boiler installation, general plumbing and
+      heating, and drinking water filtration. We've worked with clients
+      including Guinness, Bulmers, SSE Airtricity and Waterford Distillery,
+      alongside thousands of domestic customers across the region.
+    </p>
+    <p>
+      Every job is quoted with a fixed price before work begins, and
+      emergency callouts are available outside standard office hours.
+    </p>
+    <div class="pt-4 flex gap-3">
+      <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
+      <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+    </div>
+  </section>
+</BaseLayout>

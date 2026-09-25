@@ -1,0 +1,34 @@
+# TMG Plumbing & Heating Services
+
+> Specialist heating and plumbing company based in Waterford, serving
+> residential and commercial clients across South East Ireland since 2006.
+> Domestic coverage: Waterford, Wexford, Kilkenny, Tipperary, Kildare.
+> Commercial coverage: nationwide.
+
+Phone: 051 577 089 (office) / 087 717 5624 (emergency callout)
+Email: info@tmgplumbing.ie
+Address: Unit 17F, Six Cross Roads Business Park, Waterford, X91KV09
+
+## Services
+- Power flushing: /services/power-flushing
+- Underfloor heating: /services/underfloor-heating
+- Leak detection: /services/leak-detection
+- Demineralisation: /services/demineralisation
+- Oil boiler installs: /services/oil-boiler-installs
+- Plumbing & heating: /services/plumbing-heating
+- Drinking water: /services/drinking-water
+
+## Commercial
+- Overview: /commercial
+- Hotels, hospitals, schools & colleges, offices, industrial, facility
+  maintenance: /commercial/[sector]
+
+## Local service-area pages
+Pages combining a service and a county (e.g. /power-flushing-waterford)
+exist to answer local searches; the canonical content for each service
+lives at its /services/[service] page.
+
+## Other
+- About: /about
+- Blog: /blog
+- Contact / quote requests: /contact

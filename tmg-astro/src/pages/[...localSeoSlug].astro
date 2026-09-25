@@ -1,0 +1,28 @@
+---
+// Flat local SEO URLs (e.g. /power-flushing-waterford), per the "Local SEO
+// pages (hidden from nav)" section of the brief. Same template as the core
+// service pages, but the canonical tag points back at the parent service —
+// this is what section 7 means by "Canonical tags on all local SEO pages
+// pointing to main service page."
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicePageBody from '../components/ServicePageBody.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('local-seo');
+  return pages.map((entry) => ({
+    params: { localSeoSlug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, metaDescription, canonicalService } = entry.data;
+const parent = canonicalService ? await getEntry('services', canonicalService) : null;
+const canonicalURL = parent
+  ? new URL(`/services/${parent.slug}`, Astro.site).toString()
+  : undefined;
+---
+<BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription} canonical={canonicalURL}>
+  <ServicePageBody data={entry.data} />
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Schema from '../../components/Schema.astro';
+
+const sectors = await getCollection('commercial');
+---
+<BaseLayout
+  title="Commercial Plumbing & Heating | TMG"
+  description="Nationwide commercial plumbing and heating for hotels, hospitals, schools, offices and industrial sites. SLA-ready. Call 051 577089."
+>
+  <Schema />
+
+  <section class="bg-navy border-b border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-20">
+      <h1 class="text-3xl md:text-5xl font-medium text-white max-w-2xl">
+        When it can't go wrong, <span class="text-orange">call TMG.</span>
+      </h1>
+      <p class="mt-4 text-white/70 max-w-xl">
+        Nationwide commercial plumbing and heating — SLA-backed response for
+        facilities managers, estates officers and operations directors.
+      </p>
+      <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Enquire now</a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-xl font-medium text-navy mb-6">Sectors we serve</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {sectors.map((s) => (
+        <a href={`/commercial/${s.slug}`} class="rounded-card bg-mist border border-navy/10 p-6 hover:border-orange">
+          <p class="text-navy font-medium">{s.data.title.replace('Commercial Plumbing & Heating for ', '')}</p>
+          <p class="text-orange text-sm mt-4">Learn more →</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16 border-t border-navy/10 grid sm:grid-cols-3 gap-6 text-center">
+    <div><p class="text-2xl font-medium text-orange">20+</p><p class="text-xs text-navy/50">years experience</p></div>
+    <div><p class="text-2xl font-medium text-orange">All-Ireland</p><p class="text-xs text-navy/50">coverage</p></div>
+    <div><p class="text-2xl font-medium text-orange">SLA-ready</p><p class="text-xs text-navy/50">response contracts</p></div>
+  </section>
+</BaseLayout>

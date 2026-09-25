@@ -1,0 +1,127 @@
+---
+// Shared two-column template used by every /services/[slug] page AND every
+// local SEO page — per "Service pages (template)" in section 5 of the brief.
+// Main content left, sticky sidebar right; same structure, different intro.
+import Schema from './Schema.astro';
+import { getEntry } from 'astro:content';
+
+interface Props {
+  data: {
+    title: string;
+    heroSubheading: string;
+    intro: string;
+    signs: string[];
+    steps: { title: string; body: string }[];
+    benefits: string[];
+    faqs: { q: string; a: string }[];
+    relatedServices: string[];
+    county?: string;
+  };
+}
+const { data } = Astro.props;
+const related = await Promise.all(
+  (data.relatedServices ?? []).map((slug) => getEntry('services', slug))
+);
+---
+<Schema service={{ name: data.title, description: data.intro }} faqs={data.faqs} />
+
+<!-- Hero -->
+<section class="bg-navy border-b border-navy/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
+      <span class="rounded-full border border-orange/40 px-3 py-1">20+ years experience</span>
+      <span class="rounded-full border border-orange/40 px-3 py-1">Same-day response</span>
+      {data.county && <span class="rounded-full border border-orange/40 px-3 py-1">{data.county} & South East</span>}
+    </div>
+    <h1 class="text-3xl md:text-5xl font-medium text-white max-w-2xl">{data.title}</h1>
+    <p class="mt-4 text-white/70 max-w-xl">{data.heroSubheading}</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Get a quote</a>
+      <a href="tel:051577089" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-[1fr_320px] gap-12">
+  <!-- Main column -->
+  <div class="space-y-12">
+    <p class="text-navy/80 leading-relaxed">{data.intro}</p>
+
+    <div>
+      <h2 class="text-xl font-medium text-navy mb-4">Signs you need this</h2>
+      <ul class="space-y-2 text-navy/70">
+        {data.signs.map((s) => (
+          <li class="flex gap-2"><span class="text-orange">•</span>{s}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-medium text-navy mb-4">How we do it</h2>
+      <ol class="space-y-4">
+        {data.steps.map((s, i) => (
+          <li class="flex gap-4">
+            <span class="flex-none w-8 h-8 rounded-full bg-orange/10 text-orange text-sm flex items-center justify-center">{i + 1}</span>
+            <div>
+              <p class="text-navy font-medium">{s.title}</p>
+              <p class="text-navy/60 text-sm">{s.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-medium text-navy mb-4">Benefits</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {data.benefits.map((b) => (
+          <div class="rounded-card bg-mist border border-navy/10 p-4 text-navy/70 text-sm">{b}</div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-medium text-navy mb-4">FAQs</h2>
+      <div class="space-y-3">
+        {data.faqs.map((f) => (
+          <details class="rounded-card bg-mist border border-navy/10 p-4">
+            <summary class="cursor-pointer text-navy font-medium">{f.q}</summary>
+            <p class="mt-2 text-navy/60 text-sm">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky sidebar -->
+  <aside class="md:sticky md:top-24 h-fit space-y-4">
+    <div class="rounded-card bg-mist border border-navy/10 p-6">
+      <p class="text-navy font-medium mb-3">Request a quote</p>
+      <form class="space-y-3" name="quote" method="POST" data-netlify="true">
+        <input class="w-full rounded bg-white border border-navy/10 px-3 py-2 text-sm" placeholder="Name" name="name" required />
+        <input class="w-full rounded bg-white border border-navy/10 px-3 py-2 text-sm" placeholder="Phone" name="phone" required />
+        <textarea class="w-full rounded bg-white border border-navy/10 px-3 py-2 text-sm" placeholder="What do you need help with?" name="message" rows="3"></textarea>
+        <button class="w-full rounded bg-orange text-white font-medium px-4 py-2 hover:bg-orange-dark">Send request</button>
+      </form>
+    </div>
+    <div class="rounded-card bg-mist border border-navy/10 p-6 text-sm text-navy/70 space-y-2">
+      <p><a href="tel:051577089" class="text-orange">051 577 089</a></p>
+      <p>Mon–Fri, 8am–6pm · Emergency callouts 087 717 5624</p>
+      <p class="pt-2 border-t border-navy/10">Covering Waterford, Wexford, Kilkenny, Tipperary, Kildare</p>
+    </div>
+  </aside>
+</section>
+
+{related.filter(Boolean).length > 0 && (
+  <section class="mx-auto max-w-6xl px-4 pb-16">
+    <h2 class="text-xl font-medium text-navy mb-4">You might also need</h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+      {related.filter(Boolean).map((r) => (
+        <a href={`/services/${r!.slug}`} class="rounded-card bg-mist border border-navy/10 p-5 hover:border-orange">
+          <p class="text-navy font-medium">{r!.data.title}</p>
+          <p class="text-navy/50 text-sm mt-1">Learn more →</p>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

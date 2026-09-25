@@ -1,0 +1,54 @@
+---
+// Emits LocalBusiness + (optional) Service + FAQPage JSON-LD, per section 7
+// of the redesign brief ("Schema markup: LocalBusiness, Service, FAQPage on
+// all service pages"). Drop this once per page, passing only what applies.
+interface Props {
+  service?: { name: string; description: string };
+  faqs?: { q: string; a: string }[];
+}
+const { service, faqs } = Astro.props;
+
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'TMG Plumbing & Heating Services',
+  image: 'https://www.tmgplumbing.ie/images/tmg-og.jpg',
+  telephone: '+353515 77089',
+  email: 'info@tmgplumbing.ie',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Unit 17F, Six Cross Roads Business Park',
+    addressLocality: 'Waterford',
+    postalCode: 'X91KV09',
+    addressCountry: 'IE',
+  },
+  areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'],
+  url: 'https://www.tmgplumbing.ie',
+};
+
+const serviceSchema = service
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      serviceType: service.name,
+      description: service.description,
+      provider: { '@type': 'LocalBusiness', name: 'TMG Plumbing & Heating Services' },
+      areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'],
+    }
+  : null;
+
+const faqSchema = faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+---
+<script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
+{serviceSchema && <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />}
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}

@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const serviceOptions = [
+  'Power flushing', 'Underfloor heating', 'Leak detection', 'Demineralisation',
+  'Oil boiler installs', 'Plumbing & heating', 'Drinking water', 'Other',
+];
+const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare', 'Other'];
+---
+<BaseLayout
+  title="Contact TMG Plumbing & Heating | Waterford"
+  description="Request a quote from TMG Plumbing & Heating. Same-day response. Call 051 577089 or email info@tmgplumbing.ie."
+>
+  <section class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_360px] gap-12">
+    <!-- Left: enquiry form -->
+    <div>
+      <h1 class="text-3xl font-medium text-navy mb-2">Get a quote</h1>
+      <p class="text-navy/60 mb-8">Describe the issue and we'll respond the same day.</p>
+
+      <!--
+        Wire this up to your form backend of choice (Formspree, Resend, a
+        serverless function, etc). Per section 7 of the brief: every
+        submission must (1) auto-reply to the enquirer and (2) email the
+        full details to info@tmgplumbing.ie. Swap the inline success message
+        below in for whatever your handler returns — don't redirect.
+      -->
+      <form class="space-y-4" method="POST" action="#">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input class="rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Name" name="name" required />
+          <input class="rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Phone" name="phone" required />
+        </div>
+        <input class="w-full rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Email" type="email" name="email" required />
+
+        <select class="w-full rounded bg-mist border border-navy/10 px-4 py-3 text-navy/70" name="county">
+          <option value="">County</option>
+          {counties.map((c) => <option value={c}>{c}</option>)}
+        </select>
+
+        <div>
+          <p class="text-sm text-navy/60 mb-2">Service</p>
+          <div class="flex flex-wrap gap-2">
+            {serviceOptions.map((s) => (
+              <label class="cursor-pointer">
+                <input type="radio" name="service" value={s} class="peer sr-only" />
+                <span class="block rounded-full border border-navy/20 px-4 py-2 text-sm text-navy/70 peer-checked:bg-orange peer-checked:text-white peer-checked:border-orange">{s}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <textarea class="w-full rounded bg-mist border border-navy/10 px-4 py-3" placeholder="Describe the issue" name="message" rows="4"></textarea>
+
+        <button class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Send request</button>
+        <p class="text-xs text-navy/40">We reply the same day, Mon–Fri.</p>
+      </form>
+    </div>
+
+    <!-- Right: contact cards -->
+    <aside class="space-y-4">
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium mb-2">Call now</p>
+        <a href="tel:051577089" class="block text-orange">051 577 089</a>
+        <a href="https://wa.me/353877175624" class="block text-navy/60 text-sm mt-1">WhatsApp: 087 717 5624</a>
+      </div>
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium mb-2">Office hours</p>
+        <p class="text-navy/60 text-sm">Mon–Fri, 8am–6pm</p>
+        <div class="mt-3 rounded bg-orange/10 border border-orange/30 px-3 py-2 text-orange-dark text-sm">
+          Emergency callouts available outside hours — 087 717 5624
+        </div>
+      </div>
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium mb-2">Address</p>
+        <p class="text-navy/60 text-sm">Unit 17F, Six Cross Roads Business Park,<br />Waterford, X91KV09</p>
+      </div>
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium mb-2">Email</p>
+        <a href="mailto:info@tmgplumbing.ie" class="text-orange text-sm">info@tmgplumbing.ie</a>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>
