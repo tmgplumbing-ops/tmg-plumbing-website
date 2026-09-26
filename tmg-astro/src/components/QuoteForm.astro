@@ -18,6 +18,12 @@
 // <style is:global> block at the bottom of this file, which loads after
 // Zoho's own inline styles and wins on specificity — the markup and scripts
 // above it are untouched.
+//
+// Optional `preselect`: pre-fills the "Enquiring About" dropdown with one of
+// its existing option values (done by a separate script below; the Zoho
+// markup itself is untouched).
+interface Props { preselect?: string }
+const { preselect } = Astro.props;
 ---
 <div id="crmWebToEntityForm" class="zcwf_lblLeft crmWebToEntityForm" style="background-color: #FFFFFF;color: #002050;max-width: 600px;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -278,3 +284,12 @@
     display: none;
   }
 </style>
+
+{preselect && (
+  <script is:inline define:vars={{ preselect }}>
+    (function () {
+      var sel = document.getElementById('LEADCF3');
+      if (sel && [].some.call(sel.options, function (o) { return o.value === preselect; })) sel.value = preselect;
+    })();
+  </script>
+)}

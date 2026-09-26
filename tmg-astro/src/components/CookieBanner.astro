@@ -1,0 +1,78 @@
+---
+// Cookie consent banner. Google Tag Manager is held back (see BaseLayout) until
+// the visitor accepts analytics or marketing cookies here. The choice is kept in
+// localStorage as "tmg-consent" and can be changed from any
+// [data-open-cookie-settings] link, e.g. in the footer.
+---
+<div id="cookie-banner" class="hidden fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4" role="dialog" aria-live="polite" aria-label="Cookie settings">
+  <div class="mx-auto max-w-4xl rounded-card bg-white border border-navy/10 shadow-2xl p-5 sm:p-6 text-sm text-navy/80">
+    <p class="text-navy font-medium text-base">We use cookies</p>
+    <p class="mt-1">
+      We use necessary cookies to make this site work. With your permission we'd also like to use analytics cookies
+      to see how the site is used, and marketing cookies to measure our adverts. Read our
+      <a href="/cookies-policy" class="text-orange underline">Cookies Policy</a>.
+    </p>
+
+    <div id="cookie-options" class="hidden mt-4 space-y-2">
+      <label class="flex items-start gap-3 rounded bg-mist p-3">
+        <input type="checkbox" checked disabled class="mt-1" />
+        <span><span class="text-navy font-medium">Necessary</span> · always on. Remembers your choices and keeps the enquiry form working.</span>
+      </label>
+      <label class="flex items-start gap-3 rounded bg-mist p-3 cursor-pointer">
+        <input type="checkbox" id="cookie-analytics" class="mt-1" />
+        <span><span class="text-navy font-medium">Analytics</span> · Google Analytics statistics about how the site is used.</span>
+      </label>
+      <label class="flex items-start gap-3 rounded bg-mist p-3 cursor-pointer">
+        <input type="checkbox" id="cookie-marketing" class="mt-1" />
+        <span><span class="text-navy font-medium">Marketing</span> · measures whether our Google adverts lead to enquiries.</span>
+      </label>
+    </div>
+
+    <div class="mt-4 flex flex-wrap gap-2">
+      <button type="button" data-cookie="accept" class="rounded bg-orange text-white font-medium px-4 py-2 hover:bg-orange-dark">Accept all</button>
+      <button type="button" data-cookie="reject" class="rounded border border-navy/20 text-navy px-4 py-2 hover:border-orange">Reject all</button>
+      <button type="button" data-cookie="settings" class="rounded px-4 py-2 text-navy/70 underline hover:text-orange">Settings</button>
+      <button type="button" data-cookie="save" class="hidden rounded border border-navy/20 text-navy px-4 py-2 hover:border-orange">Save choices</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'tmg-consent';
+    var banner = document.getElementById('cookie-banner');
+    var options = document.getElementById('cookie-options');
+    var boxA = document.getElementById('cookie-analytics');
+    var boxM = document.getElementById('cookie-marketing');
+    var saveBtn = banner.querySelector('[data-cookie="save"]');
+    function read() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
+    function show(withOptions) {
+      var c = read() || {};
+      boxA.checked = !!c.analytics; boxM.checked = !!c.marketing;
+      options.classList.toggle('hidden', !withOptions);
+      saveBtn.classList.toggle('hidden', !withOptions);
+      banner.classList.remove('hidden');
+    }
+    function store(analytics, marketing) {
+      var prev = read();
+      var c = { analytics: analytics, marketing: marketing, date: new Date().toISOString() };
+      try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+      banner.classList.add('hidden');
+      if (window.tmgApplyConsent) window.tmgApplyConsent(c);
+      // Withdrawing consent after tags have loaded: reload so nothing keeps running.
+      if (prev && ((prev.analytics && !analytics) || (prev.marketing && !marketing))) location.reload();
+    }
+    banner.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-cookie]'); if (!a) return;
+      var k = a.getAttribute('data-cookie');
+      if (k === 'accept') store(true, true);
+      else if (k === 'reject') store(false, false);
+      else if (k === 'settings') show(true);
+      else if (k === 'save') store(boxA.checked, boxM.checked);
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-open-cookie-settings]')) { e.preventDefault(); show(true); }
+    });
+    if (!read()) show(false);
+  })();
+</script>
