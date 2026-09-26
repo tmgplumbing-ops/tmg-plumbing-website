@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
 import { Image } from 'astro:assets';
-import { photos, servicePhotos } from '../data/photos';
+import { heroes } from '../data/photos';
+import ServiceIcon from '../components/ServiceIcon.astro';
 
 const services = [
   { slug: 'power-flushing', name: 'Power flushing', href: '/services/power-flushing', desc: 'Clear sludge, restore even heat.' },
@@ -42,8 +43,8 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
       </div>
       </div>
       <div class="relative">
-        <div class="rounded-card overflow-hidden aspect-square shadow-xl">
-          <Image src={photos.technician.src} alt={photos.technician.alt} widths={[400, 714]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" />
+        <div class="rounded-card overflow-hidden aspect-[4/5] shadow-xl">
+          <Image src={heroes.home.src} alt={heroes.home.alt} widths={[400, 800]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" />
         </div>
         <div class="absolute -bottom-4 -left-4 rounded-card bg-white shadow-lg px-4 py-3 text-sm text-navy">
           <span class="text-orange font-medium">Since 2006</span> · Waterford
@@ -65,11 +66,11 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {services.map((s) => (
         <a href={s.href} class="group rounded-card bg-mist border border-navy/10 overflow-hidden hover:border-orange transition-colors">
-          {servicePhotos[s.slug] && (
-            <div class={`aspect-[16/10] overflow-hidden ${servicePhotos[s.slug].hero.fit === 'contain' ? 'bg-white p-4' : ''}`}>
-              <Image src={servicePhotos[s.slug].hero.src} alt="" widths={[400, 700]} sizes="(min-width: 768px) 360px, 100vw" class={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${servicePhotos[s.slug].hero.fit === 'contain' ? 'object-contain' : 'object-cover'}`} />
-            </div>
-          )}
+          <div class="relative aspect-[16/9] bg-navy flex items-center justify-center overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 rounded-full border-[18px] border-orange/15"></div>
+            <div class="absolute -left-6 -top-8 w-24 h-24 rounded-full border-[10px] border-white/5"></div>
+            <ServiceIcon name={s.slug} class="relative w-20 h-20 transition-transform duration-300 group-hover:scale-110" />
+          </div>
           <div class="p-5">
             <p class="text-navy font-medium">{s.name}</p>
             <p class="text-navy/50 text-sm mt-1">{s.desc}</p>

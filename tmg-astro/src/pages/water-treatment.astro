@@ -5,7 +5,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
 import { Image } from 'astro:assets';
-import { photos } from '../data/photos';
+import { heroes } from '../data/photos';
 import DeminDiagram from '../components/diagrams/DeminDiagram.astro';
 import AirPulseDiagram from '../components/diagrams/AirPulseDiagram.astro';
 import UltrasonicDiagram from '../components/diagrams/UltrasonicDiagram.astro';
@@ -59,7 +59,7 @@ const faqs = [
       </div>
       </div>
       <div class="rounded-card overflow-hidden aspect-[4/3]">
-        <Image src={photos.deminUnit.src} alt={photos.deminUnit.alt} widths={[400, 760]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" />
+        <Image src={heroes.water.src} alt={heroes.water.alt} widths={[400, 760]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" />
       </div>
     </div>
   </section>
