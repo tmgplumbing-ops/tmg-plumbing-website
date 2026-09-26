@@ -53,4 +53,31 @@ const { name, class: cls = 'w-16 h-16' } = Astro.props;
       <path d="M8 52 h48" stroke="#FFFFFF" stroke-width="2.5" />
     </g>
   )}
+  {name === 'chemical-free-cleaning' && (
+    <g>
+      <path d="M4 22 h56 M4 42 h56" stroke="#FFFFFF" stroke-width="2.5" />
+      <circle cx="16" cy="32" r="4" stroke="#FFFFFF" stroke-width="2" />
+      <circle cx="27" cy="30" r="2.5" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M36 26 q4 6 0 12 M43 23 q6 9 0 18 M50 20 q8 12 0 24" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M10 54 l8 -6 M24 54 l8 -6" stroke="#CE5600" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'heating-water-treatment' && (
+    <g>
+      <rect x="6" y="20" width="30" height="26" rx="3" stroke="#FFFFFF" stroke-width="2.5" />
+      {[14, 21, 28].map((x) => <line x1={x} y1="24" x2={x} y2="42" stroke="#FFFFFF" stroke-width="2.5" />)}
+      <path d="M48 14 C53 22 58 27 58 33 a10 10 0 0 1 -20 0 C38 27 43 22 48 14 z" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M44 34 l3 3 6 -6" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M6 54 h52" stroke="#FFFFFF" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'water-testing' && (
+    <g>
+      <path d="M22 8 h14 M25 8 v34 a4 4 0 0 0 8 0 v-34" stroke="#FFFFFF" stroke-width="2.5" />
+      <path d="M25 30 h8" stroke="#CE5600" stroke-width="2.5" />
+      <rect x="40" y="18" width="18" height="30" rx="3" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M44 26 h10 M44 32 h10 M44 38 h6" stroke="#CE5600" stroke-width="2" />
+      <path d="M8 56 h48" stroke="#FFFFFF" stroke-width="2.5" />
+    </g>
+  )}
 </svg>
