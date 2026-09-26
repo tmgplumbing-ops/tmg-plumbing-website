@@ -1,0 +1,89 @@
+---
+// Cookies policy for the new site. Same address as the old site's page
+// (/cookies-policy), so no redirect is needed.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LegalStyles from '../components/LegalStyles.astro';
+---
+<BaseLayout
+  title="Cookies Policy | TMG Plumbing & Heating"
+  description="How TMG Plumbing & Heating Services uses cookies on its website, and how to change your cookie choices."
+>
+  <LegalStyles />
+  <article class="legal mx-auto max-w-3xl px-4 py-16">
+    <h1>Cookies Policy</h1>
+    <p class="updated">Last updated 26 September 2026</p>
+
+    <p>
+      This policy explains what cookies are, which cookies www.tmgplumbing.ie uses and how you can control them.
+      It should be read alongside our <a href="/privacy-policy">Privacy Policy</a>.
+    </p>
+
+    <h2>What are cookies?</h2>
+    <p>
+      Cookies are small text files that a website places on your computer or phone. They let the website remember
+      things, such as the choices you have made, and help us understand how the site is used. Similar technologies,
+      such as your browser's local storage, work in the same way, and this policy covers them too.
+    </p>
+
+    <h2>How we ask for your consent</h2>
+    <p>
+      When you first visit the site, a banner asks whether you accept analytics and marketing cookies. These are
+      switched off until you say yes. Strictly necessary cookies are always on, because the site cannot work
+      without them. You can change your mind at any time using the
+      <button type="button" data-open-cookie-settings class="underline text-orange">Cookie settings</button>
+      link here or at the bottom of every page.
+    </p>
+
+    <h2>The cookies we use</h2>
+    <table>
+      <thead>
+        <tr><th>Type</th><th>What it does</th><th>Provider</th><th>Consent needed?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Strictly necessary</td>
+          <td>Remembers your cookie choices (stored as <code>tmg-consent</code> in your browser) and lets our enquiry
+            form work and protect itself from spam.</td>
+          <td>TMG Plumbing &amp; Heating; Zoho (enquiry form)</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Tells us how many people visit, which pages they look at and how they found us, so we can improve the
+            site. The information is grouped and does not identify you. Typical cookies are <code>_ga</code> and
+            <code>_ga_*</code>, which last up to two years.</td>
+          <td>Google (Google Analytics, loaded through Google Tag Manager)</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Marketing</td>
+          <td>Measures whether our online adverts lead to enquiries, and may be used to show our adverts to people who
+            have visited the site.</td>
+          <td>Google (Google Ads), if in use</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Google Tag Manager, and anything it loads, only runs after you accept analytics or marketing cookies.
+    </p>
+
+    <h2>Changing or deleting cookies</h2>
+    <p>
+      You can change your choices at any time with the
+      <button type="button" data-open-cookie-settings class="underline text-orange">Cookie settings</button> link.
+      You can also block or delete cookies in your browser's settings. If you block strictly necessary cookies, some
+      parts of the site, such as the enquiry form, may not work properly.
+    </p>
+    <p>
+      To opt out of Google Analytics on every website, you can install Google's
+      <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">opt-out browser add-on</a>.
+    </p>
+
+    <h2>Contact us</h2>
+    <p>
+      If you have any questions about this policy, email us at
+      <a href="mailto:info@tmgplumbing.ie">info@tmgplumbing.ie</a> or call 051 577 089.
+    </p>
+  </article>
+</BaseLayout>
