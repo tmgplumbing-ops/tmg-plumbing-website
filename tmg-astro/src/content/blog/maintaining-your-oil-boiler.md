@@ -3,9 +3,9 @@ title: "Maintaining Your Oil Boiler"
 metaDescription: "Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system. Water in your oil tank can cause the oil to congeal and clog the nozzles. Frozen water or air will block the oil line and lock out the boiler. So what do you need to do to maintain and prolong the life of your oil fired boiler?"
 publishDate: 2022-10-28
 excerpt: "Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system."
-# Migrated from https://www.tmgplumbing.ie/blog/maintaining-your-oil-boiler on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/maintaining-your-oil-boiler on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/ef327a13-c571-4c5c-8a9e-23fddd30e531/pexels-sebastian-s%C3%B8rensen-731082.jpg?format=1500w)
+![](./images/maintaining-your-oil-boiler-01.webp)
 
 Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system. Water in your oil tank can cause the oil to congeal and clog the nozzles. Frozen water or air will block the oil line and lock out the boiler. So what do you need to do to maintain and prolong the life of your oil fired boiler?
 
@@ -23,7 +23,7 @@ OFTEC recommends that oil fired boilers, tanks and equipment are serviced at lea
 
 The boiler works properly and efficiency when it burns the oil cleanly. When the boiler achieves ‘complete combustion’, the boiler get the most energy from the fuel. If the burner, fan, baffles etc are dirty and sooted then ‘incomplete combustion’ will occur, which means not all of the energy from the fuel is transferred to your heating system. This leads to waste fuel products – soot - building up inside the boiler and reducing the efficiency further.
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/a88ba957-1d4b-425c-b407-c7eca7798f07/vortex-external+%281%29.jpg?format=1500w)
+![](./images/maintaining-your-oil-boiler-02.webp)
 
 #### Boiler Checks and Cleaning
 
@@ -34,7 +34,7 @@ The boiler works properly and efficiency when it burns the oil cleanly. When the
 - Remove, clean and replace turbulators
 - Check combustion levels after cleaning
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/09b47a93-13a7-4d41-85ea-0352c22ecc0e/120573178_3628608120586127_4252134872774556419_n.jpg?format=1500w)
+![](./images/maintaining-your-oil-boiler-03.webp)
 
 #### Tank and System Check
 
@@ -53,7 +53,7 @@ For more information on why we recommend replacing your single skin oil tank wit
 
 You can do your own checks throughout year to ensure the system is well maintained and running efficiently:
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/0339a456-f793-4e29-ae86-348a5da18b3c/2019-08-06.jpg?format=1500w)
+![](./images/maintaining-your-oil-boiler-04.webp)
 
 #### Tank Checks
 
@@ -70,7 +70,7 @@ Check there are no signs of corrosion on a metal tank or bulging on a plastic ta
 - Check all of the visible oil line for leaks
 - Fit a tank monitor to be alerted to any sudden drops in oil which may be the result of a leak
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/22a2674e-e177-4a03-8f0e-3b79f25b17c0/87076998_3010753415704937_7797887007086084096_n.jpg?format=1500w)
+![](./images/maintaining-your-oil-boiler-05.webp)
 
 #### Checking for Water Ingress
 

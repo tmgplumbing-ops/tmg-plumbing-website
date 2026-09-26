@@ -3,9 +3,9 @@ title: "Leak Detection - Frequently Asked Questions"
 metaDescription: "Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system? This may indicate a leak on your water supply or on your heating system. Water leaks can be extremely damaging to your home or business and can be very costly to repair if left untouched."
 publishDate: 2023-07-28
 excerpt: "Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system?"
-# Migrated from https://www.tmgplumbing.ie/blog/leak-detection-frequently-asked-questions on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/leak-detection-frequently-asked-questions on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/9cda54f2-4927-4585-89f1-e3c6a76485ab/water-pipe-g6ba85963c_1280.jpg?format=1500w)
+![](./images/leak-detection-frequently-asked-questions-01.webp)
 
 Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system? This may indicate a leak on your water supply or on your heating system.
 
@@ -19,7 +19,7 @@ Leak detection is the process of identifying and locating leaks or seepages in v
 
 Common types of leaks include water leaks in plumbing systems and leaks on water mains pipe work.
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/17249a42-d1ef-4415-97bf-89dffdef2c0b/water-gbc262141d_1280.jpg?format=1500w)
+![](./images/leak-detection-frequently-asked-questions-02.webp)
 
 ## What causes leaks?
 
@@ -91,9 +91,9 @@ TMG Plumbing & Heating Services use thermal imaging, pressure testing and acoust
 
 Blockages of heating systems from rust can cause issues that may stop us finding the leak. In that instance the heating system may need to be power flushed to get the system clean enough to detect the leak.
 
-![aqua-m200-A.jpg](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1690538478453-CT8DKRUZE5LATNT9T3VQ/aqua-m200-A.jpg?format=1500w)
+![aqua-m200-A.jpg](./images/leak-detection-frequently-asked-questions-03.webp)
 
-![aqua-m200-B.jpg](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1690538478384-A9ODOD5BCJ9BOH7X3ZRH/aqua-m200-B.jpg?format=1500w)
+![aqua-m200-B.jpg](./images/leak-detection-frequently-asked-questions-04.webp)
 
 ## Can I use DIY methods for leak detection?
 

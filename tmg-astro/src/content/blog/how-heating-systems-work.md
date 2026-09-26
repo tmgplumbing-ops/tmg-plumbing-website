@@ -4,9 +4,9 @@ seoTitle: "Role of Power Flushing in Heating Systems"
 metaDescription: "Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency. This blog aims to explain the technical aspects of home heating systems and the role power flushing for radiators and underfloor heating plays in the maintenance of these heating systems."
 publishDate: 2023-12-18
 excerpt: "Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency."
-# Migrated from https://www.tmgplumbing.ie/blog/how-heating-systems-work on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/how-heating-systems-work on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/124f460f-b72a-4a9b-85f9-62afc49f46a1/Heating+System.jpg?format=1500w)
+![](./images/how-heating-systems-work-01.webp)
 
 Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency. This blog aims to explain the technical aspects of home heating systems and the role power flushing for radiators and underfloor heating plays in the maintenance of these heating systems.
 
@@ -27,13 +27,13 @@ How Power Flushing Works:
 - The heating system is then refilled with an inhibitor which helps prevent further build up in the future.
 - The result is a cleaner system that can heat your home more efficiently, saving energy and reducing heating costs.
 
-![Infra red gun showing radiator not heating up](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/cb41aaac-4457-44b9-b2bf-617473538a58/IMG_6328.JPEG?format=1500w)
+![Infra red gun showing radiator not heating up](./images/how-heating-systems-work-02.webp)
 
 #### Radiator Blocked
 
 Infra red camera showing that the radiator is only heating at the very top as the rest is filled with sludge. This means the boiler is working hard and very inefficiently to try to heat a room with blocked radiators. Power flushing your heating system will remove any of the sludge built up in the radiators.
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/5fcde71f-789a-4374-822e-2158123df295/IMG_6327.JPEG?format=1500w)
+![](./images/how-heating-systems-work-03.webp)
 
 #### Clean Radiator
 
@@ -57,13 +57,13 @@ Just like radiators, underfloor heating systems require maintenance to function 
 
 Power flushing is an essential maintenance procedure for underfloor heating systems, just as it is for traditional radiator systems. In underfloor heating, the network of pipes beneath the floor can accumulate debris and sludge over time. This build-up can lead to uneven heating, reduced efficiency, and potential damage to the system. Power flushing in this context involves circulating a high-strength cleansing fluid through the pipes at high pressure. This process effectively removes any build-up, ensuring the smooth and efficient flow of water. The result is a more evenly heated space, increased system efficiency, and potentially lower energy costs, as the heating system operates optimally with less strain and energy consumption. Regular power flushing is a proactive step in maintaining the health and efficiency of an underfloor heating system.
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/831358c8-c13b-432e-a9bf-76ab6bf45844/IMG_6204.JPEG?format=1500w)
+![](./images/how-heating-systems-work-04.webp)
 
 #### Underfloor Heating Not Working Correctly
 
 Infra red camera showing underfloor heating pipework not working correctly due to air and sludge blockages.
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/2a9f7d24-c9a7-4b78-b93d-668ed1f1c71b/IMG_6231.JPEG?format=1500w)
+![](./images/how-heating-systems-work-05.webp)
 
 #### Underfloor Heating Working Correctly
 

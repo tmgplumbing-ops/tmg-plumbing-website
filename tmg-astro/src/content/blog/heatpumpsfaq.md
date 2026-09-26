@@ -3,9 +3,9 @@ title: "Heat Pumps - Frequently Asked Questions"
 metaDescription: "In essence, a heat pump takes the same principle as a fridge and reverses it. A heat pump takes the available heat from the air surrounding your property and increases it to a more useful temperature for use in the home. This renewable source of heat can be used to create warm air or water for space and central heating such as underfloor heating or radiator system as well as hot water for your hot water supply. The heat pump is regarded as a much more efficient and environmentally friendly heat source as it does not burn fossil fuels but works off electricity."
 publishDate: 2021-06-18
 excerpt: "In essence, a heat pump takes the same principle as a fridge and reverses it. A heat pump takes the available heat from the air surrounding your property and increases it to a more useful temperature for use in the home."
-# Migrated from https://www.tmgplumbing.ie/blog/heatpumpsfaq on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/heatpumpsfaq on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![Heat Pump](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1624002155640-EOLNSSPC2H9A5440BEXP/Heat+Pump?format=1500w)
+![Heat Pump](./images/heatpumpsfaq-01.webp)
 
 ## How does a heat pump work?
 
@@ -21,7 +21,7 @@ Installing a heat pump system in your home (which needs to be very well insulate
 
 Heat pump systems need less maintenance once installed correctly and are safer than running oil or gas boilers to heat your home.
 
-![Heat pump system](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1624267994068-IH44U2ERJV1NYQHVD69A/Heat+pump+system?format=1500w)
+![Heat pump system](./images/heatpumpsfaq-02.webp)
 
 ## What are the disadvantages of a heat pump?
 

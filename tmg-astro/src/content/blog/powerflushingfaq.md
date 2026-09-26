@@ -3,9 +3,9 @@ title: "Power Flushing Heating Systems - Frequently Asked Questions"
 metaDescription: "All your frequently asked questions about power flushing your heating system, cleaning your central heating system, radiator flushing and flushing your underfloor heating system. Power flushing your radiators or underfloor heating helps to eliminate cold spots and prolongs the life of the boiler and pumps on your heating system."
 publishDate: 2022-01-28
 excerpt: "All your frequently asked questions about power flushing your heating system, cleaning your central heating system, radiator flushing and flushing your underfloor heating system."
-# Migrated from https://www.tmgplumbing.ie/blog/powerflushingfaq on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/powerflushingfaq on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/6e4381bf-9594-4a2e-9fc7-5be8f8a2dfd5/115312R_P0002-0001.jpg?format=1500w)
+![](./images/powerflushingfaq-01.webp)
 
 ## What is power flushing?
 
@@ -21,7 +21,7 @@ Power flushing your central heating system or underfloor heating system cleans o
 
 Power flushing your heating system is an effective way of cleaning your central heating system with radiators or underfloor heating system removing cold spots and blockages and helping your entire heating system to run more efficiently and effectively. However, if a part of your heating system is broken or not working, powerflushing will not fix that. This will have to be fixed additionally
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/e2861dda-2b51-4032-8ae9-7838dd0877ff/IMG_4657.jpg?format=1500w)
+![](./images/powerflushingfaq-02.webp)
 
 ## How does power flushing work?
 

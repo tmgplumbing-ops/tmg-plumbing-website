@@ -3,9 +3,9 @@ title: "The Value of a Good Tradesperson"
 metaDescription: "When you are looking for a tradesperson to do work in your home, make sure they are fully qualified and have received their Craft cards. And if you find a good tradesperson, appreciate that they have had to hone their skills over years of hard work and experience. Hang on to their numbers – they are invaluable!!"
 publishDate: 2019-06-20
 excerpt: "When you are looking for a tradesperson to do work in your home, make sure they are fully qualified and have received their Craft cards."
-# Migrated from https://www.tmgplumbing.ie/blog/the-value-of-a-good-tradesperson on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/the-value-of-a-good-tradesperson on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![plumbers waterford](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1607684766276-ED17Y56IY3GOYAELAZYX/plumbers+waterford?format=1500w)
+![plumbers waterford](./images/the-value-of-a-good-tradesperson-01.webp)
 
 Most people don’t think about the work a tradesperson does until something goes wrong in their house or business premises. And we have heard of those horror stories, where a “tradesperson” has come to fix and install something and has left a nightmare behind for someone else to fix.
 

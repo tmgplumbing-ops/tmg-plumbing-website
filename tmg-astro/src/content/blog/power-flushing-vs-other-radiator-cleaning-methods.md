@@ -3,9 +3,9 @@ title: "Power Flushing vs. Other Radiator Cleaning Methods: Which is Best?"
 metaDescription: "When it comes to maintaining your heating system, ensuring that your radiators and underfloor heating systems are clean and efficient is crucial. To combat this, various radiator cleaning methods are available, with power flushing and chemical flushing being the most common. But how do these methods compare, and which one is best for your system? Let's dive into a comparative analysis of power flushing versus other radiator cleaning methods."
 publishDate: 2024-09-03
 excerpt: "When it comes to maintaining your heating system, ensuring that your radiators and underfloor heating systems are clean and efficient is crucial."
-# Migrated from https://www.tmgplumbing.ie/blog/power-flushing-vs-other-radiator-cleaning-methods on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/power-flushing-vs-other-radiator-cleaning-methods on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1724928956668-1ZMC7HCUTPG4V0DQP2WH/unsplash-image-jn7uVeCdf6U.jpg?format=1500w)
+![](./images/power-flushing-vs-other-radiator-cleaning-methods-01.webp)
 
 When it comes to maintaining your heating system, ensuring that your radiators and underfloor heating systems are clean and efficient is crucial. Over time, sludge, rust, and limescale can accumulate within your heating system, leading to reduced efficiency, higher energy bills, and potential breakdowns. To combat this, various radiator cleaning methods are available, with power flushing and chemical flushing being the most common. But how do these methods compare, and which one is best for your system? Let's dive into a comparative analysis of power flushing versus other radiator cleaning methods.
 

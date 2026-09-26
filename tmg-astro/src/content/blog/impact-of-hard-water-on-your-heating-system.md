@@ -3,9 +3,9 @@ title: "The Impact of Hard Water on Your Heating System and How Power Flushing C
 metaDescription: "An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues."
 publishDate: 2024-08-23
 excerpt: "An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues."
-# Migrated from https://www.tmgplumbing.ie/blog/impact-of-hard-water-on-your-heating-system on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/impact-of-hard-water-on-your-heating-system on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1724406400497-A7LK7JPRCT4XFVDUJ1OI/unsplash-image-AQor66gwkyY.jpg?format=1500w)
+![](./images/impact-of-hard-water-on-your-heating-system-01.webp)
 
 When it comes to maintaining your home, office or commercial building’s heating system, one of the most significant factors often overlooked is the quality of the water circulating within it. If you live or work in an area with hard water, understanding how it affects your heating system is crucial for avoiding costly repairs and ensuring efficient operation. In this blog, we'll explore the impact of hard water on your heating system, focusing on the role of limescale, and how power flushing can help maintain system health. We will also explain long term solutions to get the longest possible time from your heating system.
 

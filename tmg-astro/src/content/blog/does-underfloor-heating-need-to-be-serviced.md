@@ -3,9 +3,9 @@ title: "Does Underfloor Heating Need To Be Serviced?"
 metaDescription: "Underfloor heating is an increasingly popular choice for homes and businesses, offering efficient warmth and improved comfort. However, like any heating system, it requires regular maintenance to ensure optimal performance and longevity. A common question that arises is: does underfloor heating need to be serviced? The answer is yes, and in this article, we’ll explore why servicing is essential, how often it should be done, and why flushing the system is a critical part of maintenance."
 publishDate: 2025-02-20
 excerpt: "Underfloor heating is an increasingly popular choice for homes and businesses, offering efficient warmth and improved comfort."
-# Migrated from https://www.tmgplumbing.ie/blog/does-underfloor-heating-need-to-be-serviced on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/does-underfloor-heating-need-to-be-serviced on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/3f6b0401-770d-4baa-b4aa-92b8730330de/Untitled+design+%282%29.jpg?format=1500w)
+![](./images/does-underfloor-heating-need-to-be-serviced-01.webp)
 
 Underfloor heating has become an increasingly popular choice for homes and businesses, offering efficient warmth and improved comfort. However, like any heating system, it requires regular maintenance to ensure optimal performance and longevity. A common question that arises is: does underfloor heating need to be serviced? The answer is yes, and in this article, we’ll explore why servicing is essential, how often it should be done, and why flushing the system is a critical part of maintenance.
 

@@ -3,9 +3,9 @@ title: "Flushing Your Central Heating System: The Key to Efficient and Long-Last
 metaDescription: "Is your central heating system not performing as efficiently as it used to? Are you finding yourself constantly battling with cold spots and uneven heating in your home? If so, it might be time to consider flushing your central heating system. Flushing your system is the key to maintaining its efficiency and ensuring its long-lasting performance."
 publishDate: 2024-05-23
 excerpt: "Is your central heating system not performing as efficiently as it used to? Are you finding yourself constantly battling with cold spots and uneven heating in your home?"
-# Migrated from https://www.tmgplumbing.ie/blog/flushing-your-central-heating-system on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/flushing-your-central-heating-system on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/a4d58042-962a-4bb6-a946-825444a53111/Untitled+design+%281%29.jpg?format=1500w)
+![](./images/flushing-your-central-heating-system-01.webp)
 
 Is your central heating system not performing as efficiently as it used to? Are you finding yourself constantly battling with cold spots and uneven heating in your home? If so, it might be time to consider flushing your central heating system. Flushing your system is the key to maintaining its efficiency and ensuring its long-lasting performance.
 

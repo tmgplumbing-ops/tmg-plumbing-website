@@ -3,9 +3,9 @@ title: "Underfloor Heating - Frequently Asked Questions"
 metaDescription: "Regular servicing of your underfloor heating is highly recommended. It’s always better to regularly maintain a system to ensure it is constantly running smoothly and efficiently. Servicing allows plumbers and heating engineers to proactively look out for signs of any failure in the heating system before anything major goes wrong and involves costly repairs or replacement. They can also offer tips to homeowners to maximise the efficiency of their heating system."
 publishDate: 2021-03-26
 excerpt: "Regular servicing of your underfloor heating is highly recommended. It’s always better to regularly maintain a system to ensure it is constantly running smoothly and efficiently."
-# Migrated from https://www.tmgplumbing.ie/blog/underfloorheatingfaq on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/underfloorheatingfaq on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![underfloor heating](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1616756621845-KJMYASAX65ZE737GATFE/underfloor+heating?format=1500w)
+![underfloor heating](./images/underfloorheatingfaq-01.webp)
 
 ## How does underfloor heating work?
 
@@ -35,7 +35,7 @@ In this case, it is better to call a plumber who deals with underfloor heating s
 
 It can take from two to three hours to get your underfloor heating up to the correct temperature when it is turned on initially, so it is recommended that during the coldest times of the year you leave your underfloor heating system on all the time. You can however adjust the temperature up or down depending on the occupation of the house at various times and the outside temperature. Generally underfloor heating is zoned for different areas so you can turn down the temperature in the bedrooms during the day when not in use and the living area at night.
 
-![underfloor%2Bheating%2Bmanifold](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1616789767278-N9G0PEVQ0D088Z18T4B4/underfloor%252Bheating%252Bmanifold?format=1500w)
+![underfloor heating manifold](./images/underfloorheatingfaq-02.webp)
 
 ## How long should it take for my underfloor heating to get up to temperature when it is turned on for the first time?
 
@@ -49,7 +49,7 @@ Free standing furniture with legs is generally fine on underfloor heating. Howev
 
 Yes, you can zone your heating by linking the underfloor heating to thermostats in various rooms allowing you to adjust the temperature of each zone. Most people have the living area and sitting area on one zone and the bedrooms on another zone.
 
-![underfloor+heating+zones](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1616795614077-U0AC422H7P12DGONQ4FC/underfloor%2Bheating%2Bzones?format=1500w)
+![underfloor heating zones](./images/underfloorheatingfaq-03.webp)
 
 ## What are the best floor coverings for underfloor heating?
 

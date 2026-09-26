@@ -3,9 +3,9 @@ title: "The Importance of Industrial Power Flushing: Enhancing Efficiency and Li
 metaDescription: "Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs. TMG Plumbing specializes in Industrial Power Flushing, a solution designed to restore the health of your heating systems and ensure optimal performance."
 publishDate: 2024-11-15
 excerpt: "Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs."
-# Migrated from https://www.tmgplumbing.ie/blog/the-importance-of-industrial-power-flushing on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/the-importance-of-industrial-power-flushing on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1731597656071-0Y2FANERTSALFCOOGAJQ/unsplash-image-XUEdfpPIhXg.jpg?format=1500w)
+![](./images/the-importance-of-industrial-power-flushing-01.webp)
 
 Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs. TMG Plumbing specializes in [**Industrial Power Flushing**](/commercial/industrial), a solution designed to restore the health of your heating systems and ensure optimal performance.
 
@@ -42,7 +42,7 @@ Several signs indicate that your industrial heating system may need power flushi
 - Slow warming of the heating system
 - Frequent breakdowns or pump failures
 
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/4266863e-a1c5-4d49-9faf-8ddcd978aaa5/Screenshot+2024-07-04+160933.png?format=1500w)
+![](./images/the-importance-of-industrial-power-flushing-02.webp)
 
 ## Why Choose TMG Plumbing for Industrial Power Flushing?
 

@@ -3,9 +3,9 @@ title: "Danger of Single Skin Oil Tanks"
 metaDescription: "But did you know that single skin oil tanks only come with a one-year guarantee? That means that one year after your oil tank is installed you are not covered by the manufacturer if your tank fails and you have an oil spillage. An oil spill can be devastating not only to your garden, but to your home and is extremely hazardous to your health. An oil spill clean-up can run in to tens of thousands of €’s depending on how much oil spills and where it runs to."
 publishDate: 2020-07-06
 excerpt: "But did you know that single skin oil tanks only come with a one-year guarantee? That means that one year after your oil tank is installed you are not covered by the manufacturer if your tank fails and you have an oil spillage."
-# Migrated from https://www.tmgplumbing.ie/blog/danger-of-single-skin-oil-tanks on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/danger-of-single-skin-oil-tanks on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![oil tank](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1607686195473-SMN2YPQW75S6QRXVNUIM/oil+tank?format=1500w)
+![oil tank](./images/danger-of-single-skin-oil-tanks-01.webp)
 
 Your oil tank is not something you generally think about – only when your oil runs out and it needs to be refilled. It is not an exciting subject – I mean you don’t start browsing for oil tanks for entertainment to see the latest model out this year!!!
 

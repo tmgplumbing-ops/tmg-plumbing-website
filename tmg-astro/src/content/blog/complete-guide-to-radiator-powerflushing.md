@@ -3,9 +3,9 @@ title: "The Complete Guide to Radiator Power Flushing: Everything You Need to Kn
 metaDescription: "What is radiator power flushing, how does it work and why do you need your heating system power flushed?"
 publishDate: 2024-07-11
 excerpt: "What is radiator power flushing, how does it work and why do you need your heating system power flushed?"
-# Migrated from https://www.tmgplumbing.ie/blog/complete-guide-to-radiator-powerflushing on 2026-09-26. Images still load from Squarespace.
+# Migrated from https://www.tmgplumbing.ie/blog/complete-guide-to-radiator-powerflushing on 2026-09-26. Images copied into the site on 2026-09-26.
 ---
-![](https://images.squarespace-cdn.com/content/v1/5f9817314f2e8841dba0cf8f/1720705969366-0U6Z5F1OXI9QC84VN0F2/image-asset.jpeg?format=1500w)
+![](./images/complete-guide-to-radiator-powerflushing-01.webp)
 
 ### What is Radiator Power Flushing?
 
