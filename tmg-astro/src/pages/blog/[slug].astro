@@ -1,41 +1,183 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { categoryOf, coverOf, readingMinutes, formatDate } from '../../data/blog';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+  return posts.map((entry) => ({ params: { slug: entry.slug }, props: { entry, posts } }));
 }
-const { entry } = Astro.props;
-const { Content } = await entry.render();
-const { title, seoTitle, metaDescription, publishDate } = entry.data;
+const { entry, posts } = Astro.props;
+const { Content, headings } = await entry.render();
+const { title, seoTitle, metaDescription, publishDate, excerpt } = entry.data;
+
+const category = categoryOf(entry.slug);
+const cover = coverOf(entry);
+const minutes = readingMinutes(entry);
+// Contents list: use whichever heading level the post is actually structured with.
+// Repeated labels (e.g. several "Remedy" headings) are left out.
+const counts = new Map<string, number>();
+headings.forEach((h) => counts.set(h.text, (counts.get(h.text) ?? 0) + 1));
+const unique = headings.filter((h) => counts.get(h.text) === 1);
+const tocDepth = [2, 3].find((d) => unique.filter((h) => h.depth === d).length >= 3);
+const toc = tocDepth ? unique.filter((h) => h.depth === tocDepth).slice(0, 12) : [];
+// Most migrated posts open with the same sentence as the excerpt, so only show
+// the excerpt as a standfirst when it isn't repeated straight away in the body.
+const plain = (t: string) => t.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/[*_#>\[\]]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+const showStandfirst = !plain(entry.body).startsWith(plain(excerpt).slice(0, 60));
+
+// Three related posts: same category first, then the most recent others.
+const others = posts.filter((p) => p.slug !== entry.slug)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const related = [
+  ...others.filter((p) => categoryOf(p.slug).name === category.name),
+  ...others.filter((p) => categoryOf(p.slug).name !== category.name),
+].slice(0, 3);
 ---
 <BaseLayout title={`${seoTitle ?? title} | TMG Plumbing & Heating`} description={metaDescription}>
-  <article class="mx-auto max-w-3xl px-4 py-16">
-    <p class="text-xs text-navy/40 mb-2">
-      {publishDate.toLocaleDateString('en-IE', { year: 'numeric', month: 'long', day: 'numeric' })}
-    </p>
-    <h1 class="text-3xl font-medium text-navy mb-6">{title}</h1>
-    <div class="post-body text-navy/80 leading-relaxed">
-      <Content />
+  <!-- Header -->
+  <header class="bg-mist border-b border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 pt-10 pb-8">
+      <nav class="text-sm text-navy/50" aria-label="Breadcrumb">
+        <a href="/blog" class="hover:text-orange">Blog</a>
+        <span class="mx-1">/</span>
+        <span class="text-orange">{category.name}</span>
+      </nav>
+      <h1 class="mt-4 text-3xl md:text-5xl font-medium text-navy max-w-4xl leading-tight">{title}</h1>
+      {showStandfirst && <p class="mt-5 text-lg md:text-xl text-navy/70 max-w-3xl leading-relaxed">{excerpt}</p>}
+      <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-navy/60">
+        <span class="flex items-center gap-2">
+          <img src="/images/logo-mark.png" alt="" width="28" height="28" class="w-7 h-7" />
+          Tony McGuinness, TMG
+        </span>
+        <span>{formatDate(publishDate)}</span>
+        <span>{minutes} min read</span>
+      </div>
     </div>
-  </article>
+    <div class="mx-auto max-w-6xl px-4 pb-10">
+      <div class="rounded-card overflow-hidden aspect-[21/9] bg-navy/5">
+        <Image src={cover.src} alt={cover.alt} widths={[640, 1100, 1600]} sizes="(min-width: 1152px) 1120px, 100vw" loading="eager" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Body + sidebar -->
+  <div class="mx-auto max-w-6xl px-4 py-12 grid lg:grid-cols-[minmax(0,1fr)_300px] gap-12">
+    <div class="min-w-0">
+    <article class:list={['post-body', { 'hide-lead-image': cover.leading }]}>
+      <Content />
+    </article>
+
+      <!-- End of post CTA -->
+      <aside class="mt-12 max-w-[44rem] rounded-card bg-navy p-8 text-white">
+        <p class="text-xl font-medium">Need help with your heating?</p>
+        <p class="mt-2 text-white/70">Talk to Tony and the team for advice or a free quote. Domestic work across the South East, commercial nationwide.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Get a quote</a>
+          <a href="tel:051577089" class="rounded border border-white/25 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+        </div>
+      </aside>
+    </div>
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24 space-y-5">
+        {toc.length > 2 && (
+          <nav class="rounded-card border border-navy/10 p-5" aria-label="In this article">
+            <p class="text-xs uppercase tracking-wider text-navy/50 mb-3">In this article</p>
+            <ol class="space-y-2 text-sm">
+              {toc.map((h) => (
+                <li><a href={`#${h.slug}`} class="block text-navy/70 hover:text-orange leading-snug">{h.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+        <div class="rounded-card bg-mist border border-navy/10 p-5">
+          <p class="text-xs uppercase tracking-wider text-navy/50">Our service</p>
+          <p class="mt-1 text-navy font-medium">{category.service.name}</p>
+          <p class="mt-2 text-sm text-navy/60">See how we can help, or ask for a free quote.</p>
+          <a href={category.service.href} class="mt-3 inline-block text-sm text-orange hover:underline">Find out more →</a>
+          <a href="/contact" class="mt-4 block text-center rounded bg-orange text-white text-sm font-medium px-4 py-2.5 hover:bg-orange-dark">Get a quote</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Related posts -->
+  <section class="border-t border-navy/10 bg-mist">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 class="text-2xl font-medium text-navy">Keep reading</h2>
+        <a href="/blog" class="text-sm text-orange hover:underline">All articles →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {related.map((p) => {
+          const c = coverOf(p);
+          return (
+            <a href={`/blog/${p.slug}`} class="group rounded-card bg-white border border-navy/10 overflow-hidden hover:border-orange">
+              <div class="aspect-[16/10] overflow-hidden">
+                <Image src={c.src} alt="" widths={[400, 700]} sizes="(min-width: 1024px) 360px, 100vw" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs text-orange">{categoryOf(p.slug).name}</p>
+                <p class="mt-1 text-navy font-medium leading-snug">{p.data.title}</p>
+                <p class="mt-2 text-xs text-navy/50">{readingMinutes(p)} min read</p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style is:global>
-  /* Tailwind's reset strips heading sizes, list bullets and spacing, and the
-     site doesn't use the typography plugin, so style post bodies here. */
-  .post-body > * + * { margin-top: 1rem; }
-  .post-body h2 { font-size: 1.5rem; font-weight: 500; color: #002050; margin-top: 2.25rem; line-height: 1.3; }
-  .post-body h3 { font-size: 1.2rem; font-weight: 500; color: #002050; margin-top: 1.75rem; line-height: 1.35; }
-  .post-body h4 { font-size: 1.05rem; font-weight: 500; color: #002050; margin-top: 1.5rem; }
-  .post-body ul { list-style: disc; padding-left: 1.4rem; }
-  .post-body ol { list-style: decimal; padding-left: 1.4rem; }
-  .post-body li + li { margin-top: 0.35rem; }
-  .post-body li > ul, .post-body li > ol { margin-top: 0.35rem; }
-  .post-body a { color: #CE5600; text-decoration: underline; }
+  /* No typography plugin on this site, so post bodies are styled here. */
+  .post-body { color: rgba(0, 32, 80, 0.82); font-size: 1.075rem; line-height: 1.8; max-width: 44rem; }
+  .post-body > * + * { margin-top: 1.15rem; }
+  .post-body.hide-lead-image > p:first-child:has(> img:only-child) { display: none; }
+  .post-body.hide-lead-image > p:first-child:has(> img:only-child) + * { margin-top: 0; }
+  .post-body > p:first-of-type:not(:has(img)) { font-size: 1.15rem; color: #002050; }
+  .post-body h2 {
+    font-size: 1.6rem; font-weight: 500; color: #002050; line-height: 1.3;
+    margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid rgba(0, 32, 80, 0.1);
+    scroll-margin-top: 6rem;
+  }
+  .post-body h2::before {
+    content: ''; display: block; width: 2.5rem; height: 4px; border-radius: 2px;
+    background: #CE5600; margin-bottom: 0.9rem;
+  }
+  .post-body h3 { font-size: 1.25rem; font-weight: 500; color: #002050; margin-top: 2.25rem; line-height: 1.35; scroll-margin-top: 6rem; }
+  .post-body h4 {
+    font-size: 1.05rem; font-weight: 500; color: #002050; margin-top: 1.75rem;
+    background: #F3F5F8; border-left: 3px solid #CE5600; padding: 0.6rem 0.9rem; border-radius: 0 8px 8px 0;
+  }
+  .post-body h4 + p { margin-top: 0.6rem; }
+  .post-body ul, .post-body ol { padding-left: 0; }
+  .post-body ul > li, .post-body ol > li { position: relative; padding-left: 1.6rem; }
+  .post-body ul > li::before { content: ''; position: absolute; left: 0.3rem; top: 0.72em; width: 7px; height: 7px; border-radius: 9999px; background: #CE5600; }
+  .post-body ol { counter-reset: item; }
+  .post-body ol > li { counter-increment: item; }
+  .post-body ol > li::before { content: counter(item); position: absolute; left: 0; top: 0.15em; font-size: 0.8rem; color: #CE5600; font-weight: 500; }
+  .post-body li + li { margin-top: 0.5rem; }
+  .post-body a { color: #CE5600; text-decoration: underline; text-underline-offset: 2px; }
+  .post-body .no-underline { text-decoration: none; }
   .post-body strong { font-weight: 500; color: #002050; }
-  .post-body img { border-radius: 12px; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-  .post-body blockquote { border-left: 3px solid #CE5600; padding-left: 1rem; color: rgba(0, 32, 80, 0.7); }
-  .post-body hr { border-color: rgba(0, 32, 80, 0.1); margin: 2rem 0; }
+  .post-body p:has(> img:only-child) { margin-top: 1.75rem; margin-bottom: 1.75rem; }
+  .post-body img { border-radius: 12px; width: 100%; height: auto; max-height: 26rem; object-fit: cover; }
+  .post-body h2, .post-body h3 { clear: both; }
+  @media (min-width: 768px) {
+    /* Photos sit beside the text instead of stacking full width, so posts read shorter. */
+    .post-body > p:has(> img:only-child) { float: right; width: 42%; margin: 0.35rem 0 1.25rem 1.75rem; }
+    .post-body > p:has(> img:only-child) img { aspect-ratio: 4 / 3; max-height: none; }
+    .post-body > p:has(> img:only-child) + * { margin-top: 0; }
+  }
+  .post-body::after { content: ''; display: block; clear: both; }
+  .post-body blockquote {
+    border-left: 4px solid #CE5600; background: #F3F5F8; border-radius: 0 12px 12px 0;
+    padding: 1rem 1.25rem; color: #002050; font-size: 1.15rem;
+  }
+  .post-body hr { border-color: rgba(0, 32, 80, 0.1); margin: 2.5rem 0; }
+  .post-body table { width: 100%; font-size: 0.95rem; border-collapse: collapse; }
+  .post-body th, .post-body td { border-bottom: 1px solid rgba(0, 32, 80, 0.1); padding: 0.5rem; text-align: left; }
 </style>
