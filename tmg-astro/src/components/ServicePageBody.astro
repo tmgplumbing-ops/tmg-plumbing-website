@@ -5,6 +5,8 @@
 import Schema from './Schema.astro';
 import { getEntry } from 'astro:content';
 import serviceNotices from '../data/service-notices.json';
+import { Image } from 'astro:assets';
+import { servicePhotos } from '../data/photos';
 
 interface Props {
   data: {
@@ -25,6 +27,7 @@ interface Props {
 }
 const { data, noticeSlug } = Astro.props;
 const notice = noticeSlug ? serviceNotices[noticeSlug] : undefined;
+const pics = noticeSlug ? servicePhotos[noticeSlug] : undefined;
 const related = await Promise.all(
   (data.relatedServices ?? []).map((slug) => getEntry('services', slug))
 );
@@ -33,7 +36,8 @@ const related = await Promise.all(
 
 <!-- Hero -->
 <section class="bg-navy border-b border-navy/10">
-  <div class="mx-auto max-w-6xl px-4 py-16">
+  <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_420px] gap-10 items-center">
+    <div>
     <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
       <span class="rounded-full border border-orange/40 px-3 py-1">20+ years experience</span>
       <span class="rounded-full border border-orange/40 px-3 py-1">Same-day response</span>
@@ -45,6 +49,12 @@ const related = await Promise.all(
       <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Get a quote</a>
       <a href="tel:051577089" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
     </div>
+    </div>
+    {pics && (
+      <div class={`rounded-card overflow-hidden aspect-[4/3] ${pics.hero.fit === 'contain' ? 'bg-white p-6' : 'bg-white/5'}`}>
+        <Image src={pics.hero.src} alt={pics.hero.alt} widths={[480, 840]} sizes="(min-width: 768px) 420px, 100vw" loading="eager" class={`w-full h-full ${pics.hero.fit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+      </div>
+    )}
   </div>
 </section>
 
@@ -82,6 +92,15 @@ const related = await Promise.all(
         ))}
       </ol>
     </div>
+
+    {pics?.extra && (
+      <figure>
+        <div class={`rounded-card overflow-hidden border border-navy/10 ${pics.extra.fit === 'contain' ? 'bg-white p-6' : ''}`}>
+          <Image src={pics.extra.src} alt={pics.extra.alt} widths={[560, 1000]} sizes="(min-width: 768px) 640px, 100vw" class={`w-full max-h-[420px] ${pics.extra.fit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+        </div>
+        {pics.extra.caption && <figcaption class="mt-2 text-sm text-navy/50">{pics.extra.caption}</figcaption>}
+      </figure>
+    )}
 
     <div>
       <h2 class="text-xl font-medium text-navy mb-4">Benefits</h2>
