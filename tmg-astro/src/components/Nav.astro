@@ -1,60 +1,109 @@
 ---
-const services = [
-  { name: 'Power flushing', href: '/services/power-flushing' },
-  { name: 'Underfloor heating', href: '/services/underfloor-heating' },
-  { name: 'Leak detection', href: '/services/leak-detection' },
-  { name: 'Demineralisation', href: '/services/demineralisation' },
-  { name: 'Oil boiler installs', href: '/services/oil-boiler-installs' },
-  { name: 'Plumbing & heating', href: '/services/plumbing-heating' },
+// Five main headings (Tony, 26 Sep 2026): Domestic, Commercial, Water treatment,
+// Drinking water, Heating products. Page addresses are unchanged, so no new
+// redirects are needed. About and Blog live in the footer and the mobile menu.
+type Link = { name: string; href: string };
+type Heading = { name: string; href?: string; items?: Link[] };
+
+const headings: Heading[] = [
+  {
+    name: 'Domestic',
+    items: [
+      { name: 'Power flushing', href: '/services/power-flushing' },
+      { name: 'Underfloor heating', href: '/services/underfloor-heating' },
+      { name: 'Leak detection', href: '/services/leak-detection' },
+      { name: 'Oil boiler installs', href: '/services/oil-boiler-installs' },
+      { name: 'Plumbing & heating', href: '/services/plumbing-heating' },
+    ],
+  },
+  {
+    name: 'Commercial',
+    items: [
+      { name: 'Overview', href: '/commercial' },
+      { name: 'Hotels', href: '/commercial/hotels' },
+      { name: 'Hospitals', href: '/commercial/hospitals' },
+      { name: 'Schools & colleges', href: '/commercial/schools-colleges' },
+      { name: 'Offices', href: '/commercial/office-buildings' },
+      { name: 'Industrial', href: '/commercial/industrial' },
+      { name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
+    ],
+  },
+  { name: 'Water treatment', href: '/services/demineralisation' },
   { name: 'Drinking water', href: '/services/drinking-water' },
+  { name: 'Heating products', href: '/products' },
 ];
-const commercial = [
-  { name: 'Hotels', href: '/commercial/hotels' },
-  { name: 'Hospitals', href: '/commercial/hospitals' },
-  { name: 'Schools & colleges', href: '/commercial/schools-colleges' },
-  { name: 'Offices', href: '/commercial/office-buildings' },
-  { name: 'Industrial', href: '/commercial/industrial' },
-  { name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
+const extra: Link[] = [
+  { name: 'About', href: '/about' },
+  { name: 'Blog', href: '/blog' },
 ];
 ---
-<!-- 4-item nav + persistent CTA, per section 4 of the brief. Dropdowns are
-     plain <details> so they work with zero JS (mobile-first, fast). -->
+<!-- Dropdowns are plain <details> so they work with zero JS (mobile-first, fast). -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-navy/10">
-  <div class="mx-auto max-w-6xl flex items-center justify-between px-4 h-16">
-    <a href="/" class="flex items-center gap-2">
+  <div class="mx-auto max-w-6xl flex items-center justify-between gap-4 px-4 h-16">
+    <a href="/" class="flex items-center gap-2 shrink-0">
       <img src="/images/logo-mark.png" alt="TMG Plumbing & Heating Services" class="w-10 h-10" width="40" height="40" />
       <span class="hidden sm:block font-medium text-navy leading-tight text-sm">
         PLUMBING<br />&amp; HEATING
       </span>
     </a>
 
-    <nav class="hidden md:flex items-center gap-6 text-sm text-navy/80">
-      <details class="relative group">
-        <summary class="list-none cursor-pointer hover:text-navy">Services</summary>
-        <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
-          {services.map((s) => (
-            <a href={s.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{s.name}</a>
-          ))}
-        </div>
-      </details>
-      <details class="relative group">
-        <summary class="list-none cursor-pointer hover:text-navy">Commercial</summary>
-        <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
-          <a href="/commercial" class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">Overview</a>
-          {commercial.map((c) => (
-            <a href={c.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{c.name}</a>
-          ))}
-        </div>
-      </details>
-      <a href="/about" class="hover:text-navy">About</a>
-      <a href="/blog" class="hover:text-navy">Blog</a>
+    <nav class="hidden lg:flex items-center gap-5 text-sm text-navy/80">
+      {headings.map((h) =>
+        h.items ? (
+          <details class="nav-dd relative">
+            <summary class="list-none cursor-pointer hover:text-navy whitespace-nowrap">{h.name} <span aria-hidden="true" class="text-xs">▾</span></summary>
+            <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
+              {h.items.map((s) => (
+                <a href={s.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{s.name}</a>
+              ))}
+            </div>
+          </details>
+        ) : (
+          <a href={h.href} class="hover:text-navy whitespace-nowrap">{h.name}</a>
+        )
+      )}
     </nav>
 
-    <div class="flex items-center gap-4">
-      <a href="tel:051577089" class="hidden md:inline text-navy/80 hover:text-navy text-sm">051 577 089</a>
-      <a href="/contact" class="rounded bg-orange text-white text-sm font-medium px-4 py-2 hover:bg-orange-dark transition-colors">
+    <div class="flex items-center gap-3">
+      <a href="tel:051577089" class="hidden xl:inline text-navy/80 hover:text-navy text-sm whitespace-nowrap">051 577 089</a>
+      <a href="/contact" class="rounded bg-orange text-white text-sm font-medium px-4 py-2 hover:bg-orange-dark transition-colors whitespace-nowrap">
         Get a quote
       </a>
+      <details class="lg:hidden">
+        <summary class="list-none cursor-pointer p-2 -mr-2 text-navy" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </summary>
+        <div class="absolute left-0 right-0 top-16 bg-white border-b border-navy/10 shadow-xl max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div class="mx-auto max-w-6xl px-4 py-3 text-navy">
+            {headings.map((h) =>
+              h.items ? (
+                <details class="border-b border-navy/10">
+                  <summary class="list-none cursor-pointer py-3 font-medium flex justify-between">{h.name} <span aria-hidden="true">▾</span></summary>
+                  <div class="pb-2 pl-3">
+                    {h.items.map((s) => (
+                      <a href={s.href} class="block py-2 text-navy/80 hover:text-orange">{s.name}</a>
+                    ))}
+                  </div>
+                </details>
+              ) : (
+                <a href={h.href} class="block py-3 font-medium border-b border-navy/10 hover:text-orange">{h.name}</a>
+              )
+            )}
+            {extra.map((s) => (
+              <a href={s.href} class="block py-3 border-b border-navy/10 text-navy/80 hover:text-orange">{s.name}</a>
+            ))}
+            <a href="tel:051577089" class="block py-3 text-navy/80 hover:text-orange">Call 051 577 089</a>
+          </div>
+        </div>
+      </details>
     </div>
   </div>
 </header>
+
+<script>
+  // Close any open desktop dropdown when clicking elsewhere or opening another.
+  const dds = document.querySelectorAll<HTMLDetailsElement>('details.nav-dd');
+  document.addEventListener('click', (e) => {
+    dds.forEach((d) => { if (!d.contains(e.target as Node)) d.open = false; });
+  });
+</script>
