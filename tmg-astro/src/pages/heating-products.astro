@@ -1,0 +1,229 @@
+---
+// Heating products (26 Sep 2026). Product cards carried over from the old
+// /heating-products page (same address, so no redirect needed) and restyled.
+// Products are made by magnetic GmbH; brochures are the old site's PDFs,
+// kept at their original /s/ addresses.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import hwr from '../assets/products/heating-water-regulator.webp';
+import refill from '../assets/products/refill-station.webp';
+import cartridge from '../assets/products/demineralisation-cartridge.webp';
+import mobileFilter from '../assets/products/mobile-heating-water-filter.webp';
+import mobileFill from '../assets/products/mobile-filling-station.webp';
+import addOns from '../assets/products/essential-add-ons.webp';
+
+const HWR_PDF = '/s/ENG_magnetic_HWR_plus_web.pdf';
+const RANGE_PDF = '/s/ENG_magnetic_Heating_Water_Treatment_ES_web.pdf';
+
+const products = [
+  {
+    id: 'heating-water-regulator',
+    name: 'Heating Water Regulator',
+    tag: 'Fitted to your system',
+    img: hwr,
+    alt: 'Three magnetic Heating Water Regulators, HWR 10 plus, HWR 15 plus and HWR 25 plus, with brass fittings',
+    lead: 'Want your heating system to last longer? Poor water flow, the wrong pressure and corrosion all cause blockages. The Heating Water Regulator sorts it out.',
+    points: ['Removes gases from the system water', 'Protects heating components from corrosion', 'Lower energy bills and fewer breakdowns'],
+    pdf: HWR_PDF,
+    cta: 'Get in touch for more details',
+  },
+  {
+    id: 'refill-station',
+    name: 'Refill Station',
+    tag: 'Works with the Regulator',
+    img: refill,
+    alt: 'magnetic Refill Station: green demineralisation vessel with control panel and red valves',
+    lead: 'Keeps your heating system topped up with demineralised water, at the right pressure and quality. It works together with the Heating Water Regulator.',
+    points: ['Tops up with demineralised water', 'Protects boiler, radiators and pipes', 'Helps the system run efficiently'],
+    pdf: RANGE_PDF,
+    cta: 'Request more information',
+  },
+  {
+    id: 'demineralisation-cartridge',
+    name: 'Demineralisation Cartridge',
+    tag: 'Stops hard water',
+    img: cartridge,
+    alt: 'magnetic Demineralisation Cartridge for heating water',
+    lead: 'Hard water causes scale and corrosion inside boilers, radiators and pipes, so the system works harder and costs more to run. The cartridge removes those minerals.',
+    points: ['Removes the minerals that cause scale', 'Keeps heating clean and reliable', 'Fewer repairs and a longer lifespan'],
+    pdf: RANGE_PDF,
+    cta: 'Talk to a team member',
+  },
+  {
+    id: 'mobile-heating-water-filter',
+    name: 'Mobile Heating Water Filter',
+    tag: 'Portable',
+    img: mobileFilter,
+    alt: 'magnetic Mobile Heating Water Filter: portable filtration unit on wheels with pump, gauge and control panel',
+    lead: 'Heating sluggish? Sludge and magnetite build up over time and strain the boiler. This portable filter pulls dirt and magnetic particles straight out of the system water.',
+    points: ['Removes sludge and magnetite', 'Takes the strain off your boiler', 'Portable and easy to use'],
+    pdf: RANGE_PDF,
+    cta: 'Reach out for info',
+  },
+  {
+    id: 'mobile-filling-station',
+    name: 'Mobile Filling Station',
+    tag: 'Portable',
+    img: mobileFill,
+    alt: 'magnetic Mobile Filling Station: tall stainless steel treatment unit on a wheeled trolley',
+    lead: 'Clean water, fast, every time you fill or top up a system. It strips minerals and impurities from the water as it goes in.',
+    points: ['Quick fills and top-ups', 'Treated water on every fill', 'Guards against scale, corrosion and sludge'],
+    pdf: RANGE_PDF,
+    cta: 'Contact the team',
+  },
+  {
+    id: 'essential-add-ons',
+    name: 'Essential Add-Ons',
+    tag: 'Resin, filters & cleaning',
+    img: addOns,
+    alt: 'Replacement resin, filter cartridges and cleaning products for magnetic water treatment units',
+    lead: 'Resin, filters and cleaning products that keep every unit, from the Refill Station to the Mobile Filling Station, in top shape.',
+    points: ['Replacement resin', 'Filters', 'Cleaning products'],
+    pdf: RANGE_PDF,
+    cta: 'Chat about options',
+  },
+];
+
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Heating system protection products',
+  itemListElement: products.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: { '@type': 'Product', name: p.name, description: p.lead, brand: { '@type': 'Brand', name: 'magnetic' } },
+  })),
+};
+---
+<BaseLayout
+  title="Heating System Maintenance & Protection Products | TMG Plumbing & Heating"
+  description="Protect your home or business heating system with expert-installed heating system parts. Improve efficiency, prevent breakdowns, and lower energy bills."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(itemList)} />
+
+  <!-- Hero -->
+  <section class="bg-navy border-b border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_400px] gap-10 items-center">
+      <div>
+        <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
+          <span class="rounded-full border border-orange/40 px-3 py-1">Homes & commercial</span>
+          <span class="rounded-full border border-orange/40 px-3 py-1">Supplied & fitted</span>
+          <span class="rounded-full border border-orange/40 px-3 py-1">magnetic partner</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-medium text-white max-w-3xl">Heating system maintenance <span class="text-orange">and protection</span></h1>
+        <p class="mt-4 text-white/70 max-w-2xl">
+          Improve heating performance in your home or commercial space. The right products, fitted by the
+          experts, mean fewer breakdowns and lower energy bills.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#products" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">See the products</a>
+          <a href="tel:051577089" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+        </div>
+      </div>
+      <div class="hidden md:block rounded-card bg-white p-8 aspect-[4/3]">
+        <Image src={hwr} alt={products[0].alt} widths={[400, 760]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-contain" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="mx-auto max-w-6xl px-4 pt-12">
+    <div class="grid md:grid-cols-[1fr_1fr] gap-8 items-start">
+      <h2 class="text-2xl md:text-3xl font-medium text-navy">Protect your heating and reduce repairs</h2>
+      <div class="text-navy/70 leading-relaxed space-y-3">
+        <p>
+          A good heating system keeps homes and commercial spaces warm and welcoming, but even the best setup needs
+          a bit of care. Skip the upkeep and your boiler, radiators and pipes start losing efficiency.
+        </p>
+        <p>With the right products, installed by the experts, your heating system stays in top shape.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product cards -->
+  <section id="products" class="scroll-mt-20 mx-auto max-w-6xl px-4 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {products.map((p) => (
+        <article id={p.id} class="scroll-mt-24 group flex flex-col rounded-card border border-navy/10 bg-white overflow-hidden hover:border-orange/60 hover:shadow-lg transition">
+          <div class="relative h-64 bg-white border-b border-navy/10 px-6 pt-12 pb-6">
+            <Image src={p.img} alt={p.alt} widths={[320, 640]} sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.03]" />
+            <span class="absolute top-3 left-3 rounded-full bg-mist text-navy/70 text-xs px-3 py-1">{p.tag}</span>
+          </div>
+          <div class="flex-1 flex flex-col p-6">
+            <h3 class="text-lg font-medium text-navy">{p.name}</h3>
+            <p class="mt-2 text-sm text-navy/60 leading-relaxed">{p.lead}</p>
+            <ul class="mt-4 space-y-2 text-sm text-navy/80">
+              {p.points.map((pt) => (
+                <li class="flex gap-2">
+                  <svg viewBox="0 0 20 20" class="w-4 h-4 mt-0.5 flex-none text-orange" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9" /></svg>
+                  {pt}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-auto pt-6 flex flex-wrap items-center gap-3">
+              <a href="/contact" class="rounded bg-orange text-white text-sm font-medium px-4 py-2 hover:bg-orange-dark">{p.cta}</a>
+              <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm text-navy/70 hover:text-orange">
+                <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" /></svg>
+                Brochure (PDF)
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Installation + demineralisation service -->
+  <section class="mx-auto max-w-6xl px-4 pb-12 grid md:grid-cols-2 gap-6">
+    <div class="rounded-card bg-navy text-white p-8 flex flex-col">
+      <p class="text-orange text-sm font-medium">Installation</p>
+      <h2 class="mt-2 text-xl font-medium">Need help installing your new heating parts?</h2>
+      <p class="mt-3 text-white/70 text-sm leading-relaxed">
+        If you'd rather not fit them yourself, our experienced team will do it for you, making sure everything is
+        fitted correctly and running smoothly from the start. The right products plus professional installation
+        means protected, efficient and stress-free heating.
+      </p>
+      <div class="mt-auto pt-6">
+        <a href="/contact" class="inline-block rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Book an installation</a>
+      </div>
+    </div>
+    <div class="rounded-card bg-mist border border-navy/10 p-8 flex flex-col">
+      <p class="text-orange text-sm font-medium">Service</p>
+      <h2 class="mt-2 text-xl font-medium text-navy">Demineralisation service</h2>
+      <p class="mt-3 text-navy/70 text-sm leading-relaxed">
+        Hard water build-up, or a system that needs a refresh? We treat the water in your system using high-grade
+        cartridges, the Mobile Filling Station and premium resin, removing scale and impurities right down to the core.
+      </p>
+      <div class="mt-auto pt-6 flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Schedule a system clean</a>
+        <a href="/services/demineralisation" class="rounded border border-navy/20 text-navy px-5 py-3 hover:border-orange hover:text-orange">About demineralisation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner quote -->
+  <section class="mx-auto max-w-4xl px-4 pb-14">
+    <figure class="rounded-card border border-navy/10 bg-white p-8 md:p-10 text-center">
+      <p class="text-sm text-navy/50">What our partner magnetic GmbH says about TMG Plumbing</p>
+      <blockquote class="mt-4 text-lg md:text-xl text-navy leading-relaxed">
+        “Worked and working with Tony on several heating projects. I can truly say that Tony's work is outstanding.
+        Exactly the partner we (as a manufacturer of the used products) want to partner with. 5+ Stars.”
+      </blockquote>
+      <figcaption class="mt-4 text-sm text-orange font-medium">Michael Grimm, magnetic GmbH</figcaption>
+    </figure>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-navy/10 bg-mist">
+    <div class="mx-auto max-w-6xl px-4 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <p class="text-xl font-medium text-navy">Keep your radiators heating evenly and prevent boiler breakdowns</p>
+        <p class="text-navy/60 mt-2">Get in touch to buy a product, or ask us which one suits your system.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Get in touch</a>
+        <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
