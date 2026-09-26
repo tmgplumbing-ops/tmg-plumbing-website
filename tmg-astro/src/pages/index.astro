@@ -1,14 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
+import { Image } from 'astro:assets';
+import { photos, servicePhotos } from '../data/photos';
 
 const services = [
-  { name: 'Power flushing', href: '/services/power-flushing', desc: 'Clear sludge, restore even heat.' },
-  { name: 'Underfloor heating', href: '/services/underfloor-heating', desc: 'Installation and servicing.' },
-  { name: 'Leak detection', href: '/services/leak-detection', desc: 'Find leaks without tearing up floors.' },
-  { name: 'Demineralisation', href: '/services/demineralisation', desc: 'Cleaner water, longer system life.' },
-  { name: 'Oil boiler installs', href: '/services/oil-boiler-installs', desc: 'New installs and replacements.' },
-  { name: 'Plumbing & heating', href: '/services/plumbing-heating', desc: 'General plumbing and heating work.' },
+  { slug: 'power-flushing', name: 'Power flushing', href: '/services/power-flushing', desc: 'Clear sludge, restore even heat.' },
+  { name: 'Underfloor heating', href: '/services/underfloor-heating', slug: 'underfloor-heating', desc: 'Installation and servicing.' },
+  { name: 'Leak detection', href: '/services/leak-detection', slug: 'leak-detection', desc: 'Find leaks without tearing up floors.' },
+  { name: 'Demineralisation', href: '/services/demineralisation', slug: 'demineralisation', desc: 'Cleaner water, longer system life.' },
+  { name: 'Oil boiler installs', href: '/services/oil-boiler-installs', slug: 'oil-boiler-installs', desc: 'New installs and replacements.' },
+  { name: 'Plumbing & heating', href: '/services/plumbing-heating', slug: 'plumbing-heating', desc: 'General plumbing and heating work.' },
 ];
 const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
 ---
@@ -20,7 +22,8 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
 
   <!-- Hero -->
   <section class="border-b border-navy/10 bg-mist">
-    <div class="mx-auto max-w-6xl px-4 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-[1fr_400px] gap-12 items-center">
+      <div>
       <h1 class="text-4xl md:text-6xl font-medium text-navy max-w-3xl leading-tight">
         Specialist heating services in <span class="text-orange">South East Ireland.</span>
       </h1>
@@ -37,6 +40,15 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
         <div><p class="text-2xl font-medium text-orange">5</p><p class="text-xs text-navy/50">counties covered</p></div>
         <div><p class="text-2xl font-medium text-orange">1,000s</p><p class="text-xs text-navy/50">jobs completed</p></div>
       </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-card overflow-hidden aspect-square shadow-xl">
+          <Image src={photos.technician.src} alt={photos.technician.alt} widths={[400, 714]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-4 -left-4 rounded-card bg-white shadow-lg px-4 py-3 text-sm text-navy">
+          <span class="text-orange font-medium">Since 2006</span> · Waterford
+        </div>
+      </div>
     </div>
   </section>
 
@@ -52,10 +64,17 @@ const counties = ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'];
     <h2 class="text-2xl font-medium text-navy mb-8">Services</h2>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {services.map((s) => (
-        <a href={s.href} class="rounded-card bg-mist border border-navy/10 p-6 hover:border-orange transition-colors">
-          <p class="text-navy font-medium">{s.name}</p>
-          <p class="text-navy/50 text-sm mt-1">{s.desc}</p>
-          <p class="text-orange text-sm mt-4">Learn more →</p>
+        <a href={s.href} class="group rounded-card bg-mist border border-navy/10 overflow-hidden hover:border-orange transition-colors">
+          {servicePhotos[s.slug] && (
+            <div class={`aspect-[16/10] overflow-hidden ${servicePhotos[s.slug].hero.fit === 'contain' ? 'bg-white p-4' : ''}`}>
+              <Image src={servicePhotos[s.slug].hero.src} alt="" widths={[400, 700]} sizes="(min-width: 768px) 360px, 100vw" class={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${servicePhotos[s.slug].hero.fit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+            </div>
+          )}
+          <div class="p-5">
+            <p class="text-navy font-medium">{s.name}</p>
+            <p class="text-navy/50 text-sm mt-1">{s.desc}</p>
+            <p class="text-orange text-sm mt-3">Learn more →</p>
+          </div>
         </a>
       ))}
     </div>
