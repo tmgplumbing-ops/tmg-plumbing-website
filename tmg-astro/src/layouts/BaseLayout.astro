@@ -2,6 +2,7 @@
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Banner from '../components/Banner.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -29,37 +30,44 @@ const GTM_ID = 'GTM-5BF7S236';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager, held back until cookie consent (see CookieBanner).
+         Consent Mode defaults to "denied"; GTM is only loaded once the visitor
+         accepts analytics or marketing cookies, and the choice is passed on. -->
     <script is:inline define:vars={{ GTM_ID }}>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', GTM_ID);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+        analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      });
+      window.tmgApplyConsent = function (c) {
+        if (!c) return;
+        gtag('consent', 'update', {
+          analytics_storage: c.analytics ? 'granted' : 'denied',
+          ad_storage: c.marketing ? 'granted' : 'denied',
+          ad_user_data: c.marketing ? 'granted' : 'denied',
+          ad_personalization: c.marketing ? 'granted' : 'denied',
+        });
+        if ((c.analytics || c.marketing) && !window.__tmgGtm) {
+          window.__tmgGtm = true;
+          dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var j = document.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+          document.head.appendChild(j);
+        }
+      };
+      try { window.tmgApplyConsent(JSON.parse(localStorage.getItem('tmg-consent'))); } catch (e) {}
     </script>
     <!-- End Google Tag Manager -->
   </head>
   <body class="bg-paper text-navy font-sans antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <Banner />
     <Nav />
     <main>
       <slot />
     </main>
     <Footer />
+    <CookieBanner />
   </body>
 </html>
