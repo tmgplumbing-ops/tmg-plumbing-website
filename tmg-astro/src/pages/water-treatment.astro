@@ -4,6 +4,9 @@
 // Also the replacement for the old /demineralisation-commercial-buildings page.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
+import DeminDiagram from '../components/diagrams/DeminDiagram.astro';
+import AirPulseDiagram from '../components/diagrams/AirPulseDiagram.astro';
+import UltrasonicDiagram from '../components/diagrams/UltrasonicDiagram.astro';
 
 const sections = [
   { id: 'demineralisation', name: 'Demineralisation', blurb: 'Mineral-free system water for boilers, radiators and underfloor heating.' },
@@ -113,6 +116,12 @@ const faqs = [
         </ol>
       </div>
     </div>
+    <div class="mx-auto max-w-6xl px-4 pb-14">
+      <figure class="rounded-card border border-navy/10 bg-white p-4 md:p-8">
+        <DeminDiagram />
+        <figcaption class="mt-4 text-center text-sm text-navy/60">How demineralisation works: the resin holds back the minerals, so only pure water goes into your system.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- 2. Commercial demineralisation -->
@@ -184,6 +193,7 @@ const faqs = [
       </p>
       <div class="mt-8 grid md:grid-cols-2 gap-6">
         <div class="rounded-card border border-white/15 p-6">
+          <div class="-mx-2 mb-5"><AirPulseDiagram /></div>
           <p class="text-orange font-medium">Air-pulse cleaning</p>
           <p class="text-white/80 text-sm mt-3 leading-relaxed">
             Controlled pulses of compressed air are injected into water flowing through the pipe. The air and water
@@ -197,6 +207,7 @@ const faqs = [
           </ul>
         </div>
         <div class="rounded-card border border-white/15 p-6">
+          <div class="-mx-2 mb-5"><UltrasonicDiagram /></div>
           <p class="text-orange font-medium">Ultrasonic (sound wave) cleaning</p>
           <p class="text-white/80 text-sm mt-3 leading-relaxed">
             Transducers clamped to the outside of the pipe or heat exchanger send sound waves through the metal. The
