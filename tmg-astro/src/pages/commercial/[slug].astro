@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Schema from '../../components/Schema.astro';
+import { Image } from 'astro:assets';
+import { sectorPhotos } from '../../data/photos';
 
 export async function getStaticPaths() {
   const sectors = await getCollection('commercial');
@@ -9,14 +11,22 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props;
 const { title, metaDescription, intro, points } = entry.data;
+const pic = sectorPhotos[entry.slug];
 ---
 <BaseLayout title={title} description={metaDescription}>
   <Schema />
   <section class="bg-navy border-b border-navy/10">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h1 class="text-3xl md:text-4xl font-medium text-white max-w-2xl">{title}</h1>
-      <p class="mt-4 text-white/70 max-w-xl">{intro}</p>
-      <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Enquire now</a>
+    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_420px] gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-medium text-white max-w-2xl">{title}</h1>
+        <p class="mt-4 text-white/70 max-w-xl">{intro}</p>
+        <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Enquire now</a>
+      </div>
+      {pic && (
+        <div class="rounded-card overflow-hidden aspect-[4/3]">
+          <Image src={pic.src} alt={pic.alt} widths={[480, 840]} sizes="(min-width: 768px) 420px, 100vw" loading="eager" class="w-full h-full object-cover" />
+        </div>
+      )}
     </div>
   </section>
   <section class="mx-auto max-w-6xl px-4 py-16">
