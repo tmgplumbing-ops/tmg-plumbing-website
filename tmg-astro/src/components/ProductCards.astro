@@ -1,0 +1,54 @@
+---
+// Product cards in the same style as the Heating products page. Used on the
+// Drinking water service page (products carried over from the old site's
+// /drinking-water page). `fit: 'cover'` suits photos taken in place;
+// `contain` suits cut-out product shots on white.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+export interface Product {
+  id: string;
+  name: string;
+  tag: string;
+  img: ImageMetadata;
+  alt: string;
+  fit?: 'cover' | 'contain';
+  lead: string;
+  points: string[];
+  pdf?: string;
+  cta: string;
+}
+interface Props { products: Product[]; ctaHref?: string; class?: string }
+const { products, ctaHref = '/contact', class: cls = 'grid sm:grid-cols-2 gap-6' } = Astro.props;
+---
+<div class={cls}>
+  {products.map((p) => (
+    <article id={p.id} class="scroll-mt-24 group flex flex-col rounded-card border border-navy/10 bg-white overflow-hidden hover:border-orange/60 hover:shadow-lg transition">
+      <div class={`relative h-64 bg-white border-b border-navy/10 overflow-hidden ${p.fit === 'cover' ? '' : 'px-6 pt-12 pb-6'}`}>
+        <Image src={p.img} alt={p.alt} widths={[320, 640]} sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" class={`w-full h-full transition duration-300 group-hover:scale-[1.03] ${p.fit === 'cover' ? 'object-cover' : 'object-contain'}`} />
+        <span class="absolute top-3 left-3 rounded-full bg-mist text-navy/70 text-xs px-3 py-1">{p.tag}</span>
+      </div>
+      <div class="flex-1 flex flex-col p-6">
+        <h3 class="text-lg font-medium text-navy">{p.name}</h3>
+        <p class="mt-2 text-sm text-navy/60 leading-relaxed">{p.lead}</p>
+        <ul class="mt-4 space-y-2 text-sm text-navy/80">
+          {p.points.map((pt) => (
+            <li class="flex gap-2">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 mt-0.5 flex-none text-orange" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9" /></svg>
+              {pt}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-auto pt-6 flex flex-wrap items-center gap-3">
+          <a href={ctaHref} class="rounded bg-orange text-white text-sm font-medium px-4 py-2 hover:bg-orange-dark">{p.cta}</a>
+          {p.pdf && (
+            <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm text-navy/70 hover:text-orange">
+              <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" /></svg>
+              Brochure (PDF)
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  ))}
+</div>

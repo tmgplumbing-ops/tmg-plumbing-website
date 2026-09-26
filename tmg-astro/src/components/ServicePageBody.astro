@@ -7,7 +7,8 @@ import { getEntry } from 'astro:content';
 import serviceNotices from '../data/service-notices.json';
 import { Image } from 'astro:assets';
 import QuoteForm from './QuoteForm.astro';
-import { servicePhotos } from '../data/photos';
+import ProductCards from './ProductCards.astro';
+import { servicePhotos, photos } from '../data/photos';
 import FlushDiagram from './diagrams/FlushDiagram.astro';
 import UfhDiagram from './diagrams/UfhDiagram.astro';
 import LeakDiagram from './diagrams/LeakDiagram.astro';
@@ -44,6 +45,40 @@ const enquiryOption: Record<string, string> = {
   'oil-boiler-installs': 'Heating Installation',
   'plumbing-heating': 'Heating Installation',
 };
+// Product cards per service page, carried over from the old site.
+const serviceProducts: Record<string, { heading: string; intro: string; items: any[] }> = {
+  'drinking-water': {
+    heading: 'Hard water prevention products',
+    intro: 'Limescale prevention and water softening solutions. They treat the water before it reaches your taps, appliances and devices, keeping it pleasant to drink and protecting your pipes from limescale damage.',
+    items: [
+      {
+        id: 'scale-transformer',
+        name: 'Magnetic Scale Transformer',
+        tag: 'Fitted at the mains',
+        img: photos.scaleTransformer.src,
+        alt: 'Magnetic Scale Transformer fitted to a mains water meter',
+        fit: 'cover',
+        lead: 'A proven, low-maintenance way to stop limescale building up in your water system and damaging your plumbing.',
+        points: ['Stops limescale coating taps and clogging pipes', 'Protects your hot water system', 'Longer-lasting appliances and lower maintenance costs'],
+        pdf: '/s/ENG_magnetic_Kalkumwandler_web_ES.pdf',
+        cta: 'Get in touch for more details',
+      },
+      {
+        id: 'water-softener',
+        name: 'Magnetic Water Softener',
+        tag: 'Water softening',
+        img: photos.softener.src,
+        alt: 'Magnetic Water Softener with digital control panel and DIN DVGW certification seal',
+        fit: 'contain',
+        lead: 'Stubborn limescale slowly clogs pipes and wears out appliances before their time. The softener breaks down hard water build-up before it can do any real damage.',
+        points: ['Breaks down hard water build-up', 'Smoother water flow', 'Fewer expensive repair bills'],
+        pdf: '/s/ENG_magnetic_Enthaertungsanlage_11_web_ES.pdf',
+        cta: 'Request more information',
+      },
+    ],
+  },
+};
+const productsBlock = noticeSlug ? serviceProducts[noticeSlug] : undefined;
 const related = await Promise.all(
   (data.relatedServices ?? []).map((slug) => getEntry('services', slug))
 );
@@ -119,6 +154,21 @@ const related = await Promise.all(
         {noticeSlug === 'plumbing-heating' && <SystemDiagram variant="heating" />}
         {noticeSlug === 'drinking-water' && <DrinkingDiagram />}
       </figure>
+    )}
+
+    {productsBlock && (
+      <div id="products" class="scroll-mt-24">
+        <h2 class="text-xl font-medium text-navy">{productsBlock.heading}</h2>
+        <p class="mt-2 mb-6 text-navy/70 leading-relaxed">{productsBlock.intro}</p>
+        <ProductCards products={productsBlock.items} ctaHref="#quote" />
+        <div class="mt-6 rounded-card bg-navy text-white p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5 md:justify-between">
+          <div>
+            <p class="font-medium text-lg">Need help setting it up?</p>
+            <p class="mt-1 text-white/70 text-sm leading-relaxed max-w-lg">We know these systems inside and out and will install yours for you, so your water flows clean and limescale stays away.</p>
+          </div>
+          <a href="#quote" class="shrink-0 rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Book an installation</a>
+        </div>
+      </div>
     )}
 
     <div>
