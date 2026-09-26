@@ -23,6 +23,6 @@ Regular inspection of your oil tank is essential. Most people have their oil tan
 
 So, what do you do if you need to replace your oil tank? We would recommend that you replace your single skin oil tank with a bunded oil tank – that is a tank within a tank. Yes, they are twice as expensive, but they come with a ten-year guarantee. The sun cannot get to the inner tank which holds the oil to damage it and break down the plastic, so it is unlikely to crack or fail. If the bunded oil tank is put on a solid base or supported in the middle, they will last a very long time. These tanks are much more safe and secure and give you peace of mind that the precious oil that you spend so much money on every year to heat your home is not going to end up in your garden.
 
-TMG Plumbing & Heating Service would be happy to replace your oil tanks for you. If you would like a quote, give Tony a call on 086 8762710
+TMG Plumbing & Heating Service would be happy to replace your oil tanks for you. If you would like a quote, give Tony a call on [051 577089](tel:051577089)
 
 ©Photo by fourniersltd
