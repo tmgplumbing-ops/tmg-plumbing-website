@@ -1,0 +1,245 @@
+---
+// Water treatment hub (added 26 Sep 2026). Covers home and commercial
+// demineralisation, water testing, and chemical-free pipe cleaning.
+// Also the replacement for the old /demineralisation-commercial-buildings page.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Schema from '../components/Schema.astro';
+
+const sections = [
+  { id: 'demineralisation', name: 'Demineralisation', blurb: 'Mineral-free system water for boilers, radiators and underfloor heating.' },
+  { id: 'commercial-demineralisation', name: 'Commercial demineralisation', blurb: 'Mobile units, refill stations and water regulators for larger buildings.' },
+  { id: 'water-testing', name: 'Water testing', blurb: 'Know what is in your system water before and after treatment.' },
+  { id: 'chemical-free-pipe-cleaning', name: 'Chemical-free pipe cleaning', blurb: 'Air-pulse and ultrasonic cleaning, with no chemicals.' },
+];
+
+const steps = [
+  { title: 'Initial analysis', body: 'We test the heating water for conductivity, pH and total hardness. If the readings are outside the recommended limits, we recommend treatment.' },
+  { title: 'Cleaning the system', body: 'On an existing system we remove sludge and magnetite first, circulating a cleaner or flushing until the water runs clear.' },
+  { title: 'Power flushing', body: 'Each section of the system is power flushed on its own, so no debris is left behind before refilling.' },
+  { title: 'Demineralisation', body: 'The system is refilled through professional demineralising equipment, so minerals are removed before the water goes in.' },
+  { title: 'Regulation and final testing', body: 'We test the water again to confirm it meets the standard. Checks every six months keep it there.' },
+];
+
+const faqs = [
+  { q: 'Why does the water in a heating system need treating?', a: 'Tap water carries calcium, magnesium and other dissolved solids. Inside a heating system these form scale and speed up corrosion, which cuts efficiency, causes cold spots and shortens the life of the boiler, pump and radiators.' },
+  { q: 'What is VDI 2035?', a: 'VDI 2035 is the German standard most boiler and heat pump manufacturers use to set limits for heating water, covering hardness, conductivity and pH. Following it helps keep your system efficient and your manufacturer warranty valid.' },
+  { q: 'Does my system need to be power flushed before demineralising?', a: 'Yes. Demineralised water only protects a clean system, so an existing system is cleaned and power flushed first. During the flush the water is passed through a mobile demineralising unit.' },
+  { q: 'How often should heating water be tested?', a: 'We recommend a test when the system is filled or treated, and then every six months. Commercial systems with frequent top-ups may need checking more often.' },
+  { q: 'Is chemical-free pipe cleaning suitable for every system?', a: 'It depends on the pipework, the type of deposit and whether the system can be taken offline. We survey the system first and recommend the method that suits it.' },
+];
+---
+<BaseLayout
+  title="Water Treatment for Heating Systems | TMG Plumbing & Heating"
+  description="Demineralisation, water testing and chemical-free pipe cleaning for homes and commercial buildings across Ireland. Call TMG on 051 577089."
+>
+  <Schema service={{ name: 'Heating system water treatment', description: 'Demineralisation, water testing and chemical-free pipe cleaning for domestic and commercial heating systems.' }} faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="bg-navy border-b border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
+        <span class="rounded-full border border-orange/40 px-3 py-1">Domestic & commercial</span>
+        <span class="rounded-full border border-orange/40 px-3 py-1">To VDI 2035</span>
+        <span class="rounded-full border border-orange/40 px-3 py-1">Nationwide for commercial</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-medium text-white max-w-3xl">Water treatment for <span class="text-orange">heating systems</span></h1>
+      <p class="mt-4 text-white/70 max-w-2xl">
+        Scale, sludge and corrosion all start with the water inside your system. We test it,
+        treat it and keep it clean, so boilers, heat pumps and pipework last longer and cost less to run.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Book a water analysis</a>
+        <a href="tel:051577089" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section cards -->
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <p class="text-navy/80 leading-relaxed max-w-3xl">
+      Modern boilers are very efficient, but they have little tolerance for poor water. Untreated, a system can lose
+      10–20% of its efficiency in the first year, and the minerals left in the water go on to cause scale, corrosion
+      and breakdowns. TMG Plumbing & Heating Services provides water treatment for homes across Waterford and the
+      South East, and for commercial buildings nationwide.
+    </p>
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {sections.map((s) => (
+        <a href={`#${s.id}`} class="rounded-card bg-mist border border-navy/10 p-5 hover:border-orange">
+          <p class="text-navy font-medium">{s.name}</p>
+          <p class="text-navy/60 text-sm mt-2">{s.blurb}</p>
+          <p class="text-orange text-sm mt-4">Read more ↓</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 1. Demineralisation -->
+  <section id="demineralisation" class="scroll-mt-20 border-t border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-medium text-navy">Demineralisation</h2>
+        <p class="mt-4 text-navy/80 leading-relaxed">
+          Demineralising removes calcium, magnesium and other dissolved solids from the water circulating in your
+          heating system. It is one of the most effective, chemical-free ways to protect a system for the long term.
+        </p>
+        <div class="mt-6 space-y-4">
+          <div>
+            <p class="text-navy font-medium">Stops limescale</p>
+            <p class="text-navy/60 text-sm">Scale coats heat exchangers and chokes pipework, so the system burns more energy for the same heat. Removing the minerals stops it forming.</p>
+          </div>
+          <div>
+            <p class="text-navy font-medium">Slows corrosion</p>
+            <p class="text-navy/60 text-sm">Mineral-rich water conducts electricity, which speeds up rust inside radiators and pumps. Demineralised water turns that process right down.</p>
+          </div>
+          <div>
+            <p class="text-navy font-medium">Keeps you within warranty</p>
+            <p class="text-navy/60 text-sm">Most manufacturers now set water quality limits based on VDI 2035. Treated water keeps the system within them.</p>
+          </div>
+        </div>
+        <a href="/services/demineralisation" class="inline-block mt-6 text-orange hover:underline">More about demineralising a home heating system →</a>
+      </div>
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium mb-4">Our 5-step process</p>
+        <ol class="space-y-4">
+          {steps.map((s, i) => (
+            <li class="flex gap-4">
+              <span class="flex-none w-8 h-8 rounded-full bg-orange/10 text-orange text-sm flex items-center justify-center">{i + 1}</span>
+              <div>
+                <p class="text-navy font-medium">{s.title}</p>
+                <p class="text-navy/60 text-sm">{s.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Commercial demineralisation -->
+  <section id="commercial-demineralisation" class="scroll-mt-20 bg-mist border-t border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-medium text-navy">Commercial demineralisation</h2>
+      <p class="mt-4 text-navy/80 leading-relaxed max-w-3xl">
+        Large heating systems hold thousands of litres of water and are topped up regularly, so poor water quality
+        costs more and does more damage. We power flush and demineralise commercial systems in a single, controlled
+        process, then fit equipment that keeps the water right between visits.
+      </p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="rounded-card bg-white border border-navy/10 p-5">
+          <p class="text-navy font-medium">Mobile treatment units</p>
+          <p class="text-navy/60 text-sm mt-2">Ion-exchange resin swaps calcium and magnesium for hydrogen and hydroxide ions, demineralising and filtering the water in one step.</p>
+        </div>
+        <div class="rounded-card bg-white border border-navy/10 p-5">
+          <p class="text-navy font-medium">Demineralising cartridges</p>
+          <p class="text-navy/60 text-sm mt-2">Fitted to a refill station for ongoing protection. Easy to replace, so treated water is always on hand.</p>
+        </div>
+        <div class="rounded-card bg-white border border-navy/10 p-5">
+          <p class="text-navy font-medium">Refill stations</p>
+          <p class="text-navy/60 text-sm mt-2">Top the system up with treated water only, so fresh minerals and contaminants never get back in.</p>
+        </div>
+        <div class="rounded-card bg-white border border-navy/10 p-5">
+          <p class="text-navy font-medium">Heating water regulators</p>
+          <p class="text-navy/60 text-sm mt-2">Hold pressure and flow steady in systems that need frequent refilling, preventing air locks and low-pressure faults.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-navy/70 text-sm max-w-3xl">
+        We treat systems in hospitals, hotels, schools and colleges, offices, factories, care homes, leisure centres,
+        apartment complexes and public buildings, anywhere in Ireland.
+        <a href="/commercial" class="text-orange hover:underline">See our commercial work →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Water testing -->
+  <section id="water-testing" class="scroll-mt-20 border-t border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-2xl font-medium text-navy">Water testing</h2>
+        <p class="mt-4 text-navy/80 leading-relaxed">
+          You can't treat what you haven't measured. Every job starts with a test of the system water, and we test
+          again after treatment to prove the result.
+        </p>
+        <p class="mt-4 text-navy/80 leading-relaxed">
+          For commercial systems we can send samples to an independent laboratory for a full analytical report,
+          which gives facilities teams a clear record of water quality over time.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-3 content-start">
+        <div class="rounded-card bg-mist border border-navy/10 p-4"><p class="text-navy font-medium text-sm">Conductivity</p><p class="text-navy/60 text-sm mt-1">How much dissolved mineral is in the water.</p></div>
+        <div class="rounded-card bg-mist border border-navy/10 p-4"><p class="text-navy font-medium text-sm">pH</p><p class="text-navy/60 text-sm mt-1">Water that is too acidic or alkaline attacks metals.</p></div>
+        <div class="rounded-card bg-mist border border-navy/10 p-4"><p class="text-navy font-medium text-sm">Total hardness</p><p class="text-navy/60 text-sm mt-1">The calcium and magnesium that form scale.</p></div>
+        <div class="rounded-card bg-mist border border-navy/10 p-4"><p class="text-navy font-medium text-sm">Six-monthly checks</p><p class="text-navy/60 text-sm mt-1">Regular retesting keeps treated water within limits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Chemical-free pipe cleaning -->
+  <section id="chemical-free-pipe-cleaning" class="scroll-mt-20 bg-navy">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-medium text-white">Chemical-free pipe cleaning</h2>
+      <p class="mt-4 text-white/70 leading-relaxed max-w-3xl">
+        Not every system can take cleaning chemicals, and many sites would rather avoid them altogether. We offer
+        cleaning methods that use only air, water or sound to remove scale, sludge and biofilm from pipework and heat
+        exchangers.
+      </p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-card border border-white/15 p-6">
+          <p class="text-orange font-medium">Air-pulse cleaning</p>
+          <p class="text-white/80 text-sm mt-3 leading-relaxed">
+            Controlled pulses of compressed air are injected into water flowing through the pipe. The air and water
+            create strong turbulence along the pipe wall, which scours off deposits and biofilm and carries them out
+            of the system.
+          </p>
+          <ul class="mt-4 space-y-1 text-white/70 text-sm">
+            <li class="flex gap-2"><span class="text-orange">•</span>No chemicals and little water</li>
+            <li class="flex gap-2"><span class="text-orange">•</span>Suits pipework, risers and heat exchangers</li>
+            <li class="flex gap-2"><span class="text-orange">•</span>Can be used on drinking water pipework</li>
+          </ul>
+        </div>
+        <div class="rounded-card border border-white/15 p-6">
+          <p class="text-orange font-medium">Ultrasonic (sound wave) cleaning</p>
+          <p class="text-white/80 text-sm mt-3 leading-relaxed">
+            Transducers clamped to the outside of the pipe or heat exchanger send sound waves through the metal. The
+            vibration breaks up existing deposits and stops new fouling building up, with nothing added to the water.
+          </p>
+          <ul class="mt-4 space-y-1 text-white/70 text-sm">
+            <li class="flex gap-2"><span class="text-orange">•</span>Works while the system keeps running</li>
+            <li class="flex gap-2"><span class="text-orange">•</span>No chemicals and no dismantling</li>
+            <li class="flex gap-2"><span class="text-orange">•</span>Suits heat exchangers and process pipework</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-8 text-white/70 text-sm max-w-3xl">
+        These methods suit hospitals, pharmaceutical and food sites, data centres and district heating, where downtime
+        and chemical use both need to be kept to a minimum. We survey the system first and recommend the method that fits.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="mx-auto max-w-4xl px-4 py-14">
+    <h2 class="text-2xl font-medium text-navy mb-6">Frequently asked questions</h2>
+    <div class="space-y-3">
+      {faqs.map((f) => (
+        <details class="rounded-card bg-mist border border-navy/10 p-4">
+          <summary class="cursor-pointer text-navy font-medium">{f.q}</summary>
+          <p class="mt-2 text-navy/60 text-sm">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-navy/10 bg-mist">
+    <div class="mx-auto max-w-6xl px-4 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <p class="text-xl font-medium text-navy">Find out what's in your system water</p>
+        <p class="text-navy/60 mt-2">Book a water analysis, or talk to Tony about the right treatment for your building.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Book a water analysis</a>
+        <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
