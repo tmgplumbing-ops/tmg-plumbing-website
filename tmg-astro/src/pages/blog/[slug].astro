@@ -8,16 +8,34 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, metaDescription, publishDate } = entry.data;
+const { title, seoTitle, metaDescription, publishDate } = entry.data;
 ---
-<BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription}>
-  <article class="mx-auto max-w-3xl px-4 py-16 prose prose-navy">
+<BaseLayout title={`${seoTitle ?? title} | TMG Plumbing & Heating`} description={metaDescription}>
+  <article class="mx-auto max-w-3xl px-4 py-16">
     <p class="text-xs text-navy/40 mb-2">
       {publishDate.toLocaleDateString('en-IE', { year: 'numeric', month: 'long', day: 'numeric' })}
     </p>
     <h1 class="text-3xl font-medium text-navy mb-6">{title}</h1>
-    <div class="text-navy/80 leading-relaxed space-y-4 [&_a]:text-orange [&_a]:underline">
+    <div class="post-body text-navy/80 leading-relaxed">
       <Content />
     </div>
   </article>
 </BaseLayout>
+
+<style is:global>
+  /* Tailwind's reset strips heading sizes, list bullets and spacing, and the
+     site doesn't use the typography plugin, so style post bodies here. */
+  .post-body > * + * { margin-top: 1rem; }
+  .post-body h2 { font-size: 1.5rem; font-weight: 500; color: #002050; margin-top: 2.25rem; line-height: 1.3; }
+  .post-body h3 { font-size: 1.2rem; font-weight: 500; color: #002050; margin-top: 1.75rem; line-height: 1.35; }
+  .post-body h4 { font-size: 1.05rem; font-weight: 500; color: #002050; margin-top: 1.5rem; }
+  .post-body ul { list-style: disc; padding-left: 1.4rem; }
+  .post-body ol { list-style: decimal; padding-left: 1.4rem; }
+  .post-body li + li { margin-top: 0.35rem; }
+  .post-body li > ul, .post-body li > ol { margin-top: 0.35rem; }
+  .post-body a { color: #CE5600; text-decoration: underline; }
+  .post-body strong { font-weight: 500; color: #002050; }
+  .post-body img { border-radius: 12px; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .post-body blockquote { border-left: 3px solid #CE5600; padding-left: 1rem; color: rgba(0, 32, 80, 0.7); }
+  .post-body hr { border-color: rgba(0, 32, 80, 0.1); margin: 2rem 0; }
+</style>
