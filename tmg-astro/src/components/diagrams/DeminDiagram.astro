@@ -1,0 +1,60 @@
+---
+// How demineralisation works: tap water with minerals -> ion-exchange unit -> pure water -> heating system.
+// Drawn for a light background. Pure SVG, scales to its container.
+const minerals = [
+  [52, 128, 'Ca'], [96, 150, 'Mg'], [70, 176, 'Ca'], [118, 118, 'Mg'], [138, 170, 'Ca'],
+];
+const trapped = [
+  [306, 118], [338, 142], [372, 116], [320, 176], [360, 196], [396, 160], [428, 190], [410, 124], [446, 142],
+];
+const beads = Array.from({ length: 48 }, (_, i) => [292 + (i % 8) * 23 + ((Math.floor(i / 8) % 2) * 11), 108 + Math.floor(i / 8) * 20]);
+---
+<svg viewBox="0 55 925 245" class="w-full h-auto" role="img" aria-labelledby="demin-title demin-desc" font-family="inherit">
+  <title id="demin-title">How demineralisation works</title>
+  <desc id="demin-desc">Mains water containing calcium and magnesium passes through an ion-exchange resin unit, which holds the minerals back. Pure, mineral-free water then fills the heating system.</desc>
+  <defs>
+    <marker id="demin-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#CE5600" />
+    </marker>
+  </defs>
+
+  <!-- 1. Mains water -->
+  <rect x="20" y="90" width="160" height="120" rx="14" fill="#E4ECF6" stroke="#002050" stroke-opacity="0.25" />
+  {minerals.map(([x, y, t]) => (
+    <g>
+      <circle cx={x} cy={y} r="13" fill="#FFFFFF" stroke="#002050" stroke-width="1.5" />
+      <text x={x} y={Number(y) + 4} text-anchor="middle" font-size="10" font-weight="500" fill="#002050">{t}</text>
+    </g>
+  ))}
+  <text x="100" y="262" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Mains water</text>
+  <text x="100" y="284" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">calcium &amp; magnesium</text>
+
+  <line x1="188" y1="150" x2="262" y2="150" stroke="#CE5600" stroke-width="4" marker-end="url(#demin-arrow)" />
+
+  <!-- 2. Ion exchange unit -->
+  <rect x="272" y="70" width="210" height="160" rx="18" fill="#FFFFFF" stroke="#002050" stroke-width="2" />
+  <rect x="272" y="70" width="210" height="26" rx="12" fill="#002050" />
+  <text x="377" y="88" text-anchor="middle" font-size="12" fill="#FFFFFF" letter-spacing="1">ION-EXCHANGE RESIN</text>
+  {beads.map(([x, y]) => <circle cx={x} cy={y} r="8" fill="#F4C9A6" />)}
+  {trapped.map(([x, y]) => <circle cx={x} cy={y} r="5" fill="#002050" />)}
+  <text x="377" y="262" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Treatment unit</text>
+  <text x="377" y="284" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">minerals held in the resin</text>
+
+  <line x1="490" y1="150" x2="564" y2="150" stroke="#CE5600" stroke-width="4" marker-end="url(#demin-arrow)" />
+
+  <!-- 3. Pure water -->
+  <rect x="574" y="90" width="120" height="120" rx="14" fill="#E4ECF6" stroke="#002050" stroke-opacity="0.25" />
+  <path d="M634 118 C650 140 658 152 658 166 A24 24 0 0 1 610 166 C610 152 618 140 634 118 z" fill="#FFFFFF" stroke="#CE5600" stroke-width="2.5" />
+  <text x="634" y="262" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Pure water</text>
+  <text x="634" y="284" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">to VDI 2035 limits</text>
+
+  <line x1="702" y1="150" x2="752" y2="150" stroke="#CE5600" stroke-width="4" marker-end="url(#demin-arrow)" />
+
+  <!-- 4. Heating system (radiator) -->
+  <g transform="translate(762 96)">
+    <rect x="0" y="0" width="118" height="108" rx="10" fill="#FFFFFF" stroke="#002050" stroke-width="2" />
+    {[0, 1, 2, 3, 4].map((i) => <rect x={12 + i * 20} y="12" width="14" height="84" rx="7" fill="#E4ECF6" stroke="#002050" stroke-opacity="0.4" />)}
+  </g>
+  <text x="821" y="262" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Heating system</text>
+  <text x="821" y="284" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">no scale, less corrosion</text>
+</svg>

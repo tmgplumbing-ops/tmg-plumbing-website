@@ -1,0 +1,59 @@
+---
+// Air-pulse cleaning: pulses of compressed air injected into flowing water scour deposits off the pipe wall.
+// Drawn for the navy background of the chemical-free cleaning section.
+const deposits = [70, 120, 170, 230, 280];
+const cleanDeposits = [];
+const bubbles = [
+  [250, 150, 16], [300, 138, 11], [340, 160, 14], [385, 145, 9], [430, 158, 13], [470, 140, 8], [520, 152, 12],
+];
+const flakes = [[560, 170], [600, 134], [640, 162], [690, 148], [730, 168], [760, 136]];
+---
+<svg viewBox="0 0 800 280" class="w-full h-auto" role="img" aria-labelledby="air-title air-desc" font-family="inherit">
+  <title id="air-title">How air-pulse cleaning works</title>
+  <desc id="air-desc">Compressed air is pulsed into water flowing through a pipe. The turbulence scours scale and biofilm off the pipe wall and carries it out of the system.</desc>
+  <defs>
+    <marker id="air-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#FFFFFF" />
+    </marker>
+    <marker id="air-arrow-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#CE5600" />
+    </marker>
+  </defs>
+
+  <!-- Compressor -->
+  <rect x="150" y="16" width="120" height="46" rx="10" fill="none" stroke="#CE5600" stroke-width="2" />
+  <text x="210" y="45" text-anchor="middle" font-size="20" fill="#FFFFFF">Air pulses</text>
+  <line x1="210" y1="64" x2="210" y2="98" stroke="#CE5600" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#air-arrow-o)" />
+
+  <!-- Pipe -->
+  <rect x="20" y="100" width="760" height="100" fill="#FFFFFF" fill-opacity="0.06" />
+  <line x1="20" y1="100" x2="780" y2="100" stroke="#FFFFFF" stroke-width="4" />
+  <line x1="20" y1="200" x2="780" y2="200" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- Deposits before the air pulses (left) -->
+  {deposits.map((x) => (
+    <g fill="#9AA7BA">
+      <path d={`M${x - 26} 102 Q${x} 124 ${x + 26} 102 z`} />
+      <path d={`M${x - 20} 198 Q${x + 4} 178 ${x + 30} 198 z`} />
+    </g>
+  ))}
+
+  <!-- Air bubbles + turbulence -->
+  {bubbles.map(([x, y, r]) => <circle cx={x} cy={y} r={r} fill="none" stroke="#FFFFFF" stroke-width="2" />)}
+  <path d="M260 120 q20 -14 40 0 t40 0" fill="none" stroke="#CE5600" stroke-width="2" />
+  <path d="M360 182 q20 14 40 0 t40 0" fill="none" stroke="#CE5600" stroke-width="2" />
+  <path d="M460 118 q20 -14 40 0 t40 0" fill="none" stroke="#CE5600" stroke-width="2" />
+
+  <!-- Loosened debris carried out -->
+  {flakes.map(([x, y]) => <rect x={x} y={y} width="9" height="6" rx="1" fill="#9AA7BA" transform={`rotate(25 ${x} ${y})`} />)}
+
+  <!-- Flow arrow -->
+  <line x1="40" y1="150" x2="200" y2="150" stroke="#FFFFFF" stroke-width="3" marker-end="url(#air-arrow)" />
+  <text x="40" y="140" font-size="16" fill="#FFFFFF" fill-opacity="0.8">Water flow</text>
+
+  <!-- Labels -->
+  <text x="140" y="238" text-anchor="middle" font-size="20" fill="#FFFFFF" fill-opacity="0.85">Scale &amp; biofilm</text>
+  <text x="400" y="238" text-anchor="middle" font-size="20" fill="#CE5600">Turbulence scours</text>
+  <text x="670" y="238" text-anchor="middle" font-size="20" fill="#FFFFFF" fill-opacity="0.85">Debris flushed out</text>
+  <text x="400" y="270" text-anchor="middle" font-size="16" fill="#FFFFFF" fill-opacity="0.6">No chemicals · only air and water</text>
+</svg>

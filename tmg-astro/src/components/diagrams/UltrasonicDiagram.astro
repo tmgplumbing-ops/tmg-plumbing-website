@@ -1,0 +1,51 @@
+---
+// Ultrasonic cleaning: transducers clamped outside the pipe send sound waves through the wall,
+// breaking up deposits while the system keeps running. Drawn for a navy background.
+const transducers = [200, 520];
+const waves = [0, 1, 2];
+const deposits = [110, 300, 400, 620, 700];
+---
+<svg viewBox="0 0 800 280" class="w-full h-auto" role="img" aria-labelledby="us-title us-desc" font-family="inherit">
+  <title id="us-title">How ultrasonic cleaning works</title>
+  <desc id="us-desc">Transducers clamped to the outside of a pipe send sound waves through the metal. The vibration breaks up deposits on the inside wall and stops new fouling, while water keeps flowing.</desc>
+  <defs>
+    <marker id="us-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#FFFFFF" />
+    </marker>
+  </defs>
+
+  <!-- Pipe -->
+  <rect x="20" y="100" width="760" height="100" fill="#FFFFFF" fill-opacity="0.06" />
+  <line x1="20" y1="100" x2="780" y2="100" stroke="#FFFFFF" stroke-width="4" />
+  <line x1="20" y1="200" x2="780" y2="200" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- Deposits breaking off (cracked shapes) -->
+  {deposits.map((x) => (
+    <g fill="#9AA7BA">
+      <path d={`M${x - 22} 102 L${x - 6} 116 L${x} 108 L${x + 10} 118 L${x + 22} 102 z`} />
+      <rect x={x + 16} y="124" width="7" height="5" rx="1" transform={`rotate(-20 ${x + 16} 124)`} />
+      <path d={`M${x - 18} 198 L${x - 2} 186 L${x + 6} 192 L${x + 20} 198 z`} />
+    </g>
+  ))}
+
+  <!-- Transducers + sound waves -->
+  {transducers.map((x) => (
+    <g>
+      <rect x={x - 52} y="40" width="104" height="50" rx="8" fill="#CE5600" />
+      <rect x={x - 56} y="90" width="112" height="8" rx="2" fill="#FFFFFF" fill-opacity="0.8" />
+      <text x={x} y="71" text-anchor="middle" font-size="17" fill="#FFFFFF">Transducer</text>
+      {waves.map((i) => (
+        <path d={`M${x - 30 - i * 22} ${118 + i * 12} Q${x} ${150 + i * 26} ${x + 30 + i * 22} ${118 + i * 12}`} fill="none" stroke="#CE5600" stroke-width="2.5" stroke-opacity={1 - i * 0.28} />
+      ))}
+    </g>
+  ))}
+
+  <!-- Flow arrow: system keeps running -->
+  <line x1="300" y1="160" x2="420" y2="160" stroke="#FFFFFF" stroke-width="3" marker-end="url(#us-arrow)" />
+  <text x="360" y="150" text-anchor="middle" font-size="16" fill="#FFFFFF" fill-opacity="0.8">Flow continues</text>
+
+  <!-- Labels -->
+  <text x="200" y="238" text-anchor="middle" font-size="20" fill="#CE5600">Sound waves in the wall</text>
+  <text x="590" y="238" text-anchor="middle" font-size="20" fill="#FFFFFF" fill-opacity="0.85">Deposits break away</text>
+  <text x="400" y="270" text-anchor="middle" font-size="16" fill="#FFFFFF" fill-opacity="0.6">Clamped on outside · no shutdown · no chemicals</text>
+</svg>
