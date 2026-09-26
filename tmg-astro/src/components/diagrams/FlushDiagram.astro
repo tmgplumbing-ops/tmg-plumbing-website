@@ -1,0 +1,43 @@
+---
+// Power flushing: a sludged radiator (cold at the bottom) versus the same radiator after a flush.
+const cols = [0, 1, 2, 3, 4, 5];
+---
+<svg viewBox="0 0 900 300" class="w-full h-auto" role="img" aria-labelledby="flush-title flush-desc" font-family="inherit">
+  <title id="flush-title">What a power flush does</title>
+  <desc id="flush-desc">Before: sludge settles in the bottom of the radiator, leaving it cold at the bottom and warm at the top. A power flush pumps cleaning fluid through at high speed and carries the sludge out. After: the radiator heats evenly from top to bottom.</desc>
+  <defs>
+    <linearGradient id="fl-before" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CE5600" /><stop offset="0.45" stop-color="#F4C9A6" /><stop offset="0.7" stop-color="#C9D8EE" /><stop offset="1" stop-color="#7FA7D9" />
+    </linearGradient>
+    <marker id="fl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#CE5600" />
+    </marker>
+  </defs>
+
+  <!-- Before -->
+  <g transform="translate(40 50)">
+    <rect x="0" y="0" width="260" height="150" rx="12" fill="url(#fl-before)" stroke="#002050" stroke-width="2.5" />
+    {cols.map((i) => <line x1={30 + i * 40} y1="12" x2={30 + i * 40} y2="138" stroke="#002050" stroke-opacity="0.25" stroke-width="2" />)}
+    <path d="M4 128 Q40 112 80 124 T160 120 T256 126 V146 H4 Z" fill="#6B4A2E" />
+    <circle cx="60" cy="134" r="3" fill="#3E2A1A" /><circle cx="130" cy="136" r="4" fill="#3E2A1A" /><circle cx="210" cy="133" r="3" fill="#3E2A1A" />
+  </g>
+  <text x="170" y="236" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Before</text>
+  <text x="170" y="260" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">sludge settles, cold at the bottom</text>
+
+  <!-- Flush -->
+  <line x1="330" y1="125" x2="560" y2="125" stroke="#CE5600" stroke-width="5" marker-end="url(#fl-arrow)" />
+  <path d="M360 100 q20 -16 40 0 t40 0 t40 0 t40 0" fill="none" stroke="#CE5600" stroke-width="2.5" stroke-opacity="0.6" />
+  <path d="M360 150 q20 16 40 0 t40 0 t40 0 t40 0" fill="none" stroke="#CE5600" stroke-width="2.5" stroke-opacity="0.6" />
+  <text x="445" y="84" text-anchor="middle" font-size="18" font-weight="500" fill="#002050">Power flush</text>
+  <text x="445" y="184" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">high-velocity clean,</text>
+  <text x="445" y="204" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">sludge flushed out</text>
+
+  <!-- After -->
+  <g transform="translate(600 50)">
+    <rect x="0" y="0" width="260" height="150" rx="12" fill="#F7B98A" stroke="#002050" stroke-width="2.5" />
+    <rect x="0" y="0" width="260" height="150" rx="12" fill="#CE5600" fill-opacity="0.35" />
+    {cols.map((i) => <line x1={30 + i * 40} y1="12" x2={30 + i * 40} y2="138" stroke="#002050" stroke-opacity="0.25" stroke-width="2" />)}
+  </g>
+  <text x="730" y="236" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">After</text>
+  <text x="730" y="260" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">even heat, top to bottom</text>
+</svg>

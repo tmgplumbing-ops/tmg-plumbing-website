@@ -1,0 +1,33 @@
+---
+// Underfloor heating: floor build-up cross-section with pipes in the screed and heat rising evenly.
+const pipes = Array.from({ length: 13 }, (_, i) => 70 + i * 50);
+const heat = [120, 250, 380, 510, 640, 770];
+---
+<svg viewBox="0 0 930 320" class="w-full h-auto" role="img" aria-labelledby="ufh-title ufh-desc" font-family="inherit">
+  <title id="ufh-title">How underfloor heating works</title>
+  <desc id="ufh-desc">Warm water runs through pipes laid in the screed, above a layer of insulation. The whole floor warms up and heat rises evenly into the room.</desc>
+
+  <!-- Heat rising -->
+  {heat.map((x) => (
+    <path d={`M${x} 78 q-8 -10 0 -20 t0 -20`} fill="none" stroke="#CE5600" stroke-width="3" stroke-opacity="0.75" />
+  ))}
+  <text x="400" y="22" text-anchor="middle" font-size="16" fill="#002050" fill-opacity="0.65">Even, gentle heat across the whole room</text>
+
+  <!-- Layers -->
+  <rect x="40" y="84" width="720" height="18" fill="#C79A6B" />
+  <rect x="40" y="102" width="720" height="62" fill="#D9DEE6" />
+  {pipes.map((x) => <circle cx={x} cy="133" r="10" fill="#FFFFFF" stroke="#CE5600" stroke-width="4" />)}
+  <rect x="40" y="164" width="720" height="44" fill="#F4E27A" fill-opacity="0.8" />
+  <path d="M40 164 l20 44 M80 164 l20 44 M120 164 l20 44 M160 164 l20 44 M200 164 l20 44 M240 164 l20 44 M280 164 l20 44 M320 164 l20 44 M360 164 l20 44 M400 164 l20 44 M440 164 l20 44 M480 164 l20 44 M520 164 l20 44 M560 164 l20 44 M600 164 l20 44 M640 164 l20 44 M680 164 l20 44 M720 164 l20 44" stroke="#002050" stroke-opacity="0.12" stroke-width="2" />
+  <rect x="40" y="208" width="720" height="56" fill="#9AA7BA" />
+  <rect x="40" y="84" width="720" height="180" fill="none" stroke="#002050" stroke-width="2" />
+
+  <!-- Labels -->
+  <g font-size="16" fill="#002050">
+    <line x1="760" y1="93" x2="790" y2="93" stroke="#002050" stroke-opacity="0.4" /><text x="796" y="98">Floor finish</text>
+    <line x1="760" y1="133" x2="790" y2="133" stroke="#002050" stroke-opacity="0.4" /><text x="796" y="129">Screed with</text><text x="796" y="148">heating pipes</text>
+    <line x1="760" y1="186" x2="790" y2="186" stroke="#002050" stroke-opacity="0.4" /><text x="796" y="191">Insulation</text>
+    <line x1="760" y1="236" x2="790" y2="236" stroke="#002050" stroke-opacity="0.4" /><text x="796" y="241">Concrete slab</text>
+  </g>
+  <text x="400" y="296" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">Warm water from the boiler or heat pump circulates through the pipes</text>
+</svg>

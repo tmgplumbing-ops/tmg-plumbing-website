@@ -1,0 +1,48 @@
+---
+// Leak detection: three non-invasive ways of finding a hidden leak.
+---
+<svg viewBox="0 0 900 300" class="w-full h-auto" role="img" aria-labelledby="leak-title leak-desc" font-family="inherit">
+  <title id="leak-title">How we find hidden leaks</title>
+  <desc id="leak-desc">Three non-invasive methods: thermal imaging shows warm water escaping under a floor, acoustic listening picks up the sound of the leak, and tracer gas rises through the floor above the leak.</desc>
+
+  <!-- Ground + pipe with leak, shared -->
+  {[0, 1, 2].map((i) => (
+    <g transform={`translate(${30 + i * 290} 0)`}>
+      <rect x="0" y="150" width="260" height="70" rx="8" fill="#E4ECF6" />
+      <line x1="0" y1="150" x2="260" y2="150" stroke="#002050" stroke-width="3" />
+      <rect x="10" y="186" width="240" height="14" rx="7" fill="#9AA7BA" />
+      <path d="M130 186 q-6 -10 0 -18 q6 8 0 18 z" fill="#7FA7D9" />
+    </g>
+  ))}
+
+  <!-- 1 Thermal -->
+  <g transform="translate(30 0)">
+    <ellipse cx="130" cy="150" rx="70" ry="16" fill="#CE5600" fill-opacity="0.35" />
+    <ellipse cx="130" cy="150" rx="36" ry="9" fill="#CE5600" fill-opacity="0.6" />
+    <rect x="96" y="40" width="68" height="52" rx="8" fill="#002050" />
+    <rect x="104" y="48" width="52" height="30" rx="3" fill="#CE5600" />
+    <rect x="120" y="92" width="20" height="30" rx="4" fill="#002050" />
+    <text x="130" y="252" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Thermal imaging</text>
+    <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">spots warm water escaping</text>
+  </g>
+
+  <!-- 2 Acoustic -->
+  <g transform="translate(320 0)">
+    <path d="M100 60 a30 30 0 0 1 60 0" fill="none" stroke="#002050" stroke-width="5" />
+    <rect x="90" y="56" width="16" height="26" rx="6" fill="#002050" /><rect x="154" y="56" width="16" height="26" rx="6" fill="#002050" />
+    <rect x="124" y="118" width="12" height="32" fill="#002050" /><ellipse cx="130" cy="146" rx="22" ry="6" fill="#002050" />
+    {[0, 1, 2].map((k) => <path d={`M${100 - k * 14} ${178 - k * 4} q30 ${-20 - k * 6} 60 0`} fill="none" stroke="#CE5600" stroke-width="2.5" stroke-opacity={1 - k * 0.25} transform="translate(0 0)" />)}
+    <text x="130" y="252" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Acoustic listening</text>
+    <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">hears the leak through the floor</text>
+  </g>
+
+  <!-- 3 Tracer gas -->
+  <g transform="translate(610 0)">
+    {[[118, 132, 5], [136, 118, 4], [124, 100, 6], [142, 86, 4], [128, 70, 5]].map(([x, y, r]) => <circle cx={x} cy={y} r={r} fill="none" stroke="#CE5600" stroke-width="2.5" />)}
+    <rect x="160" y="54" width="54" height="34" rx="8" fill="#002050" />
+    <rect x="168" y="62" width="24" height="10" rx="2" fill="#CE5600" />
+    <line x1="168" y1="88" x2="146" y2="140" stroke="#002050" stroke-width="4" />
+    <text x="130" y="252" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Tracer gas</text>
+    <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">rises exactly above the leak</text>
+  </g>
+</svg>
