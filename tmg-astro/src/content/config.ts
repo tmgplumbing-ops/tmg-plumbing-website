@@ -25,8 +25,13 @@ const commercialSector = z.object({
 });
 
 const blogPost = z.object({
-  title: z.string(),
-  metaDescription: z.string().max(160),
+  title: z.string(), // on-page H1
+  // Page <title> when it differs from the H1. Posts migrated from the old
+  // Squarespace site keep their original title here to protect rankings.
+  seoTitle: z.string().optional(),
+  // No length cap: migrated posts keep their original descriptions verbatim,
+  // even where they run past Google's ~160-character display limit.
+  metaDescription: z.string(),
   publishDate: z.date(),
   excerpt: z.string(),
 });
