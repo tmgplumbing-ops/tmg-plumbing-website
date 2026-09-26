@@ -28,7 +28,16 @@ const headings: Heading[] = [
       { name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
     ],
   },
-  { name: 'Water treatment', href: '/services/demineralisation' },
+  {
+    name: 'Water treatment',
+    items: [
+      { name: 'Overview', href: '/water-treatment' },
+      { name: 'Demineralisation (homes)', href: '/services/demineralisation' },
+      { name: 'Commercial demineralisation', href: '/water-treatment#commercial-demineralisation' },
+      { name: 'Water testing', href: '/water-treatment#water-testing' },
+      { name: 'Chemical-free pipe cleaning', href: '/water-treatment#chemical-free-pipe-cleaning' },
+    ],
+  },
   { name: 'Drinking water', href: '/services/drinking-water' },
   { name: 'Heating products', href: '/products' },
 ];
@@ -52,7 +61,7 @@ const extra: Link[] = [
         h.items ? (
           <details class="nav-dd relative">
             <summary class="list-none cursor-pointer hover:text-navy whitespace-nowrap">{h.name} <span aria-hidden="true" class="text-xs">▾</span></summary>
-            <div class="absolute left-0 mt-2 w-56 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
+            <div class="absolute left-0 mt-2 w-64 rounded-card bg-white border border-navy/10 p-2 shadow-xl">
               {h.items.map((s) => (
                 <a href={s.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{s.name}</a>
               ))}
