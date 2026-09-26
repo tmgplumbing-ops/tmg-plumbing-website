@@ -1,7 +1,7 @@
 ---
 // Heating products (26 Sep 2026). Product cards carried over from the old
 // /heating-products page (same address, so no redirect needed) and restyled.
-// Products are made by magnetic GmbH; brochures are the old site's PDFs,
+// Products are made by Magnetic GmbH; brochures are the old site's PDFs,
 // kept at their original /s/ addresses.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
@@ -21,7 +21,7 @@ const products = [
     name: 'Heating Water Regulator',
     tag: 'Fitted to your system',
     img: hwr,
-    alt: 'Three magnetic Heating Water Regulators, HWR 10 plus, HWR 15 plus and HWR 25 plus, with brass fittings',
+    alt: 'Three Magnetic Heating Water Regulators, HWR 10 plus, HWR 15 plus and HWR 25 plus, with brass fittings',
     lead: 'Want your heating system to last longer? Poor water flow, the wrong pressure and corrosion all cause blockages. The Heating Water Regulator sorts it out.',
     points: ['Removes gases from the system water', 'Protects heating components from corrosion', 'Lower energy bills and fewer breakdowns'],
     pdf: HWR_PDF,
@@ -32,7 +32,7 @@ const products = [
     name: 'Refill Station',
     tag: 'Works with the Regulator',
     img: refill,
-    alt: 'magnetic Refill Station: green demineralisation vessel with control panel and red valves',
+    alt: 'Magnetic Refill Station: green demineralisation vessel with control panel and red valves',
     lead: 'Keeps your heating system topped up with demineralised water, at the right pressure and quality. It works together with the Heating Water Regulator.',
     points: ['Tops up with demineralised water', 'Protects boiler, radiators and pipes', 'Helps the system run efficiently'],
     pdf: RANGE_PDF,
@@ -43,7 +43,7 @@ const products = [
     name: 'Demineralisation Cartridge',
     tag: 'Stops hard water',
     img: cartridge,
-    alt: 'magnetic Demineralisation Cartridge for heating water',
+    alt: 'Magnetic Demineralisation Cartridge for heating water',
     lead: 'Hard water causes scale and corrosion inside boilers, radiators and pipes, so the system works harder and costs more to run. The cartridge removes those minerals.',
     points: ['Removes the minerals that cause scale', 'Keeps heating clean and reliable', 'Fewer repairs and a longer lifespan'],
     pdf: RANGE_PDF,
@@ -54,7 +54,7 @@ const products = [
     name: 'Mobile Heating Water Filter',
     tag: 'Portable',
     img: mobileFilter,
-    alt: 'magnetic Mobile Heating Water Filter: portable filtration unit on wheels with pump, gauge and control panel',
+    alt: 'Magnetic Mobile Heating Water Filter: portable filtration unit on wheels with pump, gauge and control panel',
     lead: 'Heating sluggish? Sludge and magnetite build up over time and strain the boiler. This portable filter pulls dirt and magnetic particles straight out of the system water.',
     points: ['Removes sludge and magnetite', 'Takes the strain off your boiler', 'Portable and easy to use'],
     pdf: RANGE_PDF,
@@ -65,7 +65,7 @@ const products = [
     name: 'Mobile Filling Station',
     tag: 'Portable',
     img: mobileFill,
-    alt: 'magnetic Mobile Filling Station: tall stainless steel treatment unit on a wheeled trolley',
+    alt: 'Magnetic Mobile Filling Station: tall stainless steel treatment unit on a wheeled trolley',
     lead: 'Clean water, fast, every time you fill or top up a system. It strips minerals and impurities from the water as it goes in.',
     points: ['Quick fills and top-ups', 'Treated water on every fill', 'Guards against scale, corrosion and sludge'],
     pdf: RANGE_PDF,
@@ -76,7 +76,7 @@ const products = [
     name: 'Essential Add-Ons',
     tag: 'Resin, filters & cleaning',
     img: addOns,
-    alt: 'Replacement resin, filter cartridges and cleaning products for magnetic water treatment units',
+    alt: 'Replacement resin, filter cartridges and cleaning products for Magnetic water treatment units',
     lead: 'Resin, filters and cleaning products that keep every unit, from the Refill Station to the Mobile Filling Station, in top shape.',
     points: ['Replacement resin', 'Filters', 'Cleaning products'],
     pdf: RANGE_PDF,
@@ -91,7 +91,7 @@ const itemList = {
   itemListElement: products.map((p, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    item: { '@type': 'Product', name: p.name, description: p.lead, brand: { '@type': 'Brand', name: 'magnetic' } },
+    item: { '@type': 'Product', name: p.name, description: p.lead, brand: { '@type': 'Brand', name: 'Magnetic' } },
   })),
 };
 ---
@@ -108,7 +108,7 @@ const itemList = {
         <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
           <span class="rounded-full border border-orange/40 px-3 py-1">Homes & commercial</span>
           <span class="rounded-full border border-orange/40 px-3 py-1">Supplied & fitted</span>
-          <span class="rounded-full border border-orange/40 px-3 py-1">magnetic partner</span>
+          <span class="rounded-full border border-orange/40 px-3 py-1">Magnetic partner</span>
         </div>
         <h1 class="text-3xl md:text-5xl font-medium text-white max-w-3xl">Heating system maintenance <span class="text-orange">and protection</span></h1>
         <p class="mt-4 text-white/70 max-w-2xl">
@@ -204,12 +204,12 @@ const itemList = {
   <!-- Partner quote -->
   <section class="mx-auto max-w-4xl px-4 pb-14">
     <figure class="rounded-card border border-navy/10 bg-white p-8 md:p-10 text-center">
-      <p class="text-sm text-navy/50">What our partner magnetic GmbH says about TMG Plumbing</p>
+      <p class="text-sm text-navy/50">What our partner Magnetic GmbH says about TMG Plumbing</p>
       <blockquote class="mt-4 text-lg md:text-xl text-navy leading-relaxed">
         “Worked and working with Tony on several heating projects. I can truly say that Tony's work is outstanding.
         Exactly the partner we (as a manufacturer of the used products) want to partner with. 5+ Stars.”
       </blockquote>
-      <figcaption class="mt-4 text-sm text-orange font-medium">Michael Grimm, magnetic GmbH</figcaption>
+      <figcaption class="mt-4 text-sm text-orange font-medium">Michael Grimm, Magnetic GmbH</figcaption>
     </figure>
   </section>
 
