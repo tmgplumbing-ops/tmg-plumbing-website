@@ -28,11 +28,12 @@ const areas = [
   { name: 'Nationwide', text: 'Commercial power flushing, demineralisation and water treatment anywhere in Ireland.', links: [{ name: 'Commercial services', href: '/commercial' }] },
 ];
 
-const reasons = [
-  { title: 'Since 2006', text: 'Twenty years of plumbing and heating work across the South East.' },
-  { title: 'Fixed price first', text: 'You get a clear, fixed price before any work begins.' },
-  { title: 'Clean, no-mess methods', text: 'Systems are cleaned in place, without taking down radiators or lifting floors.' },
-  { title: 'Domestic & commercial', text: 'From a single radiator at home to hospital and hotel plant rooms.' },
+const usps = [
+  'Since 2006',
+  'Fixed price before we start',
+  'Same-day response',
+  'No-mess cleaning methods',
+  'Domestic & commercial',
 ];
 
 const faqs = [
@@ -87,37 +88,16 @@ const latest = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- Trust band -->
+  <!-- USP band -->
   <section class="border-b border-navy/10 bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-6 flex flex-wrap items-center justify-center gap-8 text-navy/40 text-sm">
-      <span>Guinness</span><span>Bulmers</span><span>SSE Airtricity</span><span>Waterford Distillery</span>
-    </div>
-  </section>
-
-  <!-- Intro + why TMG -->
-  <section class="mx-auto max-w-6xl px-4 pt-16 grid md:grid-cols-[1fr_1.1fr] gap-10 items-start">
-    <div>
-      <h2 class="text-2xl md:text-3xl font-medium text-navy leading-snug">Plumbing and heating specialists in Waterford and the South East</h2>
-      <p class="mt-4 text-navy/70 leading-relaxed">
-        TMG Plumbing &amp; Heating Services has looked after homes and businesses across Waterford, Wexford,
-        Kilkenny, Tipperary and Kildare since 2006. We specialise in keeping heating systems clean and efficient:
-        power flushing, demineralisation and water treatment, alongside underfloor heating, leak detection,
-        oil boiler installs and everyday plumbing and heating work.
-      </p>
-      <p class="mt-3 text-navy/70 leading-relaxed">
-        For commercial clients, we power flush, treat and maintain the heating systems in hospitals, hotels,
-        schools and industrial sites nationwide.
-      </p>
-    </div>
-    <div class="grid sm:grid-cols-2 gap-3">
-      {reasons.map((r) => (
-        <div class="rounded-card bg-mist border border-navy/10 p-5">
-          <span class="block w-8 h-1 rounded bg-orange mb-3"></span>
-          <p class="text-navy font-medium">{r.title}</p>
-          <p class="text-navy/60 text-sm mt-1">{r.text}</p>
-        </div>
+    <ul class="mx-auto max-w-6xl px-4 py-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-navy/80">
+      {usps.map((u) => (
+        <li class="flex items-center gap-2">
+          <svg viewBox="0 0 20 20" class="w-5 h-5 flex-none" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#CE5600" fill-opacity="0.12" /><path d="M6 10.5l2.5 2.5L14 7.5" fill="none" stroke="#CE5600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          {u}
+        </li>
       ))}
-    </div>
+    </ul>
   </section>
 
   <!-- Services grid -->
@@ -138,6 +118,25 @@ const latest = (await getCollection('blog'))
           </div>
         </a>
       ))}
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="mx-auto max-w-6xl px-4 pb-16">
+    <div class="rounded-card bg-mist border border-navy/10 p-8 md:p-10 grid md:grid-cols-[1fr_1.4fr] gap-8">
+      <h2 class="text-2xl md:text-3xl font-medium text-navy leading-snug">Plumbing and heating specialists in Waterford and the South East</h2>
+      <div>
+        <p class="text-navy/70 leading-relaxed">
+          TMG Plumbing &amp; Heating Services has looked after homes and businesses across Waterford, Wexford,
+          Kilkenny, Tipperary and Kildare since 2006. We specialise in keeping heating systems clean and efficient:
+          power flushing, demineralisation and water treatment, alongside underfloor heating, leak detection,
+          oil boiler installs and everyday plumbing and heating work.
+        </p>
+        <p class="mt-3 text-navy/70 leading-relaxed">
+          For commercial clients, we power flush, treat and maintain the heating systems in hospitals, hotels,
+          schools and industrial sites nationwide.
+        </p>
+      </div>
     </div>
   </section>
 
