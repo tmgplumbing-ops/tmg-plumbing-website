@@ -28,6 +28,24 @@ import college from '../assets/photos/college-campus.webp';
 import office from '../assets/photos/office-interior.webp';
 import industrial from '../assets/photos/industrial-pipework.webp';
 
+// New header photos (26 Sep 2026), free to use under the Unsplash licence.
+import hHome from '../assets/photos/hero-home.webp';
+import hFlush from '../assets/photos/hero-power-flushing.webp';
+import hUfh from '../assets/photos/hero-underfloor-heating.webp';
+import hLeak from '../assets/photos/hero-leak-detection.webp';
+import hDemin from '../assets/photos/hero-demineralisation.webp';
+import hOil from '../assets/photos/hero-oil-boiler-installs.webp';
+import hPlumbing from '../assets/photos/hero-plumbing-heating.webp';
+import hDrinking from '../assets/photos/hero-drinking-water.webp';
+import hWater from '../assets/photos/hero-water-treatment.webp';
+import hCommercial from '../assets/photos/hero-commercial.webp';
+import hHotels from '../assets/photos/hero-hotels.webp';
+import hHospitals from '../assets/photos/hero-hospitals.webp';
+import hSchools from '../assets/photos/hero-schools-colleges.webp';
+import hOffices from '../assets/photos/hero-office-buildings.webp';
+import hIndustrial from '../assets/photos/hero-industrial.webp';
+import hFacility from '../assets/photos/hero-facility-maintenance.webp';
+
 export type Photo = { src: ImageMetadata; alt: string; caption?: string; fit?: 'cover' | 'contain' };
 
 export const photos = {
@@ -56,23 +74,49 @@ export const photos = {
   industrial: { src: industrial, alt: 'Stainless steel industrial pipework and pumps' },
 } satisfies Record<string, Photo>;
 
+// Header photos for the main pages. Unsplash photographers, for reference:
+// home Marc Zeman · power flushing e24 · underfloor Steffen Lemmerzahl ·
+// leak detection Egor Komarov · demineralisation Crystal Kwok · oil boilers Immo Wegmann ·
+// plumbing Timur Shakerzianov · drinking water Swanky Fella · water treatment Jahhid Fitrah Alamsyah ·
+// commercial Crystal Kwok · hotels Point3D Commercial Imaging · hospitals Tasha Kostyuk ·
+// schools Andreas Haslinger · offices Nastuh Abootalebi · industrial Samuel Sianipar ·
+// facility maintenance TECNIC Bioprocess Solutions.
+export const heroes = {
+  home: { src: hHome, alt: 'Heating engineer in a hi-vis jacket working on a heating manifold' },
+  powerFlushing: { src: hFlush, alt: 'White radiator under a window in a bright room' },
+  underfloor: { src: hUfh, alt: 'Underfloor heating pipes laid across a floor, running into a manifold' },
+  leak: { src: hLeak, alt: 'Thermal heat-map style image in reds, yellows and blues' },
+  demin: { src: hDemin, alt: 'Stainless steel water treatment pipework and pumps' },
+  oil: { src: hOil, alt: 'Boiler room pipework with pumps, valves and gauges' },
+  plumbing: { src: hPlumbing, alt: 'Plumber fitting pipework under a sink' },
+  drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
+  water: { src: hWater, alt: 'Blue pipework and valves in a treatment plant' },
+  commercial: { src: hCommercial, alt: 'Stainless steel pipework in a commercial plant room' },
+  hotels: { src: hHotels, alt: 'Bright modern hotel bedroom' },
+  hospitals: { src: hHospitals, alt: 'Clean, bright hospital corridor' },
+  schools: { src: hSchools, alt: 'Modern college building beside green lawns' },
+  offices: { src: hOffices, alt: 'Open-plan office with floor-to-ceiling windows' },
+  industrial: { src: hIndustrial, alt: 'Industrial pipework' },
+  facility: { src: hFacility, alt: 'Technician maintaining equipment in a plant room' },
+} satisfies Record<string, Photo>;
+
 // Hero + one in-page photo for each core service (also used by the local SEO
 // pages, which point back to these services).
 export const servicePhotos: Record<string, { hero: Photo; extra?: Photo }> = {
-  'power-flushing': { hero: photos.flushMachine, extra: photos.pipeBeforeAfter },
-  'underfloor-heating': { hero: photos.ufhManifold, extra: photos.ufhPipework },
-  'leak-detection': { hero: photos.thermalRadiator, extra: photos.thermalLeak },
-  demineralisation: { hero: photos.refillStation, extra: photos.limescale },
-  'oil-boiler-installs': { hero: photos.oilBoiler, extra: photos.oilTank },
-  'plumbing-heating': { hero: photos.plantCylinder, extra: photos.plantManifolds },
-  'drinking-water': { hero: photos.scaleTransformer, extra: photos.softener },
+  'power-flushing': { hero: heroes.powerFlushing, extra: photos.pipeBeforeAfter },
+  'underfloor-heating': { hero: heroes.underfloor, extra: photos.ufhPipework },
+  'leak-detection': { hero: heroes.leak, extra: photos.thermalLeak },
+  demineralisation: { hero: heroes.demin, extra: photos.limescale },
+  'oil-boiler-installs': { hero: heroes.oil, extra: photos.oilTank },
+  'plumbing-heating': { hero: heroes.plumbing, extra: photos.plantManifolds },
+  'drinking-water': { hero: heroes.drinking, extra: photos.softener },
 };
 
 export const sectorPhotos: Record<string, Photo> = {
-  hotels: photos.hotel,
-  hospitals: photos.hospital,
-  'schools-colleges': photos.college,
-  'office-buildings': photos.office,
-  industrial: photos.industrial,
-  'facility-maintenance': photos.commercialPlant,
+  hotels: heroes.hotels,
+  hospitals: heroes.hospitals,
+  'schools-colleges': heroes.schools,
+  'office-buildings': heroes.offices,
+  industrial: heroes.industrial,
+  'facility-maintenance': heroes.facility,
 };
