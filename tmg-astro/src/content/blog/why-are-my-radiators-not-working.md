@@ -15,7 +15,7 @@ When you find your radiators not heating up as they should, it can be both puzzl
 
 One of the most common reasons for a radiator not heating up properly is trapped air. When air gets trapped inside a radiator, it prevents hot water from circulating effectively, leaving your radiator cold at the top while warm at the bottom.
 
-### Remedy:
+#### Remedy
 
 Bleeding your radiators is a simple solution. Use a radiator key to open the bleed valve slightly until you hear the hiss of escaping air. Once water starts to dribble out, close the valve. This should allow hot water to circulate through the entire radiator.
 
@@ -25,7 +25,7 @@ Bleeding your radiators is a simple solution. Use a radiator key to open the ble
 
 Thermostatic Radiator Valves (TRVs) allow you to control the temperature of individual radiators. If a TRV is stuck, it might not open to let hot water in, leaving the radiator cold.
 
-### Remedy:
+#### Remedy
 
 Try to free the valve by gently turning it back and forth. If this doesn't work, you may need to remove the TRV head to check if the pin is stuck and gently free it. If you're not comfortable doing this, it might be time to call a professional.
 
@@ -35,7 +35,7 @@ Try to free the valve by gently turning it back and forth. If this doesn't work,
 
 If radiators further away from your boiler are cold while those closer are hot, your system might need balancing. This involves adjusting the valves on each radiator to ensure an even distribution of hot water throughout your home.
 
-### Remedy:
+#### Remedy
 
 Balancing radiators usually requires adjusting the lockshield valve (found under a plastic or metal cap on one end of the radiator) to regulate the flow of water. It can be a bit of a trial-and-error process and might require a bit of patience or professional assistance.
 
@@ -45,7 +45,7 @@ Balancing radiators usually requires adjusting the lockshield valve (found under
 
 Over time, sludge can build up in your heating system, leading to blocked pipes or radiators. This sludge can prevent hot water from circulating properly, resulting in cold spots or completely cold radiators.
 
-### Remedy:
+#### Remedy
 
 Flushing your system can remove this build-up. A chemical flush involves adding a chemical cleaner to your system to break down the sludge, which is then flushed out with water. For severe blockages, a power flush, which uses high-pressure water to clear the system, might be necessary. These procedures are best left to professionals.
 
@@ -55,7 +55,7 @@ Flushing your system can remove this build-up. A chemical flush involves adding 
 
 Sometimes the problem might not be with the radiators themselves but with the boiler. If your boiler is not working correctly or not producing enough hot water, your radiators will not heat up properly.
 
-### Remedy:
+#### Remedy
 
 Regular boiler maintenance is key. Ensure your boiler is serviced annually by a qualified professional to keep it running efficiently and to prevent future heating issues.
 
