@@ -1,0 +1,56 @@
+---
+// Branded line icons for the service cards (navy + orange). 64x64 grid.
+interface Props { name: string; class?: string }
+const { name, class: cls = 'w-16 h-16' } = Astro.props;
+---
+<svg viewBox="0 0 64 64" class={cls} fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  {name === 'power-flushing' && (
+    <g>
+      <rect x="8" y="18" width="36" height="30" rx="4" stroke="#FFFFFF" stroke-width="2.5" />
+      {[16, 24, 32].map((x) => <line x1={x} y1="22" x2={x} y2="44" stroke="#FFFFFF" stroke-width="2.5" />)}
+      <path d="M44 26 h6 a6 6 0 0 1 0 12 h-4" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M49 34 l-4 4 4 4" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M12 54 q4 -4 8 0 t8 0 t8 0" stroke="#CE5600" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'underfloor-heating' && (
+    <g>
+      <path d="M6 46 h52" stroke="#FFFFFF" stroke-width="2.5" />
+      <path d="M10 40 h40 a4 4 0 0 0 0 -8 h-36 a4 4 0 0 1 0 -8 h36" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M18 54 v-4 M32 54 v-4 M46 54 v-4" stroke="#FFFFFF" stroke-width="2.5" />
+      <path d="M20 16 q-2 -4 0 -8 M32 16 q-2 -4 0 -8 M44 16 q-2 -4 0 -8" stroke="#FFFFFF" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'leak-detection' && (
+    <g>
+      <path d="M24 8 C30 18 36 24 36 32 a12 12 0 0 1 -24 0 C12 24 18 18 24 8 z" stroke="#FFFFFF" stroke-width="2.5" />
+      <circle cx="40" cy="40" r="10" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M47 47 l9 9" stroke="#CE5600" stroke-width="3" />
+    </g>
+  )}
+  {name === 'demineralisation' && (
+    <g>
+      <path d="M32 6 C40 18 48 26 48 36 a16 16 0 0 1 -32 0 C16 26 24 18 32 6 z" stroke="#FFFFFF" stroke-width="2.5" />
+      <circle cx="26" cy="36" r="2.5" fill="#CE5600" stroke="none" />
+      <circle cx="36" cy="30" r="2.5" fill="#CE5600" stroke="none" />
+      <circle cx="37" cy="42" r="2.5" fill="#CE5600" stroke="none" />
+      <path d="M22 58 h20" stroke="#CE5600" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'oil-boiler-installs' && (
+    <g>
+      <rect x="14" y="8" width="36" height="48" rx="4" stroke="#FFFFFF" stroke-width="2.5" />
+      <rect x="22" y="16" width="20" height="8" rx="2" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M32 48 c-6 -4 -6 -10 0 -16 c1 5 6 6 4 12 c3 -1 4 -3 4 -5 c2 6 -2 9 -8 9 z" stroke="#CE5600" stroke-width="2.5" />
+    </g>
+  )}
+  {name === 'plumbing-heating' && (
+    <g>
+      <path d="M8 44 h20 a6 6 0 0 0 6 -6 v-22" stroke="#FFFFFF" stroke-width="3" />
+      <path d="M28 12 h12" stroke="#FFFFFF" stroke-width="3" />
+      <path d="M42 30 l12 -12 a6 6 0 0 0 -8 -8 l-12 12" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M36 28 l-10 10 a3 3 0 0 0 4 4 l10 -10" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M8 52 h48" stroke="#FFFFFF" stroke-width="2.5" />
+    </g>
+  )}
+</svg>
