@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
 import { Image } from 'astro:assets';
-import { heroes } from '../data/photos';
+import { heroes, sectorPhotos } from '../data/photos';
 import ServiceIcon from '../components/ServiceIcon.astro';
 import { getCollection } from 'astro:content';
 import { coverOf, categoryOf, readingMinutes } from '../data/blog';
@@ -28,12 +28,27 @@ const areas = [
   { name: 'Nationwide', text: 'Commercial power flushing, demineralisation and water treatment anywhere in Ireland.', links: [{ name: 'Commercial services', href: '/commercial' }] },
 ];
 
+const sectors = [
+  { slug: 'hospitals', name: 'Hospitals', href: '/commercial/hospitals' },
+  { slug: 'hotels', name: 'Hotels', href: '/commercial/hotels' },
+  { slug: 'schools-colleges', name: 'Schools & colleges', href: '/commercial/schools-colleges' },
+  { slug: 'office-buildings', name: 'Offices', href: '/commercial/office-buildings' },
+  { slug: 'industrial', name: 'Industrial sites', href: '/commercial/industrial' },
+  { slug: 'facility-maintenance', name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
+];
+const commercialServices = [
+  'Commercial power flushing',
+  'Demineralisation and heating water treatment',
+  'Water testing to VDI 2035',
+  'Chemical-free pipe cleaning (air-pulse and ultrasonic)',
+  'Planned maintenance and response contracts',
+];
+
 const usps = [
   'Since 2006',
   'Fixed price before we start',
-  'Same-day response',
   'No-mess cleaning methods',
-  'Domestic & commercial',
+  'Commercial work nationwide',
 ];
 
 const faqs = [
@@ -52,7 +67,7 @@ const latest = (await getCollection('blog'))
 ---
 <BaseLayout
   title="TMG Plumbing & Heating Services | Waterford & South East Ireland"
-  description="Specialist plumbing and heating across Waterford, Wexford, Kilkenny, Tipperary & Kildare. Domestic and commercial. Same-day response — call 051 577089."
+  description="Specialist plumbing and heating across Waterford, Wexford, Kilkenny, Tipperary & Kildare. Domestic, and commercial nationwide. Call 051 577089."
 >
   <Schema faqs={faqs} />
 
@@ -61,19 +76,19 @@ const latest = (await getCollection('blog'))
     <div class="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-[1fr_400px] gap-12 items-center">
       <div>
       <h1 class="text-4xl md:text-6xl font-medium text-navy max-w-3xl leading-tight">
-        Specialist heating services in <span class="text-orange">South East Ireland.</span>
+        Specialist heating services <span class="text-orange">across Ireland.</span>
       </h1>
       <p class="mt-6 text-navy/70 max-w-xl text-lg">
-        Reliable residential and commercial plumbing and heating since 2006 —
-        power flushing, underfloor heating, leak detection and more.
+        Commercial heating system cleaning and water treatment nationwide, and domestic plumbing and
+        heating across the South East, since 2006.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
-        <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+        <a href="/commercial" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Commercial services</a>
       </div>
       <div class="mt-12 grid grid-cols-3 max-w-md gap-6 text-center">
         <div><p class="text-2xl font-medium text-orange">20+</p><p class="text-xs text-navy/50">years experience</p></div>
-        <div><p class="text-2xl font-medium text-orange">5</p><p class="text-xs text-navy/50">counties covered</p></div>
+        <div><p class="text-2xl font-medium text-orange">Nationwide</p><p class="text-xs text-navy/50">commercial work</p></div>
         <div><p class="text-2xl font-medium text-orange">1,000s</p><p class="text-xs text-navy/50">jobs completed</p></div>
       </div>
       </div>
@@ -121,10 +136,47 @@ const latest = (await getCollection('blog'))
     </div>
   </section>
 
+  <!-- Commercial -->
+  <section class="bg-navy">
+    <div class="mx-auto max-w-6xl px-4 py-16 grid lg:grid-cols-[1fr_1.3fr] gap-10 items-start">
+      <div>
+        <p class="text-orange text-sm font-medium">Commercial · nationwide</p>
+        <h2 class="mt-2 text-2xl md:text-3xl font-medium text-white leading-snug">Commercial heating services across Ireland</h2>
+        <p class="mt-4 text-white/70 leading-relaxed">
+          We clean, treat and maintain the heating systems in hospitals, hotels, schools, offices and industrial
+          sites anywhere in Ireland. Work is planned around your building to keep disruption to a minimum.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-white/85">
+          {commercialServices.map((c) => (
+            <li class="flex gap-2">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 mt-0.5 flex-none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#CE5600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              {c}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/commercial" class="rounded bg-orange text-white font-medium px-5 py-3 hover:bg-orange-dark">Commercial services</a>
+          <a href="/contact" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Request a site survey</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {sectors.map((c) => (
+          <a href={c.href} class="group relative rounded-card overflow-hidden aspect-[4/3] bg-white/5">
+            {sectorPhotos[c.slug] && (
+              <Image src={sectorPhotos[c.slug].src} alt="" widths={[300, 600]} sizes="(min-width: 1024px) 200px, 50vw" class="absolute inset-0 w-full h-full object-cover opacity-70 transition duration-300 group-hover:opacity-90 group-hover:scale-105" />
+            )}
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+            <p class="absolute left-3 bottom-3 right-3 text-white text-sm font-medium">{c.name} →</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- Intro -->
-  <section class="mx-auto max-w-6xl px-4 pb-16">
+  <section class="mx-auto max-w-6xl px-4 py-16">
     <div class="rounded-card bg-mist border border-navy/10 p-8 md:p-10 grid md:grid-cols-[1fr_1.4fr] gap-8">
-      <h2 class="text-2xl md:text-3xl font-medium text-navy leading-snug">Plumbing and heating specialists in Waterford and the South East</h2>
+      <h2 class="text-2xl md:text-3xl font-medium text-navy leading-snug">Heating specialists for Irish businesses and South East homes</h2>
       <div>
         <p class="text-navy/70 leading-relaxed">
           TMG Plumbing &amp; Heating Services has looked after homes and businesses across Waterford, Wexford,
@@ -133,8 +185,9 @@ const latest = (await getCollection('blog'))
           oil boiler installs and everyday plumbing and heating work.
         </p>
         <p class="mt-3 text-navy/70 leading-relaxed">
-          For commercial clients, we power flush, treat and maintain the heating systems in hospitals, hotels,
-          schools and industrial sites nationwide.
+          Commercial work is a core part of what we do. Facilities teams across Ireland use us to power flush,
+          demineralise and maintain large heating systems, with planned maintenance and response contracts that
+          keep plant rooms running and within manufacturer water quality limits.
         </p>
       </div>
     </div>
@@ -144,7 +197,7 @@ const latest = (await getCollection('blog'))
   <section class="bg-mist border-y border-navy/10">
     <div class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="text-2xl font-medium text-navy">Where we work</h2>
-      <p class="mt-2 text-navy/60 max-w-2xl">Domestic plumbing and heating across five counties in the South East, and commercial contracts anywhere in Ireland.</p>
+      <p class="mt-2 text-navy/60 max-w-2xl">Commercial contracts anywhere in Ireland, and domestic plumbing and heating across five counties in the South East.</p>
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {areas.map((a) => (
           <div class="rounded-card bg-white border border-navy/10 p-5">
