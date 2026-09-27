@@ -1,6 +1,6 @@
 ---
 title: "Power Flushing"
-metaDescription: "Power flushing across Waterford & the South East. Clear sludge, restore heat, same-day response. Call TMG on 051 577089."
+metaDescription: "Power flushing across Waterford & the South East. Clear sludge, restore heat, fixed price before we start. Call TMG on 051 577089."
 heroSubheading: "Clearing sludge from your heating system so every radiator heats evenly again."
 intro: "Cold radiators, banging pipes, and a boiler working harder than it should are usually signs of sludge build-up in the heating system. We've carried out power flushing across Waterford and the South East since 2006, restoring efficient, even heating to older systems."
 signs:
