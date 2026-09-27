@@ -16,5 +16,5 @@ Booking before that rush has two advantages. First, availability — appointment
 
 Getting a power flush done in autumn means going into winter with a system that's already running at full efficiency, rather than discovering problems on the first cold night.
 
-We cover Waterford, Wexford, Kilkenny, Tipperary and Kildare, with same-day response wherever possible. [Get in touch](/contact) to book ahead of the season, or read more about [power flushing](/services/power-flushing).
+We cover Waterford, Wexford, Kilkenny, Tipperary and Kildare. [Get in touch](/contact) to book ahead of the season, or read more about [power flushing](/services/power-flushing).
 ---
