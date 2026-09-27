@@ -57,7 +57,11 @@ const GTM_ID = 'GTM-5BF7S236';
           document.head.appendChild(j);
         }
       };
-      try { window.tmgApplyConsent(JSON.parse(localStorage.getItem('tmg-consent'))); } catch (e) {}
+      try {
+        var saved = JSON.parse(localStorage.getItem('tmg-consent'));
+        // Consent older than six months is ignored; the banner asks again.
+        if (saved && saved.date && Date.now() - Date.parse(saved.date) < 1000 * 60 * 60 * 24 * 182) window.tmgApplyConsent(saved);
+      } catch (e) {}
     </script>
     <!-- End Google Tag Manager -->
   </head>
