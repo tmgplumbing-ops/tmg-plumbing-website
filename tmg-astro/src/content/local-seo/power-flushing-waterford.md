@@ -1,10 +1,10 @@
 ---
 title: "Power Flushing in Waterford"
-metaDescription: "Power flushing in Waterford. Same-day response, 20+ years experience. Fixed price quotes. Call TMG on 051 577089."
+metaDescription: "Power flushing in Waterford. 20+ years experience. Fixed price quotes. Call TMG on 051 577089."
 county: "Waterford"
 canonicalService: "power-flushing"
 heroSubheading: "Waterford's power flushing specialists, restoring even heat since 2006."
-intro: "Cold radiators in a Waterford home are usually a sign of sludge build-up, and power flushing is how we clear it. TMG has provided power flushing across Waterford and the wider South East since 2006, with same-day response and a fixed price before any work begins."
+intro: "Cold radiators in a Waterford home are usually a sign of sludge build-up, and power flushing is how we clear it. TMG has provided power flushing across Waterford and the wider South East since 2006, with a fixed price before any work begins."
 signs:
   - "Radiators cold at the bottom, warm at the top"
   - "Some rooms heat up, others stay cold"
@@ -27,8 +27,8 @@ benefits:
 faqs:
   - q: "How much does a power flush cost in Waterford?"
     a: "Cost depends on radiator count and the condition of the system. Contact us for a fixed price before any work begins."
-  - q: "Do you offer same-day power flushing in Waterford?"
-    a: "Where possible, yes. Call 051 577 089 and we'll arrange the earliest available visit."
+  - q: "How quickly can you power flush a home in Waterford?"
+    a: "Call 051 577 089 and we'll arrange the earliest available visit."
 relatedServices:
   - "power-flushing"
   - "leak-detection"

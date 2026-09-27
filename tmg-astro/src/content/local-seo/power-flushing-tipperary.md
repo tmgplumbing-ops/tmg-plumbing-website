@@ -1,6 +1,6 @@
 ---
 title: "Power Flushing in Tipperary"
-metaDescription: "Power flushing in Tipperary. Same-day response, 20+ years experience. Fixed price quotes. Call TMG on 051 577089."
+metaDescription: "Power flushing in Tipperary. 20+ years experience. Fixed price quotes. Call TMG on 051 577089."
 county: "Tipperary"
 canonicalService: "power-flushing"
 heroSubheading: "Power flushing across Tipperary, restoring even heat since 2006."
@@ -27,8 +27,8 @@ benefits:
 faqs:
   - q: "How much does a power flush cost in Tipperary?"
     a: "Cost depends on radiator count and the condition of the system. Contact us for a fixed price before any work begins."
-  - q: "Do you offer same-day power flushing in Tipperary?"
-    a: "Where possible, yes. Call 051 577 089 and we'll arrange the earliest available visit."
+  - q: "How quickly can you power flush a home in Tipperary?"
+    a: "Call 051 577 089 and we'll arrange the earliest available visit."
 relatedServices:
   - "power-flushing"
   - "leak-detection"
