@@ -91,7 +91,7 @@ const related = await Promise.all(
     <div>
     <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
       <span class="rounded-full border border-orange/40 px-3 py-1">20+ years experience</span>
-      <span class="rounded-full border border-orange/40 px-3 py-1">Same-day response</span>
+      <span class="rounded-full border border-orange/40 px-3 py-1">Fixed price before we start</span>
       {data.county && <span class="rounded-full border border-orange/40 px-3 py-1">{data.county} & South East</span>}
     </div>
     <h1 class="text-3xl md:text-5xl font-medium text-white max-w-2xl">{data.title}</h1>
@@ -194,7 +194,7 @@ const related = await Promise.all(
 
     <div id="quote" class="scroll-mt-24 rounded-card border border-navy/10 bg-white p-6 md:p-8">
       <h2 class="text-xl font-medium text-navy">Request a free quote</h2>
-      <p class="mt-1 mb-4 text-navy/60 text-sm">Fill in your details and we'll get back to you, usually the same day.</p>
+      <p class="mt-1 mb-4 text-navy/60 text-sm">Fill in your details and we'll get back to you as soon as we can.</p>
       <QuoteForm preselect={noticeSlug ? enquiryOption[noticeSlug] : undefined} />
     </div>
   </div>
