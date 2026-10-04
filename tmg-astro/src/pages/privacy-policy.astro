@@ -1,7 +1,8 @@
 ---
 // Privacy policy for the new site. Replaces the 2020 notice from the old site,
 // updated for the tools the new site actually uses (Zoho CRM enquiry form,
-// Google Tag Manager with consent, Vercel hosting, Stripe for online payments).
+// Google Tag Manager with consent, Vercel hosting, Zoho invoice payment links).
+// 4 Oct 2026: enquiry retention set to 3 months; Google Ads confirmed in use.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LegalStyles from '../components/LegalStyles.astro';
 ---
@@ -12,7 +13,7 @@ import LegalStyles from '../components/LegalStyles.astro';
   <LegalStyles />
   <article class="legal mx-auto max-w-3xl px-4 py-16">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated 26 September 2026</p>
+    <p class="updated">Last updated 4 October 2026</p>
 
     <p>
       TMG Plumbing &amp; Heating Services ("TMG", "we", "us") respects your privacy. This policy explains what
@@ -36,8 +37,8 @@ import LegalStyles from '../components/LegalStyles.astro';
       <li>When you phone, email or message us: whatever you choose to tell us.</li>
       <li>When we carry out work for you: the site address, details of your heating or plumbing system, and the
         records we need for quotes, invoices, reports and warranties.</li>
-      <li>When you pay online: your payment is handled by Stripe. We receive confirmation of the payment, but we
-        never see or store your full card details.</li>
+      <li>When you pay an invoice online: you pay through the secure payment link on your Zoho invoice. We receive
+        confirmation of the payment, but we never see or store your full card details.</li>
     </ul>
     <h3>Information collected automatically</h3>
     <ul>
@@ -56,6 +57,8 @@ import LegalStyles from '../components/LegalStyles.astro';
       <li><strong>To keep business, tax and accounting records</strong>: to comply with our legal obligations.</li>
       <li><strong>To understand and improve how the website is used</strong>: your consent, given through the cookie
         banner.</li>
+      <li><strong>To measure whether our online adverts (Google Ads) lead to enquiries</strong>: your consent, given
+        through the cookie banner.</li>
       <li><strong>To send you service reminders or occasional news</strong>: your consent, or our legitimate interest
         in contacting existing customers about similar services. You can opt out at any time.</li>
     </ul>
@@ -63,10 +66,10 @@ import LegalStyles from '../components/LegalStyles.astro';
     <h2>4. Who we share it with</h2>
     <p>We never sell your personal information. We share it only with service providers who help us run the business, under contracts that protect your data:</p>
     <ul>
-      <li><strong>Zoho</strong> (Zoho CRM, EU data centre): stores enquiries and customer records.</li>
-      <li><strong>Google</strong> (Google Tag Manager and Google Analytics, only with your consent): website statistics.</li>
+      <li><strong>Zoho</strong> (EU data centre): stores enquiries and customer records, and provides the payment links on our invoices.</li>
+      <li><strong>Google</strong> (Google Tag Manager, Google Analytics and Google Ads, only with your consent): website statistics and measuring our adverts.</li>
+      <li><strong>LinkedIn</strong> (LinkedIn Insight Tag, only with your consent): measuring our adverts.</li>
       <li><strong>Vercel</strong>: hosts the website.</li>
-      <li><strong>Stripe</strong>: processes online card payments.</li>
       <li>Our accountants, insurers and professional advisers, and any subcontractor carrying out part of your job,
         where needed.</li>
       <li>Public authorities, where the law requires it.</li>
@@ -79,7 +82,7 @@ import LegalStyles from '../components/LegalStyles.astro';
 
     <h2>5. How long we keep it</h2>
     <ul>
-      <li>Enquiries that do not lead to work: up to two years, then deleted.</li>
+      <li>Enquiries that do not lead to work: three months, then deleted.</li>
       <li>Customer, job and invoice records: seven years after the work, as required for tax purposes, or longer if
         a guarantee or warranty is still running.</li>
       <li>Analytics data: up to fourteen months.</li>
