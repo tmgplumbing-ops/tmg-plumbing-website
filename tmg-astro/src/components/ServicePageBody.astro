@@ -16,6 +16,9 @@ import DeminDiagram from './diagrams/DeminDiagram.astro';
 import SystemDiagram from './diagrams/SystemDiagram.astro';
 import DrinkingDiagram from './diagrams/DrinkingDiagram.astro';
 import FlushProcessDiagram from './diagrams/FlushProcessDiagram.astro';
+import UfhFlushDiagram from './diagrams/UfhFlushDiagram.astro';
+import LeakSignsDiagram from './diagrams/LeakSignsDiagram.astro';
+import HwrDiagram from './diagrams/HwrDiagram.astro';
 import VideoEmbed from './VideoEmbed.astro';
 
 interface Props {
@@ -35,10 +38,27 @@ interface Props {
   // and their local-SEO variants) — used to look up an optional staff
   // notice from Zoho's Website Pages module.
   noticeSlug?: string;
+  // Overrides used by the commercial pages, which share this template.
+  photo?: { src: any; alt: string; fit?: 'cover' | 'contain' };
+  enquiry?: string;
+  coverage?: string;
+  badges?: string[];
 }
-const { data, noticeSlug } = Astro.props;
+const { data, noticeSlug, photo, enquiry, coverage, badges } = Astro.props;
 const notice = noticeSlug ? serviceNotices[noticeSlug] : undefined;
-const pics = noticeSlug ? servicePhotos[noticeSlug] : undefined;
+const pics = photo ? { hero: photo } : noticeSlug ? servicePhotos[noticeSlug] : undefined;
+// Diagrams: a page can list its own (`diagrams` in the content file); otherwise the service default.
+const defaultDiagrams: Record<string, string[]> = {
+  'power-flushing': ['flush', 'flushProcess'],
+  'underfloor-heating': ['ufh', 'ufhFlush'],
+  'leak-detection': ['leakSigns', 'leak'],
+  demineralisation: ['demin'],
+  'oil-boiler-installs': ['oil'],
+  'plumbing-heating': ['heating'],
+  'drinking-water': ['drinking'],
+};
+const diagrams: string[] = data.diagrams ?? (noticeSlug ? defaultDiagrams[noticeSlug] ?? [] : []);
+const topDiagrams = diagrams.filter((d) => d !== 'flushProcess');
 // Pre-fills the Zoho form's "Enquiring About" dropdown for this service.
 const enquiryOption: Record<string, string> = {
   'power-flushing': 'Power Flushing - Domestic',
@@ -93,8 +113,7 @@ const related = await Promise.all(
   <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_420px] gap-10 items-center">
     <div>
     <div class="flex flex-wrap gap-2 mb-4 text-xs text-orange">
-      <span class="rounded-full border border-orange/40 px-3 py-1">20+ years experience</span>
-      <span class="rounded-full border border-orange/40 px-3 py-1">Fixed price before we start</span>
+      {(badges ?? ['20+ years experience', 'Fixed price before we start']).map((b) => <span class="rounded-full border border-orange/40 px-3 py-1">{b}</span>)}
       {data.county && <span class="rounded-full border border-orange/40 px-3 py-1">{data.county} & South East</span>}
     </div>
     <h1 class="text-3xl md:text-5xl font-medium text-white max-w-2xl">{data.h1 ?? data.title}</h1>
@@ -118,6 +137,8 @@ const related = await Promise.all(
   </section>
 )}
 
+<slot name="after-hero" />
+
 <section class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-[1fr_320px] gap-12">
   <!-- Main column -->
   <div class="space-y-12">
@@ -132,17 +153,20 @@ const related = await Promise.all(
       </div>
     )}
 
-    {noticeSlug && (
+    {topDiagrams.map((d) => (
       <figure class="rounded-card border border-navy/10 bg-white p-4 md:p-6">
-        {noticeSlug === 'power-flushing' && <FlushDiagram />}
-        {noticeSlug === 'underfloor-heating' && <UfhDiagram />}
-        {noticeSlug === 'leak-detection' && <LeakDiagram />}
-        {noticeSlug === 'demineralisation' && <DeminDiagram />}
-        {noticeSlug === 'oil-boiler-installs' && <SystemDiagram variant="oil" />}
-        {noticeSlug === 'plumbing-heating' && <SystemDiagram variant="heating" />}
-        {noticeSlug === 'drinking-water' && <DrinkingDiagram />}
+        {d === 'flush' && <FlushDiagram />}
+        {d === 'ufh' && <UfhDiagram />}
+        {d === 'ufhFlush' && <UfhFlushDiagram />}
+        {d === 'leak' && <LeakDiagram />}
+        {d === 'leakSigns' && <LeakSignsDiagram />}
+        {d === 'demin' && <DeminDiagram />}
+        {d === 'hwr' && <HwrDiagram />}
+        {d === 'oil' && <SystemDiagram variant="oil" />}
+        {d === 'heating' && <SystemDiagram variant="heating" />}
+        {d === 'drinking' && <DrinkingDiagram />}
       </figure>
-    )}
+    ))}
 
     <div>
       <h2 class="text-2xl font-medium text-navy mb-4">{data.signsHeading ?? 'Signs you need this'}</h2>
@@ -169,7 +193,7 @@ const related = await Promise.all(
           </li>
         ))}
       </ol>
-      {noticeSlug === 'power-flushing' && (
+      {diagrams.includes('flushProcess') && (
         <figure class="mt-6 rounded-card border border-navy/10 bg-white p-4 md:p-6">
           <FlushProcessDiagram />
         </figure>
@@ -258,40 +282,49 @@ const related = await Promise.all(
       </div>
     </div>
 
-    {(data.downloads || data.reading) && (
-      <div class="grid sm:grid-cols-2 gap-4">
-        {data.downloads && (
-          <div class="rounded-card border border-navy/10 bg-white p-5">
-            <p class="text-navy font-medium mb-3">Downloads</p>
-            <ul class="space-y-2">
-              {data.downloads.map((d: { label: string; href: string; meta?: string }) => (
-                <li>
-                  <a href={d.href} target="_blank" rel="noopener" class="group flex gap-3 items-start">
-                    <svg viewBox="0 0 20 20" class="w-5 h-5 mt-0.5 flex-none text-orange" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" /></svg>
-                    <span><span class="text-navy group-hover:text-orange text-sm">{d.label}</span>{d.meta && <span class="block text-xs text-navy/50">{d.meta}</span>}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+    {data.downloads && (
+      <div class="rounded-card bg-orange/10 border-2 border-orange/40 p-6 md:p-8">
+        <div class="flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-orange flex items-center justify-center flex-none">
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
+          </span>
+          <div>
+            <h2 class="text-xl font-medium text-navy">Download our guides</h2>
+            <p class="text-sm text-navy/65">Free PDFs to read now or keep for later.</p>
           </div>
-        )}
-        {data.reading && (
-          <div class="rounded-card border border-navy/10 bg-white p-5">
-            <p class="text-navy font-medium mb-3">Further reading</p>
-            <ul class="space-y-2">
-              {data.reading.map((r: { title: string; href: string }) => (
-                <li><a href={r.href} class="text-sm text-navy hover:text-orange">{r.title} →</a></li>
-              ))}
-            </ul>
-          </div>
-        )}
+        </div>
+        <div class="mt-5 grid sm:grid-cols-2 gap-3">
+          {data.downloads.map((d: { label: string; href: string; meta?: string }) => (
+            <a href={d.href} target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-card bg-white border border-navy/10 p-4 hover:border-orange hover:shadow-md transition">
+              <span class="flex-none w-12 h-14 rounded-md bg-navy text-white text-xs font-medium flex items-end justify-center pb-2 relative">
+                <span class="absolute top-0 right-0 w-4 h-4 bg-orange rounded-bl-md rounded-tr-md"></span>PDF
+              </span>
+              <span class="flex-1">
+                <span class="block text-navy font-medium leading-snug group-hover:text-orange">{d.label}</span>
+                {d.meta && <span class="block text-xs text-navy/50 mt-0.5">{d.meta}</span>}
+              </span>
+              <span class="text-orange text-sm font-medium">Download</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {data.reading && (
+      <div class="rounded-card border border-navy/10 bg-white p-5">
+        <p class="text-navy font-medium mb-3">Further reading</p>
+        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+          {data.reading.map((r: { title: string; href: string }) => (
+            <li><a href={r.href} class="text-sm text-navy hover:text-orange">{r.title} →</a></li>
+          ))}
+        </ul>
       </div>
     )}
 
     <div id="quote" class="scroll-mt-24 rounded-card border border-navy/10 bg-white p-6 md:p-8">
       <h2 class="text-xl font-medium text-navy">Request a free quote</h2>
       <p class="mt-1 mb-4 text-navy/60 text-sm">Fill in your details and we'll get back to you as soon as we can.</p>
-      <QuoteForm preselect={noticeSlug ? enquiryOption[noticeSlug] : undefined} />
+      <QuoteForm preselect={enquiry ?? (noticeSlug ? enquiryOption[noticeSlug] : undefined)} />
     </div>
   </div>
 
@@ -306,7 +339,7 @@ const related = await Promise.all(
     <div class="rounded-card bg-mist border border-navy/10 p-6 text-sm text-navy/70 space-y-2">
       <p><a href="tel:051577089" class="text-orange">051 577 089</a></p>
       <p>Mon–Fri, 8am–6pm · Emergency callouts 087 717 5624</p>
-      <p class="pt-2 border-t border-navy/10">Covering Waterford, Wexford, Kilkenny, Tipperary, Kildare</p>
+      <p class="pt-2 border-t border-navy/10">{coverage ?? 'Covering Waterford, Wexford, Kilkenny, Tipperary and Kildare, and commercial sites nationwide'}</p>
     </div>
   </aside>
 </section>

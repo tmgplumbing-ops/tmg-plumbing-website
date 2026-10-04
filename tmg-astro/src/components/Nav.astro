@@ -3,7 +3,7 @@
 // Drinking water, Heating products. Page addresses are unchanged, so no new
 // redirects are needed. About and Blog live in the footer and the mobile menu.
 type Link = { name: string; href: string };
-type Heading = { name: string; href?: string; items?: Link[] };
+type Heading = { name: string; href?: string; items?: Link[]; local?: Link[] };
 
 const headings: Heading[] = [
   {
@@ -14,6 +14,13 @@ const headings: Heading[] = [
       { name: 'Leak detection', href: '/services/leak-detection' },
       { name: 'Oil boiler installs', href: '/services/oil-boiler-installs' },
       { name: 'Plumbing & heating', href: '/services/plumbing-heating' },
+    ],
+    // Local area pages: shown small and muted under the main links.
+    local: [
+      { name: 'Waterford', href: '/power-flushing-waterford' },
+      { name: 'Kilkenny', href: '/power-flushing-kilkenny' },
+      { name: 'Wexford', href: '/power-flushing-wexford' },
+      { name: 'Tipperary', href: '/power-flushing-tipperary' },
     ],
   },
   {
@@ -65,6 +72,14 @@ const extra: Link[] = [
               {h.items.map((s) => (
                 <a href={s.href} class="block px-3 py-2 rounded hover:bg-mist hover:text-orange">{s.name}</a>
               ))}
+              {h.local && (
+                <div class="mt-1 border-t border-navy/10 px-3 pt-2 pb-1 text-xs text-navy/45">
+                  <span>Power flushing in </span>
+                  {h.local.map((l, i) => (
+                    <span><a href={l.href} class="hover:text-orange">{l.name}</a>{i < h.local!.length - 1 ? ' · ' : ''}</span>
+                  ))}
+                </div>
+              )}
             </div>
           </details>
         ) : (
@@ -92,6 +107,11 @@ const extra: Link[] = [
                     {h.items.map((s) => (
                       <a href={s.href} class="block py-2 text-navy/80 hover:text-orange">{s.name}</a>
                     ))}
+                    {h.local && (
+                      <p class="py-2 text-xs text-navy/45">
+                        Power flushing in {h.local.map((l, i) => <span><a href={l.href} class="underline hover:text-orange">{l.name}</a>{i < h.local!.length - 1 ? ', ' : ''}</span>)}
+                      </p>
+                    )}
                   </div>
                 </details>
               ) : (
