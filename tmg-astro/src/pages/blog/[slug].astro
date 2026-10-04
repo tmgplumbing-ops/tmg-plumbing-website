@@ -34,8 +34,11 @@ const related = [
   ...others.filter((p) => categoryOf(p.slug).name === category.name),
   ...others.filter((p) => categoryOf(p.slug).name !== category.name),
 ].slice(0, 3);
+const baseTitle = seoTitle ?? title;
+const pageTitle = baseTitle.length <= 35 ? `${baseTitle} | TMG Plumbing & Heating`
+  : baseTitle.length <= 54 ? `${baseTitle} | TMG` : baseTitle;
 ---
-<BaseLayout title={`${seoTitle ?? title} | TMG Plumbing & Heating`} description={metaDescription}>
+<BaseLayout title={pageTitle} description={metaDescription}>
   <!-- Header -->
   <header class="bg-mist border-b border-navy/10">
     <div class="mx-auto max-w-6xl px-4 pt-10 pb-8">
