@@ -49,7 +49,8 @@ import hHotels from '../assets/photos/hero-hotels-plantroom.webp'; // supplied b
 import hHospitals from '../assets/photos/hero-hospitals-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-hospitals.webp
 import hSchools from '../assets/photos/hero-schools-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-schools-colleges.webp
 import tileSchools from '../assets/photos/hero-schools-colleges.webp';
-import hOffices from '../assets/photos/hero-office-buildings.webp';
+import hOffices from '../assets/photos/hero-offices-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-office-buildings.webp
+import tileOffices from '../assets/photos/hero-office-buildings.webp';
 import hIndustrial from '../assets/photos/hero-industrial.webp';
 import hFacility from '../assets/photos/hero-facility-maintenance.webp';
 
@@ -102,7 +103,7 @@ export const heroes = {
   hotels: { src: hHotels, alt: 'Engineer in a basement boiler room with gas boilers, hot water cylinders and circulating pumps' },
   hospitals: { src: hHospitals, alt: 'Engineer checking a large boiler plant room with commercial boilers, hot water cylinders and pumps' },
   schools: { src: hSchools, alt: 'Engineer checking a school boiler plant room with wall-hung boilers, a buffer vessel and circulating pumps' },
-  offices: { src: hOffices, alt: 'Open-plan office with floor-to-ceiling windows' },
+  offices: { src: hOffices, alt: 'Engineer checking a bank of wall-hung boilers, a hot water cylinder and pumps in an office plant room' },
   industrial: { src: hIndustrial, alt: 'Industrial pipework' },
   facility: { src: hFacility, alt: 'Technician maintaining equipment in a plant room' },
 } satisfies Record<string, Photo>;
@@ -133,5 +134,6 @@ export const sectorTiles: Record<string, Photo> = {
   ...sectorPhotos,
   hotels: { src: tileHotels, alt: 'Bright modern hotel bedroom' },
   hospitals: { src: tileHospitals, alt: 'Clean, bright hospital corridor' },
+  'office-buildings': { src: tileOffices, alt: 'Open-plan office with floor-to-ceiling windows' },
   'schools-colleges': { src: tileSchools, alt: 'Modern college building beside green lawns' },
 };
