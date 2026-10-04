@@ -39,7 +39,7 @@ import hDemin from '../assets/photos/hero-demineralisation.webp';
 import hOil from '../assets/photos/hero-oil-boiler-outdoor.webp'; // supplied by Tony 4 Oct 2026; old: hero-oil-boiler-installs.webp
 import hPlumbing from '../assets/photos/hero-plumbing-heating-cylinder.webp'; // supplied by Tony 4 Oct 2026; old: hero-plumbing-heating.webp
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
-import hWater from '../assets/photos/hero-water-treatment.webp';
+import hWater from '../assets/photos/hero-water-treatment-units.webp'; // supplied by Tony 4 Oct 2026; old: hero-water-treatment.webp
 import hCommercial from '../assets/photos/hero-commercial-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-commercial.webp
 // Sector grid tiles keep the original sector photos (hotel bedroom, hospital corridor)
 // so the tiles are easy to tell apart; the sector pages themselves use the plant-room heroes.
@@ -100,7 +100,7 @@ export const heroes = {
   oil: { src: hOil, alt: 'Engineer fitting a new outdoor oil boiler beside a house, with the old rusted boiler removed alongside' },
   plumbing: { src: hPlumbing, alt: 'Engineer fitting a pump on the pipework of a hot water cylinder in a utility room, with a heat pump unit behind' },
   drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
-  water: { src: hWater, alt: 'Blue pipework and valves in a treatment plant' },
+  water: { src: hWater, alt: 'TMG engineer operating mobile filtration and demineralisation units connected to a commercial heating system' },
   commercial: { src: hCommercial, alt: 'Engineers working in a large commercial boiler plant room with insulated pipework, pumps and boilers' },
   hotels: { src: hHotels, alt: 'Engineer in a basement boiler room with gas boilers, hot water cylinders and circulating pumps' },
   hospitals: { src: hHospitals, alt: 'Engineer checking a large boiler plant room with commercial boilers, hot water cylinders and pumps' },
