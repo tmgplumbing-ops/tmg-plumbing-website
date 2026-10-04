@@ -1,35 +1,83 @@
 ---
-title: "Leak Detection in Waterford"
-metaDescription: "Non-invasive leak detection in Waterford. Locate hidden leaks without unnecessary excavation. Call TMG on 051 577089."
-county: "Waterford"
-canonicalService: "leak-detection"
-heroSubheading: "Locating hidden leaks across Waterford, without unnecessary excavation."
-intro: "A rising water bill or damp patch in a Waterford property often points to a hidden leak. TMG uses non-invasive leak detection equipment across Waterford to locate the source precisely before any floor or wall is disturbed."
+title: Leak Detection in Waterford
+h1: Leak detection in Waterford
+seoTitle: Leak Detection Waterford | Underground & Heating Leaks | TMG Plumbers
+metaDescription: Leak detection in Waterford for heating systems, underground pipes and mains water. Thermal imaging and acoustic equipment. Call TMG on 051 577089.
+county: Waterford
+canonicalService: leak-detection
+heroSubheading: Locating hidden leaks in homes and businesses across Waterford, without unnecessary digging.
+intro: A boiler that keeps losing pressure, a damp patch with no obvious source or a water bill that suddenly jumps are all signs of a hidden leak. TMG Plumbing & Heating Services is based in Waterford and carries out leak detection across the city and county, using thermal imaging, acoustic and pressure-testing equipment to find the exact source before any floor or ground is disturbed.
+about:
+  heading: Local leak detection specialists
+  paragraphs:
+  - Leaks in central heating pipework, underfloor heating and underground mains supplies can go unnoticed for months, wasting water and damaging floors, walls and foundations. Finding them quickly and accurately keeps the repair small and the disruption low.
+  - Once we have located the leak, we recommend the remedial works needed, and as local plumbers and heating contractors we can carry out the repair too.
+signsHeading: Signs of a hidden leak
 signs:
-  - "Unexplained increase in water or heating bills"
-  - "Damp patches on walls, ceilings or floors"
-  - "Consistent loss of pressure in the heating system"
-  - "Sound of running water with no obvious source"
+- Heating pressure keeps dropping
+- Damp patches on floors, walls or ceilings
+- Higher water bills or a meter that keeps turning
+- Damp or discoloured ground outside
+- Low water pressure at the taps
+- Mould or musty smells
+stepsHeading: How we find leaks in Waterford homes and businesses
 steps:
-  - title: "Assess"
-    body: "We review the property and system layout to narrow down likely leak locations."
-  - title: "Detect"
-    body: "Acoustic and thermal imaging equipment is used to pinpoint the leak without exploratory digging."
-  - title: "Confirm"
-    body: "The exact location is marked and confirmed before any repair work begins."
-  - title: "Repair"
-    body: "We carry out the repair, or provide a report if a separate contractor is doing the remedial work."
+- title: Assess
+  body: We discuss the symptoms and look at the layout of the heating system or water supply.
+- title: Pressure test
+  body: Isolating and testing sections of pipework confirms which part of the system is losing water.
+- title: Thermal imaging
+  body: Infrared cameras trace warm water through floors and walls to find heating and underfloor leaks.
+- title: Acoustic detection
+  body: Listening equipment picks up the sound of water escaping from buried and underground pipes.
+- title: Recommend the repair
+  body: We mark the leak and recommend the remedial works, so nothing is dug up unnecessarily.
+video:
+  youtubeId: dBo1wmXQpc0
+  title: Leak detection with TMG
+  caption: How we locate hidden leaks without unnecessary digging.
+benefitsHeading: Why choose TMG for leak detection
 benefits:
-  - "Avoids unnecessary excavation or floor removal"
-  - "Faster resolution than trial-and-error methods"
-  - "Detailed report available for insurance claims"
-  - "Local Waterford-based team — no call-out delay"
+- Based in Waterford, covering the whole city and county
+- Thermal imaging, acoustic and pressure-testing equipment
+- 'Non-invasive: no unnecessary digging or lifting of floors'
+- Clear recommendations for the repair
+- Domestic and commercial properties
+- Experienced plumbers and heating contractors since 2006
+areas:
+  heading: Leak detection across County Waterford
+  intro: 'Including:'
+  towns:
+  - Waterford City
+  - Tramore
+  - Dungarvan
+  - Dunmore East
+  - Lismore
+  - Portlaw
+  - Kilmacthomas
+  - Cappoquin
+  - Passage East
+  - Tallow
+  - Ferrybank
+  - Kilmeadan
 faqs:
-  - q: "How is a hidden leak found in a Waterford property without digging up the floor?"
-    a: "We use acoustic listening equipment and thermal imaging to locate the leak's position accurately before any excavation is considered."
-  - q: "Can leak detection be used for insurance claims?"
-    a: "Yes. We can provide a written report detailing the leak's location and likely cause, suitable for submission to insurers."
+- q: How do you find a leak under the floor?
+  a: Thermal imaging traces warm water from heating pipes and underfloor heating, and pressure testing confirms the section that is leaking, so only a small area needs to be opened.
+- q: Can you find underground water leaks in Waterford?
+  a: Yes. Acoustic detection along the line of the pipe, combined with pressure testing, locates underground mains and supply leaks precisely.
+- q: Will my insurance cover leak detection?
+  a: Some policies cover leak detection and repairs where a leak has caused significant damage. Cover varies, so check with your insurer before we begin.
+- q: Do you dig or lift floors?
+  a: No. Our leak detection is non-invasive. We locate the leak and recommend the repair, keeping any excavation to a minimum.
+downloads:
+- label: TMG leak detection leaflet
+  href: /s/Leak-Detection_Digi.pdf
+  meta: PDF
+reading:
+- title: 'Leak detection: frequently asked questions'
+  href: /blog/leak-detection-frequently-asked-questions
 relatedServices:
-  - "leak-detection"
-  - "power-flushing"
+- leak-detection
+- plumbing-heating
+- underfloor-heating
 ---
