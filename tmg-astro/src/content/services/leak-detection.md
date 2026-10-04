@@ -1,8 +1,8 @@
 ---
 title: Leak Detection
 h1: Water leak detection for homes and businesses
-seoTitle: Water Leak Detection Ireland | Underground & Underfloor Leaks | TMG
-metaDescription: Leak detection for central heating, underground pipes and mains water. Thermal imaging and acoustic equipment, no unnecessary digging. Call TMG 051 577089.
+seoTitle: Water Leak Detection | Underground & Underfloor Leaks | TMG
+metaDescription: Find hidden leaks in heating systems, underground pipes and mains water. Thermal imaging, acoustic and pressure testing, no unnecessary digging.
 heroSubheading: Finding and fixing leaks in central heating systems, underground pipework and mains water lines, without unnecessary digging.
 intro: From a boiler that keeps losing pressure to a hard-to-find mains leak hiding underground, TMG Plumbing & Heating Services locates leaks across Waterford, the South East and further afield. Using thermal imaging, acoustic and pressure-testing equipment, our plumbers and heating contractors find the exact source quickly, cleanly and with as little disruption to your home or business as possible.
 about:

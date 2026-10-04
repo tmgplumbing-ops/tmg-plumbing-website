@@ -1,8 +1,8 @@
 ---
 title: Plumbing & Heating
 h1: Plumbing and heating services for homes and businesses
-seoTitle: Plumbers & Heating Contractors Waterford | Installs, Repairs & Servicing | TMG
-metaDescription: Plumbers and heating contractors in Waterford and the South East. Heating installations, repairs, servicing, heat pumps and radiators. Call TMG on 051 577089.
+seoTitle: Plumbing & Heating Services Waterford | Plumbers | TMG
+metaDescription: 'Plumbers and heating contractors in Waterford: heating installations, repairs, servicing, heat pumps and radiators. Fixed price. Call TMG on 051 577089.'
 heroSubheading: Heating installations, servicing and repairs for homes and businesses, from experienced plumbers and heating contractors.
 intro: 'When the heating is doing its job you barely notice it. The minute something is off, you do: a radiator stays cold, the boiler starts acting up, or underfloor heating stops pulling its weight. TMG Plumbing & Heating Services are plumbers and heating contractors based in Waterford, covering everything from new heating systems to tracking down faults, carrying out repairs and routine maintenance across the South East.'
 about:

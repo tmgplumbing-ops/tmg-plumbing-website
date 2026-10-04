@@ -1,8 +1,8 @@
 ---
 title: Underfloor Heating
 h1: Underfloor heating installation, servicing and power flushing
-seoTitle: Underfloor Heating Installation, Servicing & Flushing | TMG Waterford
-metaDescription: Underfloor heating installation, servicing and power flushing from TMG, plumbers and heating contractors in Waterford and the South East. Call 051 577089.
+seoTitle: Underfloor Heating Installation & Servicing | TMG Waterford
+metaDescription: Underfloor heating installation, servicing and power flushing from TMG, plumbers and heating contractors in Waterford and the South East.
 heroSubheading: Reliable underfloor heating that keeps your home warm, comfortable and efficient, installed and maintained by specialists.
 intro: 'Many new and renovated homes are now designed around underfloor heating: an almost invisible way to heat a home, with steady warmth and no radiators taking up wall space. TMG Plumbing & Heating Services installs, services and power flushes underfloor heating systems across Waterford and the South East, so your floor delivers the even, efficient heat it was designed for.'
 about:

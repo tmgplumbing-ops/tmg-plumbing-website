@@ -1,8 +1,8 @@
 ---
 title: Oil Boiler Installations
 h1: Oil boiler installation, servicing and upgrades
-seoTitle: Oil Boiler Installation & Servicing Waterford | Heating Contractors | TMG
-metaDescription: Oil boiler installation, upgrades, servicing and bunded oil tanks in Waterford and the South East from trusted heating contractors. Call TMG on 051 577089.
+seoTitle: Oil Boiler Installation & Servicing Waterford | TMG
+metaDescription: Oil boiler installation, upgrades, servicing and bunded oil tanks from heating contractors in Waterford and the South East. Call TMG on 051 577089.
 heroSubheading: Energy-efficient oil boilers, sized correctly and installed with minimal disruption.
 intro: Your boiler should heat your home, keep the hot water steady and run quietly in the background without burning money. For many homes and businesses, though, an older system is quietly driving up oil bills and struggling to keep up. TMG Plumbing & Heating Services installs, upgrades and services oil boilers across Waterford and the South East for domestic and commercial customers.
 about:
