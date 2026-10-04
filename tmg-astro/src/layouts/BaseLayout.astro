@@ -38,6 +38,9 @@ const GTM_ID = 'GTM-5BF7S236';
     <script is:inline define:vars={{ GTM_ID }}>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
+      // Tells the shared GTM container this is the new site, so tags meant only for
+      // the old Squarespace site (e.g. the Cookie Script banner) can be blocked here.
+      dataLayer.push({ tmg_site: 'new' });
       gtag('consent', 'default', {
         ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
         analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
