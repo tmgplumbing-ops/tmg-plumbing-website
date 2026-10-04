@@ -51,8 +51,10 @@ import hSchools from '../assets/photos/hero-schools-plantroom.webp'; // supplied
 import tileSchools from '../assets/photos/hero-schools-colleges.webp';
 import hOffices from '../assets/photos/hero-offices-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-office-buildings.webp
 import tileOffices from '../assets/photos/hero-office-buildings.webp';
-import hIndustrial from '../assets/photos/hero-industrial.webp';
-import hFacility from '../assets/photos/hero-facility-maintenance.webp';
+import hIndustrial from '../assets/photos/hero-industrial-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-industrial.webp
+import tileIndustrial from '../assets/photos/hero-industrial.webp';
+import hFacility from '../assets/photos/hero-facility-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-facility-maintenance.webp
+import tileFacility from '../assets/photos/hero-facility-maintenance.webp';
 
 export type Photo = { src: ImageMetadata; alt: string; caption?: string; fit?: 'cover' | 'contain' };
 
@@ -104,8 +106,8 @@ export const heroes = {
   hospitals: { src: hHospitals, alt: 'Engineer checking a large boiler plant room with commercial boilers, hot water cylinders and pumps' },
   schools: { src: hSchools, alt: 'Engineer checking a school boiler plant room with wall-hung boilers, a buffer vessel and circulating pumps' },
   offices: { src: hOffices, alt: 'Engineer checking a bank of wall-hung boilers, a hot water cylinder and pumps in an office plant room' },
-  industrial: { src: hIndustrial, alt: 'Industrial pipework' },
-  facility: { src: hFacility, alt: 'Technician maintaining equipment in a plant room' },
+  industrial: { src: hIndustrial, alt: 'Engineer checking an industrial plant room with a buffer vessel, large pumps, insulated pipework and control panels' },
+  facility: { src: hFacility, alt: 'Engineer reviewing a commercial plant room with a boiler, buffer vessel, pumps, controls and water treatment equipment' },
 } satisfies Record<string, Photo>;
 
 // Hero + one in-page photo for each core service (also used by the local SEO
@@ -133,7 +135,9 @@ export const sectorPhotos: Record<string, Photo> = {
 export const sectorTiles: Record<string, Photo> = {
   ...sectorPhotos,
   hotels: { src: tileHotels, alt: 'Bright modern hotel bedroom' },
+  'facility-maintenance': { src: tileFacility, alt: 'Technician maintaining equipment in a plant room' },
   hospitals: { src: tileHospitals, alt: 'Clean, bright hospital corridor' },
+  industrial: { src: tileIndustrial, alt: 'Industrial pipework' },
   'office-buildings': { src: tileOffices, alt: 'Open-plan office with floor-to-ceiling windows' },
   'schools-colleges': { src: tileSchools, alt: 'Modern college building beside green lawns' },
 };
