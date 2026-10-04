@@ -17,12 +17,12 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, metaDescription, canonicalService } = entry.data;
+const { title, metaDescription, canonicalService, seoTitle } = entry.data;
 const parent = canonicalService ? await getEntry('services', canonicalService) : null;
 const canonicalURL = parent
   ? new URL(`/services/${parent.slug}`, Astro.site).toString()
   : undefined;
 ---
-<BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription} canonical={canonicalURL}>
+<BaseLayout title={seoTitle ?? `${title} | TMG Plumbing & Heating`} description={metaDescription} canonical={canonicalURL}>
   <ServicePageBody data={entry.data} noticeSlug={canonicalService} />
 </BaseLayout>
