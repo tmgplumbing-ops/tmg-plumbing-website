@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
 import { Image } from 'astro:assets';
-import { heroes, sectorPhotos } from '../data/photos';
+import { heroes, sectorTiles } from '../data/photos';
 import ServiceIcon from '../components/ServiceIcon.astro';
 import { getCollection } from 'astro:content';
 import GoogleReviews from '../components/GoogleReviews.astro';
@@ -160,8 +160,8 @@ const latest = (await getCollection('blog'))
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {sectors.map((c) => (
           <a href={c.href} class="group relative rounded-card overflow-hidden aspect-[4/3] bg-white/5">
-            {sectorPhotos[c.slug] && (
-              <Image src={sectorPhotos[c.slug].src} alt="" widths={[300, 600]} sizes="(min-width: 1024px) 200px, 50vw" class="absolute inset-0 w-full h-full object-cover opacity-70 transition duration-300 group-hover:opacity-90 group-hover:scale-105" />
+            {sectorTiles[c.slug] && (
+              <Image src={sectorTiles[c.slug].src} alt="" widths={[300, 600]} sizes="(min-width: 1024px) 200px, 50vw" class="absolute inset-0 w-full h-full object-cover opacity-70 transition duration-300 group-hover:opacity-90 group-hover:scale-105" />
             )}
             <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
             <p class="absolute left-3 bottom-3 right-3 text-white text-sm font-medium">{c.name} →</p>
