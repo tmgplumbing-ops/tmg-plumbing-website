@@ -35,7 +35,7 @@ import hHome from '../assets/photos/hero-home-split.webp'; // supplied by Tony 4
 import hFlush from '../assets/photos/hero-power-flushing-domestic.webp'; // supplied by Tony 4 Oct 2026; old: hero-power-flushing.webp
 import hUfh from '../assets/photos/hero-underfloor-heating-manifold.webp'; // supplied by Tony 4 Oct 2026; earlier: hero-underfloor-heating-flush.webp, hero-underfloor-heating.webp
 import hLeak from '../assets/photos/hero-leak-detection-thermal.webp'; // supplied by Tony 4 Oct 2026; old: hero-leak-detection.webp
-import hDemin from '../assets/photos/hero-demineralisation.webp';
+import hDemin from '../assets/photos/hero-demineralisation-units.webp'; // supplied by Tony 4 Oct 2026; old: hero-demineralisation.webp
 import hOil from '../assets/photos/hero-oil-boiler-outdoor.webp'; // supplied by Tony 4 Oct 2026; old: hero-oil-boiler-installs.webp
 import hPlumbing from '../assets/photos/hero-plumbing-heating-cylinder.webp'; // supplied by Tony 4 Oct 2026; old: hero-plumbing-heating.webp
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
@@ -96,7 +96,7 @@ export const heroes = {
   powerFlushing: { src: hFlush, alt: 'Engineer testing heating system water beside a wall-mounted boiler, with a power flushing and filtration unit connected' },
   underfloor: { src: hUfh, alt: 'Engineer adjusting an underfloor heating manifold beneath a wall-mounted boiler in a utility room' },
   leak: { src: hLeak, alt: 'Engineer using a thermal imaging camera to trace underfloor heating pipes beneath a tiled floor' },
-  demin: { src: hDemin, alt: 'Stainless steel water treatment pipework and pumps' },
+  demin: { src: hDemin, alt: 'Mobile demineralisation and filtration units connected by hoses to heating pipework in a plant room' },
   oil: { src: hOil, alt: 'Engineer fitting a new outdoor oil boiler beside a house, with the old rusted boiler removed alongside' },
   plumbing: { src: hPlumbing, alt: 'Engineer fitting a pump on the pipework of a hot water cylinder in a utility room, with a heat pump unit behind' },
   drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
