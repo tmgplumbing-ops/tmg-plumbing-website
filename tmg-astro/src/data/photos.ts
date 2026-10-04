@@ -29,8 +29,9 @@ import office from '../assets/photos/office-interior.webp';
 import industrial from '../assets/photos/industrial-pipework.webp';
 
 // New header photos (26 Sep 2026), free to use under the Unsplash licence.
-// Home hero: placeholder plant-room image supplied by Tony (27 Sep 2026); previous photo kept as hero-home.webp.
-import hHome from '../assets/photos/hero-home-plantroom.webp';
+// Home hero: engineer between a home and a plant room, supplied by Tony (4 Oct 2026).
+// Earlier versions kept as hero-home-plantroom.webp and hero-home.webp.
+import hHome from '../assets/photos/hero-home-engineer.webp';
 import hFlush from '../assets/photos/hero-power-flushing.webp';
 import hUfh from '../assets/photos/hero-underfloor-heating.webp';
 import hLeak from '../assets/photos/hero-leak-detection.webp';
@@ -83,7 +84,7 @@ export const photos = {
 // schools Andreas Haslinger · offices Nastuh Abootalebi · industrial Samuel Sianipar ·
 // facility maintenance TECNIC Bioprocess Solutions.
 export const heroes = {
-  home: { src: hHome, alt: 'Commercial plant room with blue and red insulated pipework, pumps and heat exchangers' },
+  home: { src: hHome, alt: 'Heating engineer with a tablet, between a modern home with a wall-mounted boiler and a commercial plant room' },
   powerFlushing: { src: hFlush, alt: 'White radiator under a window in a bright room' },
   underfloor: { src: hUfh, alt: 'Underfloor heating pipes laid across a floor, running into a manifold' },
   leak: { src: hLeak, alt: 'Thermal heat-map style image in reds, yellows and blues' },
