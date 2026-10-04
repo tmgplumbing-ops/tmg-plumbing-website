@@ -1,10 +1,9 @@
 ---
-title: "How Heating Systems Work and the Role of Power Flushing and Underfloor Heating in Efficiency"
-seoTitle: "Role of Power Flushing in Heating Systems"
-metaDescription: "Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency. This blog aims to explain the technical aspects of home heating systems and the role power flushing for radiators and underfloor heating plays in the maintenance of these heating systems."
+title: How Heating Systems Work and the Role of Power Flushing and Underfloor Heating in Efficiency
+seoTitle: Role of Power Flushing in Heating Systems
+metaDescription: How home heating systems work, and the role power flushing plays in keeping radiators and underfloor heating running efficiently.
 publishDate: 2023-12-18
-excerpt: "Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency."
-# Migrated from https://www.tmgplumbing.ie/blog/how-heating-systems-work on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Heating systems in our homes are integral to our comfort, especially during the colder months. However, not everyone is familiar with how these systems work and the importance of maintenance for optimal efficiency.
 ---
 ![](./images/how-heating-systems-work-01.webp)
 

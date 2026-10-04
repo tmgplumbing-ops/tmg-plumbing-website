@@ -1,9 +1,8 @@
 ---
-title: "Why Commercial Buildings Need Regular Power Flushing"
-metaDescription: "At TMG Plumbing & Heating Services, we understand how vital a reliable heating system is for commercial spaces like hotels, offices, and schools. Over time, heating systems naturally accumulate sludge, rust, and debris, which can severely impact performance and lead to costly repairs. That’s where power flushing comes in."
+title: Why Commercial Buildings Need Regular Power Flushing
+metaDescription: Why hotels, offices and schools need regular power flushing to remove sludge, keep heating reliable and avoid costly repairs.
 publishDate: 2025-04-04
-excerpt: "At TMG Plumbing & Heating Services, we understand how vital a reliable heating system is for commercial spaces like hotels, offices, and schools."
-# Migrated from https://www.tmgplumbing.ie/blog/why-commercial-buildings-need-regular-power-flushing on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: At TMG Plumbing & Heating Services, we understand how vital a reliable heating system is for commercial spaces like hotels, offices, and schools.
 ---
 ![](./images/why-commercial-buildings-need-regular-power-flushing-01.webp)
 

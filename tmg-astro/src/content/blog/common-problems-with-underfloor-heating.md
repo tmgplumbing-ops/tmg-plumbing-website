@@ -1,10 +1,9 @@
 ---
-title: "Common Problems with Underfloor Heating"
-seoTitle: "Common Problems With Underfloor Heating"
-metaDescription: "While underfloor heating is generally a very reliable heating system, sometimes things go wrong and either your heating system is not working efficiently, or it stops working altogether. By knowing some of the common problems, it can help either you or your heating engineer to rectify the issues and get you back up and running as quickly as possible."
+title: Common Problems with Underfloor Heating
+seoTitle: Common Problems With Underfloor Heating
+metaDescription: Underfloor heating not working properly? The most common problems, from cold patches to pump and manifold faults, and how to put them right.
 publishDate: 2023-03-23
-excerpt: "While underfloor heating is generally a very reliable heating system, sometimes things go wrong and either your heating system is not working efficiently, or it stops working altogether."
-# Migrated from https://www.tmgplumbing.ie/blog/common-problems-with-underfloor-heating on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: While underfloor heating is generally a very reliable heating system, sometimes things go wrong and either your heating system is not working efficiently, or it stops working altogether.
 ---
 ![](./images/common-problems-with-underfloor-heating-01.webp)
 

@@ -1,9 +1,9 @@
 ---
-title: "What is Demineralising a Heating System and Why Do You Need It?"
-metaDescription: "Demineralising a heating system is the process of removing minerals such as calcium, magnesium, and other dissolved solids from the water that circulates within the system. These minerals, if left untreated, can accumulate and lead to scale build-up within pipes, boilers, and heat exchangers, reducing the efficiency of the system and potentially causing damage over time. The aim of demineralisation is to maintain optimal water quality, ensuring the heating system operates smoothly, efficiently, and with a longer lifespan."
+title: What is Demineralising a Heating System and Why Do You Need It?
+metaDescription: What demineralising a heating system means, how removing minerals prevents scale and corrosion, and why your system needs it.
 publishDate: 2024-10-24
-excerpt: "Demineralising a heating system is the process of removing minerals such as calcium, magnesium, and other dissolved solids from the water that circulates within the system."
-# Migrated from https://www.tmgplumbing.ie/blog/what-is-demineralising-heating-system on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Demineralising a heating system is the process of removing minerals such as calcium, magnesium, and other dissolved solids from the water that circulates within the system.
+seoTitle: What Is Demineralising a Heating System?
 ---
 ![](./images/what-is-demineralising-heating-system-01.webp)
 

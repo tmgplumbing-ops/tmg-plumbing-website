@@ -1,9 +1,9 @@
 ---
-title: "The Impact of Hard Water on Your Heating System and How Power Flushing Can Help"
-metaDescription: "An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues."
+title: The Impact of Hard Water on Your Heating System and How Power Flushing Can Help
+metaDescription: An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues.
 publishDate: 2024-08-23
-excerpt: "An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues."
-# Migrated from https://www.tmgplumbing.ie/blog/impact-of-hard-water-on-your-heating-system on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: An exploration of how hard water affects your heating system and how power flushing can help mitigate these issues.
+seoTitle: How Hard Water Affects Your Heating System
 ---
 ![](./images/impact-of-hard-water-on-your-heating-system-01.webp)
 

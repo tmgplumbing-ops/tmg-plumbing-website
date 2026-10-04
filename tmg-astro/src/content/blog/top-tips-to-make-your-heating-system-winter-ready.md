@@ -1,10 +1,9 @@
 ---
-title: "Top Tips to Make Your Heating System Winter Ready!"
-seoTitle: "Top Tips to Make Your Heating System Winter Ready"
-metaDescription: "Winter is just around the corner, and for many of us, this means cosy nights by the fireplace and keeping warm indoors. But for your home's heating system, it means a period of hard work to keep you and your loved ones warm. TMG Plumbing is here with our top tips to ensure your heating system, be it radiators or underfloor heating, works smoothly throughout the chilly season."
+title: Top Tips to Make Your Heating System Winter Ready!
+seoTitle: Top Tips to Make Your Heating System Winter Ready
+metaDescription: Our top tips to get your radiators or underfloor heating ready for winter, so your heating works smoothly through the cold months.
 publishDate: 2023-09-28
-excerpt: "Winter is just around the corner, and for many of us, this means cosy nights by the fireplace and keeping warm indoors."
-# Migrated from https://www.tmgplumbing.ie/blog/top-tips-to-make-your-heating-system-winter-ready on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Winter is just around the corner, and for many of us, this means cosy nights by the fireplace and keeping warm indoors.
 ---
 ![](./images/top-tips-to-make-your-heating-system-winter-ready-01.webp)
 

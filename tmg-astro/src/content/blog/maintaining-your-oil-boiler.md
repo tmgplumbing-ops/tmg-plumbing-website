@@ -1,9 +1,8 @@
 ---
-title: "Maintaining Your Oil Boiler"
-metaDescription: "Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system. Water in your oil tank can cause the oil to congeal and clog the nozzles. Frozen water or air will block the oil line and lock out the boiler. So what do you need to do to maintain and prolong the life of your oil fired boiler?"
+title: Maintaining Your Oil Boiler
+metaDescription: Water or air in your oil supply can clog nozzles and lock out the boiler. How to maintain your oil boiler and help it last longer.
 publishDate: 2022-10-28
-excerpt: "Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system."
-# Migrated from https://www.tmgplumbing.ie/blog/maintaining-your-oil-boiler on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Oil is a fuel, that is not only extremely costly now but is also a fuel that can be easy contaminated. This can cause severe issues with your heating system.
 ---
 ![](./images/maintaining-your-oil-boiler-01.webp)
 

@@ -1,9 +1,8 @@
 ---
-title: "Underfloor Heating - Frequently Asked Questions"
-metaDescription: "Regular servicing of your underfloor heating is highly recommended. It’s always better to regularly maintain a system to ensure it is constantly running smoothly and efficiently. Servicing allows plumbers and heating engineers to proactively look out for signs of any failure in the heating system before anything major goes wrong and involves costly repairs or replacement. They can also offer tips to homeowners to maximise the efficiency of their heating system."
+title: Underfloor Heating - Frequently Asked Questions
+metaDescription: Common questions about underfloor heating answered, including servicing, efficiency and how to keep your system running smoothly.
 publishDate: 2021-03-26
-excerpt: "Regular servicing of your underfloor heating is highly recommended. It’s always better to regularly maintain a system to ensure it is constantly running smoothly and efficiently."
-# Migrated from https://www.tmgplumbing.ie/blog/underfloorheatingfaq on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Regular servicing of your underfloor heating is highly recommended. It’s always better to regularly maintain a system to ensure it is constantly running smoothly and efficiently.
 ---
 ![underfloor heating](./images/underfloorheatingfaq-01.webp)
 

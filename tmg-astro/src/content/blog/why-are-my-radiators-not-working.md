@@ -1,9 +1,8 @@
 ---
-title: "Why Are My Radiators Not Heating Up?"
-metaDescription: "When you find your radiators not heating up as they should, it can be both puzzling and frustrating, especially during the colder months when you rely on them the most. There are several common reasons why your radiators may not be working efficiently, and thankfully, most of these issues can be resolved with some basic troubleshooting and remedial work."
+title: Why Are My Radiators Not Heating Up?
+metaDescription: Radiators not heating up? The most common reasons, from trapped air and sludge to valve problems, and how to put them right.
 publishDate: 2024-03-06
-excerpt: "When you find your radiators not heating up as they should, it can be both puzzling and frustrating, especially during the colder months when you rely on them the most."
-# Migrated from https://www.tmgplumbing.ie/blog/why-are-my-radiators-not-working on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: When you find your radiators not heating up as they should, it can be both puzzling and frustrating, especially during the colder months when you rely on them the most.
 ---
 ![](./images/why-are-my-radiators-not-working-01.webp)
 

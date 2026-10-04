@@ -1,10 +1,9 @@
 ---
-title: "Money Saving Tips for your Heating System"
-seoTitle: "Money Saving Tips for Your Heating System"
-metaDescription: "Heating has always accounted for a large part of our expenses. With oil, gas and electricity costs at an all time high, now more than ever, we need to find ways to make our heating systems more efficient and our money stretch further. Even just some small adjustments can help to lower your bills by a significant amount. The following are some of our tips and advice to help you run your heating system more efficiently."
+title: Money Saving Tips for your Heating System
+seoTitle: Money Saving Tips for Your Heating System
+metaDescription: Simple ways to run your heating system more efficiently and bring your heating bills down, from TMG Plumbing & Heating.
 publishDate: 2022-04-28
-excerpt: "Heating has always accounted for a large part of our expenses. With oil, gas and electricity costs at an all time high, now more than ever, we need to find ways to make our heating systems more efficient and our money stretch further."
-# Migrated from https://www.tmgplumbing.ie/blog/money-saving-tips-for-your-heating-system on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Heating has always accounted for a large part of our expenses. With oil, gas and electricity costs at an all time high, now more than ever, we need to find ways to make our heating systems more efficient and our money stretch further.
 ---
 ![Room thermostat](./images/money-saving-tips-for-your-heating-system-01.webp)
 

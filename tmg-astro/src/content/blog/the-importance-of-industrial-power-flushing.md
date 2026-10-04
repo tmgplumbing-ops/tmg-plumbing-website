@@ -1,9 +1,9 @@
 ---
-title: "The Importance of Industrial Power Flushing: Enhancing Efficiency and Lifespan of Heating Systems"
-metaDescription: "Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs. TMG Plumbing specializes in Industrial Power Flushing, a solution designed to restore the health of your heating systems and ensure optimal performance."
+title: 'The Importance of Industrial Power Flushing: Enhancing Efficiency and Lifespan of Heating Systems'
+metaDescription: 'Why industrial heating systems need power flushing: removing sludge, rust and scale to restore efficiency and avoid costly repairs.'
 publishDate: 2024-11-15
-excerpt: "Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs."
-# Migrated from https://www.tmgplumbing.ie/blog/the-importance-of-industrial-power-flushing on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Heating systems, particularly in industrial and commercial settings, work under heavy demands. Over time, these systems accumulate dirt, sludge, rust, and other mineral deposits, significantly reducing efficiency and risking costly repairs.
+seoTitle: 'Industrial Power Flushing: Why It Matters'
 ---
 ![](./images/the-importance-of-industrial-power-flushing-01.webp)
 

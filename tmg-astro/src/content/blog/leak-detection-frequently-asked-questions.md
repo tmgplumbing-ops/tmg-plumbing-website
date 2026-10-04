@@ -1,9 +1,8 @@
 ---
-title: "Leak Detection - Frequently Asked Questions"
-metaDescription: "Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system? This may indicate a leak on your water supply or on your heating system. Water leaks can be extremely damaging to your home or business and can be very costly to repair if left untouched."
+title: Leak Detection - Frequently Asked Questions
+metaDescription: Losing pressure in your water supply or heating system? Answers to common questions about finding and fixing hidden water leaks.
 publishDate: 2023-07-28
-excerpt: "Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system?"
-# Migrated from https://www.tmgplumbing.ie/blog/leak-detection-frequently-asked-questions on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: Have you recently noticed a drop in pressure to your water supply or your heating system? Is your heating system not working efficiently or do you keep having to top up the water in your heating system?
 ---
 ![](./images/leak-detection-frequently-asked-questions-01.webp)
 

@@ -1,9 +1,8 @@
 ---
-title: "Heat Pumps - Frequently Asked Questions"
-metaDescription: "In essence, a heat pump takes the same principle as a fridge and reverses it. A heat pump takes the available heat from the air surrounding your property and increases it to a more useful temperature for use in the home. This renewable source of heat can be used to create warm air or water for space and central heating such as underfloor heating or radiator system as well as hot water for your hot water supply. The heat pump is regarded as a much more efficient and environmentally friendly heat source as it does not burn fossil fuels but works off electricity."
+title: Heat Pumps - Frequently Asked Questions
+metaDescription: 'Common questions about heat pumps answered: how they work, why they are efficient and how they heat your home and hot water.'
 publishDate: 2021-06-18
-excerpt: "In essence, a heat pump takes the same principle as a fridge and reverses it. A heat pump takes the available heat from the air surrounding your property and increases it to a more useful temperature for use in the home."
-# Migrated from https://www.tmgplumbing.ie/blog/heatpumpsfaq on 2026-09-26. Images copied into the site on 2026-09-26.
+excerpt: In essence, a heat pump takes the same principle as a fridge and reverses it. A heat pump takes the available heat from the air surrounding your property and increases it to a more useful temperature for use in the home.
 ---
 ![Heat Pump](./images/heatpumpsfaq-01.webp)
 
