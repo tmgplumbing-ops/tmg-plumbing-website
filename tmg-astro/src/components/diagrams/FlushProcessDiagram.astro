@@ -1,0 +1,72 @@
+---
+// How TMG power flushes a system (reworked from the old site's machine
+// diagram): the heating circuit is connected to the flushing unit, water is
+// circulated at high velocity but low pressure through magnetic and particle
+// filters, then passed through a demineraliser before going back in.
+const rads = [0, 1, 2];
+---
+<svg viewBox="0 0 920 360" class="w-full h-auto" role="img" aria-labelledby="fp-title fp-desc" font-family="inherit">
+  <title id="fp-title">How we power flush a heating system</title>
+  <desc id="fp-desc">The heating system is connected to TMG's flushing unit. Water is pumped around the radiators at high velocity but low pressure, then through a magnetic filter that captures magnetite and a filter that removes sludge and debris. Finally the water passes through a demineraliser so minerals are removed before it returns to the system.</desc>
+  <defs>
+    <marker id="fp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#CE5600" />
+    </marker>
+    <marker id="fp-arrow-n" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#002050" />
+    </marker>
+  </defs>
+
+  <!-- Heating system -->
+  <text x="40" y="30" font-size="15" font-weight="500" fill="#002050" fill-opacity="0.6">YOUR HEATING SYSTEM</text>
+  {rads.map((i) => (
+    <g transform={`translate(${60 + i * 120} 60)`}>
+      <rect width="96" height="64" rx="8" fill="#F3F5F8" stroke="#002050" stroke-width="2" />
+      {[0, 1, 2, 3, 4].map((k) => <line x1={16 + k * 16} y1="10" x2={16 + k * 16} y2="54" stroke="#002050" stroke-opacity="0.25" stroke-width="2" />)}
+      <line x1="48" y1="64" x2="48" y2="96" stroke="#CE5600" stroke-width="3" />
+    </g>
+  ))}
+  <!-- flow pipe -->
+  <path d="M108 156 H400" stroke="#CE5600" stroke-width="4" fill="none" />
+  <line x1="108" y1="156" x2="108" y2="124" stroke="#CE5600" stroke-width="3" />
+  <line x1="228" y1="156" x2="228" y2="124" stroke="#CE5600" stroke-width="3" />
+  <line x1="348" y1="156" x2="348" y2="124" stroke="#CE5600" stroke-width="3" />
+  <!-- boiler -->
+  <rect x="60" y="210" width="110" height="110" rx="10" fill="#fff" stroke="#002050" stroke-width="2" />
+  <text x="115" y="262" text-anchor="middle" font-size="15" font-weight="500" fill="#002050">Boiler or</text>
+  <text x="115" y="281" text-anchor="middle" font-size="15" font-weight="500" fill="#002050">heat pump</text>
+  <path d="M170 250 H260 V156" stroke="#CE5600" stroke-width="4" fill="none" />
+  <path d="M170 290 H400" stroke="#4A78B8" stroke-width="4" fill="none" />
+  <text x="285" y="314" font-size="13" fill="#002050" fill-opacity="0.6">return</text>
+
+  <!-- hoses to unit -->
+  <path d="M400 156 C450 156 450 110 500 110" stroke="#CE5600" stroke-width="4" fill="none" marker-end="url(#fp-arrow)" />
+  <path d="M500 290 C450 290 450 290 404 290" stroke="#4A78B8" stroke-width="4" fill="none" marker-end="url(#fp-arrow-n)" />
+  <text x="452" y="92" text-anchor="middle" font-size="13" fill="#002050" fill-opacity="0.6">hoses</text>
+
+  <!-- Flushing unit -->
+  <rect x="490" y="44" width="400" height="290" rx="16" fill="#002050" />
+  <text x="510" y="72" font-size="15" font-weight="500" fill="#fff" fill-opacity="0.7">TMG FLUSHING UNIT</text>
+
+  <g font-size="15" font-weight="500" fill="#002050">
+    <rect x="516" y="90" width="160" height="70" rx="10" fill="#fff" />
+    <text x="596" y="120" text-anchor="middle">1 Flushing pump</text>
+    <text x="596" y="142" text-anchor="middle" font-size="12" font-weight="400" fill-opacity="0.7">fast flow, low pressure</text>
+
+    <rect x="708" y="90" width="160" height="70" rx="10" fill="#fff" />
+    <text x="788" y="120" text-anchor="middle">2 Magnetic filter</text>
+    <text x="788" y="142" text-anchor="middle" font-size="12" font-weight="400" fill-opacity="0.7">captures magnetite</text>
+
+    <rect x="708" y="230" width="160" height="70" rx="10" fill="#fff" />
+    <text x="788" y="260" text-anchor="middle">3 Particle filter</text>
+    <text x="788" y="282" text-anchor="middle" font-size="12" font-weight="400" fill-opacity="0.7">removes sludge, debris</text>
+
+    <rect x="516" y="230" width="160" height="70" rx="10" fill="#CE5600" />
+    <text x="596" y="260" text-anchor="middle" fill="#fff">4 Demineraliser</text>
+    <text x="596" y="282" text-anchor="middle" font-size="12" font-weight="400" fill="#fff" fill-opacity="0.9">removes minerals</text>
+  </g>
+  <line x1="676" y1="125" x2="702" y2="125" stroke="#fff" stroke-width="3" marker-end="url(#fp-arrow)" />
+  <line x1="788" y1="160" x2="788" y2="224" stroke="#fff" stroke-width="3" marker-end="url(#fp-arrow)" />
+  <line x1="708" y1="265" x2="682" y2="265" stroke="#fff" stroke-width="3" marker-end="url(#fp-arrow)" />
+  <path d="M516 265 H500 V290" stroke="#fff" stroke-width="3" fill="none" />
+</svg>
