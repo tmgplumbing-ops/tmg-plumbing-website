@@ -40,7 +40,7 @@ import hOil from '../assets/photos/hero-oil-boiler-outdoor.webp'; // supplied by
 import hPlumbing from '../assets/photos/hero-plumbing-heating-cylinder.webp'; // supplied by Tony 4 Oct 2026; old: hero-plumbing-heating.webp
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
 import hWater from '../assets/photos/hero-water-treatment.webp';
-import hCommercial from '../assets/photos/hero-commercial.webp';
+import hCommercial from '../assets/photos/hero-commercial-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-commercial.webp
 import hHotels from '../assets/photos/hero-hotels.webp';
 import hHospitals from '../assets/photos/hero-hospitals.webp';
 import hSchools from '../assets/photos/hero-schools-colleges.webp';
@@ -93,7 +93,7 @@ export const heroes = {
   plumbing: { src: hPlumbing, alt: 'Engineer fitting a pump on the pipework of a hot water cylinder in a utility room, with a heat pump unit behind' },
   drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
   water: { src: hWater, alt: 'Blue pipework and valves in a treatment plant' },
-  commercial: { src: hCommercial, alt: 'Stainless steel pipework in a commercial plant room' },
+  commercial: { src: hCommercial, alt: 'Engineers working in a large commercial boiler plant room with insulated pipework, pumps and boilers' },
   hotels: { src: hHotels, alt: 'Bright modern hotel bedroom' },
   hospitals: { src: hHospitals, alt: 'Clean, bright hospital corridor' },
   schools: { src: hSchools, alt: 'Modern college building beside green lawns' },
