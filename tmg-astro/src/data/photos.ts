@@ -41,7 +41,7 @@ import hPlumbing from '../assets/photos/hero-plumbing-heating-cylinder.webp'; //
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
 import hWater from '../assets/photos/hero-water-treatment.webp';
 import hCommercial from '../assets/photos/hero-commercial-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-commercial.webp
-import hHotels from '../assets/photos/hero-hotels.webp';
+import hHotels from '../assets/photos/hero-hotels-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-hotels.webp
 import hHospitals from '../assets/photos/hero-hospitals-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-hospitals.webp
 import hSchools from '../assets/photos/hero-schools-colleges.webp';
 import hOffices from '../assets/photos/hero-office-buildings.webp';
@@ -94,7 +94,7 @@ export const heroes = {
   drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
   water: { src: hWater, alt: 'Blue pipework and valves in a treatment plant' },
   commercial: { src: hCommercial, alt: 'Engineers working in a large commercial boiler plant room with insulated pipework, pumps and boilers' },
-  hotels: { src: hHotels, alt: 'Bright modern hotel bedroom' },
+  hotels: { src: hHotels, alt: 'Engineer in a basement boiler room with gas boilers, hot water cylinders and circulating pumps' },
   hospitals: { src: hHospitals, alt: 'Engineer checking a large boiler plant room with commercial boilers, hot water cylinders and pumps' },
   schools: { src: hSchools, alt: 'Modern college building beside green lawns' },
   offices: { src: hOffices, alt: 'Open-plan office with floor-to-ceiling windows' },
