@@ -12,8 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, metaDescription } = entry.data;
+const { title, metaDescription, seoTitle } = entry.data;
 ---
-<BaseLayout title={`${title} | TMG Plumbing & Heating`} description={metaDescription}>
+<BaseLayout title={seoTitle ?? `${title} | TMG Plumbing & Heating`} description={metaDescription}>
   <ServicePageBody data={entry.data} noticeSlug={entry.slug} />
 </BaseLayout>
