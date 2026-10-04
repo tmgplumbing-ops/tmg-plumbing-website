@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import { heroes, sectorPhotos } from '../data/photos';
 import ServiceIcon from '../components/ServiceIcon.astro';
 import { getCollection } from 'astro:content';
+import GoogleReviews from '../components/GoogleReviews.astro';
 import { coverOf, categoryOf, readingMinutes } from '../data/blog';
 
 const services = [
@@ -172,6 +173,9 @@ const latest = (await getCollection('blog'))
       </div>
     </div>
   </section>
+
+  <!-- Google reviews (hidden until the first fetch) -->
+  <GoogleReviews />
 
   <!-- Intro -->
   <section class="mx-auto max-w-6xl px-4 py-16">
