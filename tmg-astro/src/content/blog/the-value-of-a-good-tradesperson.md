@@ -16,6 +16,6 @@ Many people don’t realise the amount of training and education that a tradespe
 
 As a plumber, not only do you need to have a wide range of knowledge in heating and plumbing but general building, carpentry and occasionally electrical knowledge to get repairs and installations done and to know which other tradespeople are needed. On most jobs, you will use power tools and even sometimes welding and soldering equipment.
 
-As a plumber who attends emergency callouts, you sometimes have to work late into the evening and weekends and often have to work in tight and confined spaces so claustrophobia is not a good thing to suffer from. Plumbing is not only a physical job but requires quick thinking and good problem solving abilities.
+As a plumber, you sometimes have to work late into the evening and at weekends and often have to work in tight and confined spaces so claustrophobia is not a good thing to suffer from. Plumbing is not only a physical job but requires quick thinking and good problem solving abilities.
 
 So when you are looking for a tradesperson to do work in your home, make sure they are fully qualified and have received their Craft cards. And if you find a good tradesperson, appreciate that they have had to hone their skills over years of hard work and experience. Hang on to their numbers – they are invaluable!!
