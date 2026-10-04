@@ -11,6 +11,7 @@ import cartridge from '../assets/products/demineralisation-cartridge.webp';
 import mobileFilter from '../assets/products/mobile-heating-water-filter.webp';
 import mobileFill from '../assets/products/mobile-filling-station.webp';
 import addOns from '../assets/products/essential-add-ons.webp';
+import heroPhoto from '../assets/photos/hero-heating-products.webp'; // supplied by Tony 4 Oct 2026
 
 const HWR_PDF = '/s/ENG_magnetic_HWR_plus_web.pdf';
 const RANGE_PDF = '/s/ENG_magnetic_Heating_Water_Treatment_ES_web.pdf';
@@ -120,8 +121,8 @@ const itemList = {
           <a href="tel:051577089" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
         </div>
       </div>
-      <div class="hidden md:block rounded-card bg-white p-8 aspect-[4/3]">
-        <Image src={hwr} alt={products[0].alt} widths={[400, 760]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-contain" />
+      <div class="rounded-card overflow-hidden aspect-[4/3] shadow-xl">
+        <Image src={heroPhoto} alt="Mobile heating water filter and mobile filling station connected to pipework in a plant room" widths={[400, 800]} sizes="(min-width: 768px) 400px, 100vw" loading="eager" class="w-full h-full object-cover" style="object-position: 62% 50%" />
       </div>
     </div>
   </section>
