@@ -1,0 +1,39 @@
+---
+// Underfloor heating before and after a power flush (reworked from the old
+// site's thermal-camera graphic): sludge-blocked loops leave cold patches;
+// after flushing, heat reaches the whole floor.
+const loop = 'M30 40 H310 a18 18 0 0 1 0 36 H48 a18 18 0 0 0 0 36 H310 a18 18 0 0 1 0 36 H48 a18 18 0 0 0 0 36 H310';
+---
+<svg viewBox="0 0 900 330" class="w-full h-auto" role="img" aria-labelledby="ufhf-title ufhf-desc" font-family="inherit">
+  <title id="ufhf-title">Underfloor heating before and after power flushing</title>
+  <desc id="ufhf-desc">Before: sludge in the underfloor pipes slows the flow, so heat fades along the loop and parts of the floor stay cold. After a power flush, warm water reaches the full length of every loop and the floor heats evenly.</desc>
+  <defs>
+    <linearGradient id="ufhf-cold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7B98A" /><stop offset="0.45" stop-color="#F3DCC8" /><stop offset="1" stop-color="#BFD3EE" />
+    </linearGradient>
+    <linearGradient id="ufhf-pipe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CE5600" /><stop offset="0.5" stop-color="#D99A6C" /><stop offset="1" stop-color="#4A78B8" />
+    </linearGradient>
+    <marker id="ufhf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#CE5600" /></marker>
+  </defs>
+
+  <g transform="translate(40 30)">
+    <rect width="340" height="220" rx="12" fill="url(#ufhf-cold)" stroke="#002050" stroke-width="2.5" />
+    <path d={loop} fill="none" stroke="url(#ufhf-pipe)" stroke-width="7" stroke-linecap="round" />
+    <circle cx="180" cy="112" r="4" fill="#5A3B22" /><circle cx="250" cy="148" r="5" fill="#5A3B22" /><circle cx="120" cy="184" r="4" fill="#5A3B22" /><circle cx="270" cy="184" r="5" fill="#5A3B22" />
+    <text x="250" y="210" font-size="13" fill="#002050" fill-opacity="0.7">cold patches</text>
+  </g>
+  <text x="210" y="282" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Before</text>
+  <text x="210" y="306" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">sludge slows the flow, heat fades</text>
+
+  <line x1="400" y1="140" x2="490" y2="140" stroke="#CE5600" stroke-width="5" marker-end="url(#ufhf-arrow)" />
+  <text x="445" y="120" text-anchor="middle" font-size="15" font-weight="500" fill="#002050">Flush</text>
+
+  <g transform="translate(520 30)">
+    <rect width="340" height="220" rx="12" fill="#F7B98A" stroke="#002050" stroke-width="2.5" />
+    <rect width="340" height="220" rx="12" fill="#CE5600" fill-opacity="0.25" />
+    <path d={loop} fill="none" stroke="#CE5600" stroke-width="7" stroke-linecap="round" />
+  </g>
+  <text x="690" y="282" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">After</text>
+  <text x="690" y="306" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">even heat across the whole floor</text>
+</svg>

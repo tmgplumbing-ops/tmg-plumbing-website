@@ -3,7 +3,7 @@
 ---
 <svg viewBox="0 0 900 300" class="w-full h-auto" role="img" aria-labelledby="leak-title leak-desc" font-family="inherit">
   <title id="leak-title">How we find hidden leaks</title>
-  <desc id="leak-desc">Three non-invasive methods: thermal imaging shows warm water escaping under a floor, acoustic listening picks up the sound of the leak, and tracer gas rises through the floor above the leak.</desc>
+  <desc id="leak-desc">Three non-invasive methods: thermal imaging shows warm water escaping under a floor, acoustic listening picks up the sound of the leak, and pressure testing confirms which section of pipework is losing water.</desc>
 
   <!-- Ground + pipe with leak, shared -->
   {[0, 1, 2].map((i) => (
@@ -36,13 +36,14 @@
     <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">hears the leak through the floor</text>
   </g>
 
-  <!-- 3 Tracer gas -->
+  <!-- 3 Pressure testing -->
   <g transform="translate(610 0)">
-    {[[118, 132, 5], [136, 118, 4], [124, 100, 6], [142, 86, 4], [128, 70, 5]].map(([x, y, r]) => <circle cx={x} cy={y} r={r} fill="none" stroke="#CE5600" stroke-width="2.5" />)}
-    <rect x="160" y="54" width="54" height="34" rx="8" fill="#002050" />
-    <rect x="168" y="62" width="24" height="10" rx="2" fill="#CE5600" />
-    <line x1="168" y1="88" x2="146" y2="140" stroke="#002050" stroke-width="4" />
-    <text x="130" y="252" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Tracer gas</text>
-    <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">rises exactly above the leak</text>
+    <circle cx="130" cy="92" r="40" fill="#fff" stroke="#002050" stroke-width="4" />
+    {[-60, -30, 0, 30, 60].map((a) => <line x1={130 + 30 * Math.sin(a * Math.PI / 180)} y1={92 - 30 * Math.cos(a * Math.PI / 180)} x2={130 + 36 * Math.sin(a * Math.PI / 180)} y2={92 - 36 * Math.cos(a * Math.PI / 180)} stroke="#002050" stroke-width="2.5" />)}
+    <line x1="130" y1="92" x2="108" y2="74" stroke="#CE5600" stroke-width="4" stroke-linecap="round" />
+    <circle cx="130" cy="92" r="5" fill="#002050" />
+    <rect x="124" y="132" width="12" height="22" fill="#002050" />
+    <text x="130" y="252" text-anchor="middle" font-size="20" font-weight="500" fill="#002050">Pressure testing</text>
+    <text x="130" y="275" text-anchor="middle" font-size="15" fill="#002050" fill-opacity="0.65">confirms which pipe is losing water</text>
   </g>
 </svg>

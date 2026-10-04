@@ -1,0 +1,45 @@
+---
+// "How do I know if I have a water leak?" (reworked from the old site's
+// infographic): twelve common signs either side of a branching pipe.
+const left = [
+  'Pooling water on the ground',
+  'Cracks in concrete',
+  'Damp spots on floors or walls',
+  'Rising damp or black mould',
+  'Sudden drop in heating pressure',
+  'Dirty or rusty water supply',
+];
+const right = [
+  'Damp or discoloured soil',
+  'Water stains on walls or ceilings',
+  'Bad odours, especially near drains',
+  'Sudden drop in water pressure',
+  'Gurgling in the heating system',
+  'Boiler pressure needs topping up',
+];
+const y = (i: number) => 40 + i * 58;
+---
+<svg viewBox="0 0 900 400" class="w-full h-auto" role="img" aria-labelledby="ls-title ls-desc" font-family="inherit">
+  <title id="ls-title">How do I know if I have a water leak?</title>
+  <desc id="ls-desc">Common signs of a hidden leak: {left.concat(right).join('; ')}.</desc>
+  <!-- pipe -->
+  <rect x="438" y="20" width="24" height="350" rx="6" fill="#C9D3E0" />
+  {left.map((_, i) => <rect x="400" y={y(i) + 14} width="38" height="12" fill="#C9D3E0" />)}
+  {right.map((_, i) => <rect x="462" y={y(i) + 14} width="38" height="12" fill="#C9D3E0" />)}
+  <path d="M450 372 c-6 10 -6 16 0 20 c6 -4 6 -10 0 -20 z" fill="#4A78B8" />
+
+  {left.map((t, i) => (
+    <g>
+      <rect x="20" y={y(i)} width="380" height="40" rx="8" fill="#F3F5F8" />
+      <rect x="392" y={y(i)} width="8" height="40" fill="#CE5600" />
+      <text x="206" y={y(i) + 26} text-anchor="middle" font-size="15" fill="#002050">{t}</text>
+    </g>
+  ))}
+  {right.map((t, i) => (
+    <g>
+      <rect x="500" y={y(i)} width="380" height="40" rx="8" fill="#F3F5F8" />
+      <rect x="500" y={y(i)} width="8" height="40" fill="#CE5600" />
+      <text x="694" y={y(i) + 26} text-anchor="middle" font-size="15" fill="#002050">{t}</text>
+    </g>
+  ))}
+</svg>

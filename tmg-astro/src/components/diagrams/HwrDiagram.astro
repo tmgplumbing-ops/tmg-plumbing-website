@@ -1,0 +1,41 @@
+---
+// Heating Water Regulator (reworked from the manufacturer's function
+// graphic): degassing, anode protection and magnetic/sludge filtration in one
+// vessel fitted to the heating return.
+const items = [
+  { y: 60, title: 'Degassing', body: ['Removes oxygen and gases, venting', 'circulating bubbles via the degasser'] },
+  { y: 160, title: 'Anode protection', body: ['Regulates the pH value and', 'converts oxygen in the water'] },
+  { y: 260, title: 'Magnetic and sludge filter', body: ['A strong magnet captures magnetite;', 'sludge settles and is drained off'] },
+];
+---
+<svg viewBox="0 0 900 340" class="w-full h-auto" role="img" aria-labelledby="hwr-title hwr-desc" font-family="inherit">
+  <title id="hwr-title">How a Heating Water Regulator works</title>
+  <desc id="hwr-desc">Fitted to the heating system, the Heating Water Regulator does three jobs in one vessel: degassing removes oxygen and gases, an anode regulates pH and converts oxygen, and a magnetic and sludge filter captures magnetite and sludge.</desc>
+  <!-- pipes -->
+  <rect x="60" y="190" width="120" height="22" fill="#C9D3E0" />
+  <rect x="340" y="190" width="120" height="22" fill="#C9D3E0" />
+  <text x="70" y="180" font-size="13" fill="#002050" fill-opacity="0.6">from system</text>
+  <text x="356" y="234" font-size="13" fill="#002050" fill-opacity="0.6">back to system</text>
+  <!-- vessel -->
+  <rect x="180" y="40" width="160" height="260" rx="22" fill="#fff" stroke="#002050" stroke-width="3" />
+  <rect x="190" y="80" width="140" height="210" rx="16" fill="#4A78B8" fill-opacity="0.25" />
+  <rect x="244" y="18" width="32" height="26" rx="4" fill="#002050" />
+  <!-- bubbles -->
+  <circle cx="225" cy="100" r="7" fill="#fff" stroke="#4A78B8" stroke-width="2" /><circle cx="255" cy="88" r="5" fill="#fff" stroke="#4A78B8" stroke-width="2" /><circle cx="292" cy="104" r="6" fill="#fff" stroke="#4A78B8" stroke-width="2" />
+  <!-- anode -->
+  <rect x="254" y="120" width="12" height="90" rx="4" fill="#B0B8C4" />
+  <!-- magnet + sludge -->
+  <rect x="220" y="225" width="80" height="16" rx="4" fill="#CE5600" />
+  <path d="M196 290 Q230 270 260 284 T324 280 V290 Z" fill="#5A3B22" />
+  <!-- callouts -->
+  {items.map((it) => (
+    <g>
+      <line x1="345" y1={it.y + 10} x2="520" y2={it.y + 10} stroke="#CE5600" stroke-width="2" stroke-dasharray="4 4" />
+      <circle cx="536" cy={it.y + 10} r="14" fill="#CE5600" />
+      <path d={`M529 ${it.y + 10} h14 M536 ${it.y + 3} v14`} stroke="#fff" stroke-width="3" stroke-linecap="round" />
+      <text x="562" y={it.y + 8} font-size="17" font-weight="500" fill="#002050">{it.title}</text>
+      <text x="562" y={it.y + 30} font-size="14" fill="#002050" fill-opacity="0.7">{it.body[0]}</text>
+      <text x="562" y={it.y + 48} font-size="14" fill="#002050" fill-opacity="0.7">{it.body[1]}</text>
+    </g>
+  ))}
+</svg>
