@@ -41,6 +41,10 @@ import hPlumbing from '../assets/photos/hero-plumbing-heating-cylinder.webp'; //
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
 import hWater from '../assets/photos/hero-water-treatment.webp';
 import hCommercial from '../assets/photos/hero-commercial-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-commercial.webp
+// Sector grid tiles keep the original sector photos (hotel bedroom, hospital corridor)
+// so the tiles are easy to tell apart; the sector pages themselves use the plant-room heroes.
+import tileHotels from '../assets/photos/hero-hotels.webp';
+import tileHospitals from '../assets/photos/hero-hospitals.webp';
 import hHotels from '../assets/photos/hero-hotels-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-hotels.webp
 import hHospitals from '../assets/photos/hero-hospitals-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-hospitals.webp
 import hSchools from '../assets/photos/hero-schools-colleges.webp';
@@ -121,4 +125,11 @@ export const sectorPhotos: Record<string, Photo> = {
   'office-buildings': heroes.offices,
   industrial: heroes.industrial,
   'facility-maintenance': heroes.facility,
+};
+
+// Photos for the small sector tiles on the home page and the commercial overview.
+export const sectorTiles: Record<string, Photo> = {
+  ...sectorPhotos,
+  hotels: { src: tileHotels, alt: 'Bright modern hotel bedroom' },
+  hospitals: { src: tileHospitals, alt: 'Clean, bright hospital corridor' },
 };
