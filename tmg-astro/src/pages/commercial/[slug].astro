@@ -1,8 +1,10 @@
 ---
+// Commercial sector pages (hotels, hospitals, schools, offices, industrial,
+// facility maintenance). Since the Oct 2026 content rewrite they share the
+// service-page template, with the sector photo and a commercial enquiry type.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Schema from '../../components/Schema.astro';
-import { Image } from 'astro:assets';
+import ServicePageBody from '../../components/ServicePageBody.astro';
 import { sectorPhotos } from '../../data/photos';
 
 export async function getStaticPaths() {
@@ -10,30 +12,15 @@ export async function getStaticPaths() {
   return sectors.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 const { entry } = Astro.props;
-const { title, metaDescription, intro, points } = entry.data;
-const pic = sectorPhotos[entry.slug];
+const { title, metaDescription, seoTitle } = entry.data;
+const enquiry = entry.slug === 'facility-maintenance' ? 'Commercial Facility Maintenance' : 'Power Flushing - Commercial';
 ---
-<BaseLayout title={title} description={metaDescription}>
-  <Schema />
-  <section class="bg-navy border-b border-navy/10">
-    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_420px] gap-10 items-center">
-      <div>
-        <h1 class="text-3xl md:text-4xl font-medium text-white max-w-2xl">{title}</h1>
-        <p class="mt-4 text-white/70 max-w-xl">{intro}</p>
-        <a href="/contact" class="inline-block mt-8 rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Enquire now</a>
-      </div>
-      {pic && (
-        <div class="rounded-card overflow-hidden aspect-[4/3]">
-          <Image src={pic.src} alt={pic.alt} widths={[480, 840]} sizes="(min-width: 768px) 420px, 100vw" loading="eager" class="w-full h-full object-cover" />
-        </div>
-      )}
-    </div>
-  </section>
-  <section class="mx-auto max-w-6xl px-4 py-16">
-    <div class="grid sm:grid-cols-2 gap-4">
-      {points.map((p) => (
-        <div class="rounded-card bg-mist border border-navy/10 p-5 text-navy/70">{p}</div>
-      ))}
-    </div>
-  </section>
+<BaseLayout title={seoTitle ?? `${title} | TMG Plumbing & Heating`} description={metaDescription}>
+  <ServicePageBody
+    data={entry.data}
+    photo={sectorPhotos[entry.slug]}
+    enquiry={enquiry}
+    badges={['Nationwide', '20+ years experience', 'Minimal disruption']}
+    coverage="Commercial work across Ireland. Domestic work in Waterford, Wexford, Kilkenny, Tipperary and Kildare."
+  />
 </BaseLayout>
