@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "sync-zoho": "node scripts/sync-zoho.mjs",
-    "build": "node scripts/sync-zoho.mjs && astro build",
+    "build": "node scripts/sync-zoho.mjs && node scripts/sync-google-reviews.mjs && astro build",
+    "sync-reviews": "node scripts/sync-google-reviews.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
