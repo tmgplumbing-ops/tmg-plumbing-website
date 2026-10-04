@@ -34,7 +34,7 @@ benefitsHeading: Benefits of a modern oil boiler
 benefits:
 - Lower oil bills from a high-efficiency, correctly sized boiler
 - Reliable heating and steady hot water
-- Fewer breakdowns and emergency repairs
+- Fewer breakdowns and unexpected repairs
 - Quieter, cleaner running
 - Peace of mind with a new manufacturer warranty
 - Installed by experienced heating contractors from start to finish

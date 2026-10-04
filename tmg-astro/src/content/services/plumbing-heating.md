@@ -47,8 +47,6 @@ faqs:
   a: Yes. We install air-to-water heat pump systems, often paired with underfloor heating for the best efficiency.
 - q: Can you repair an existing heating system?
   a: Yes. If a heating system isn't working as it should, we find the fault and repair it, whether it's a boiler, pump, valve or radiator.
-- q: Do you offer emergency call-outs?
-  a: Our office is open Monday to Friday, 8am to 6pm, on 051 577 089. For emergencies, call 087 717 5624.
 reading:
 - title: How heating systems work
   href: /blog/how-heating-systems-work
