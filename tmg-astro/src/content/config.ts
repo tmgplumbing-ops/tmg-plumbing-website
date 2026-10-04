@@ -15,6 +15,32 @@ const serviceLike = z.object({
   benefits: z.array(z.string()),
   faqs: z.array(z.object({ q: z.string(), a: z.string() })),
   relatedServices: z.array(z.string()).default([]), // slugs into `services` collection
+  // Optional richer blocks (added Oct 2026 for the full content rewrite).
+  seoTitle: z.string().optional(), // page <title> when it should differ from "<title> | TMG Plumbing & Heating"
+  h1: z.string().optional(), // on-page H1 when it should differ from `title`
+  signsHeading: z.string().optional(),
+  stepsHeading: z.string().optional(),
+  benefitsHeading: z.string().optional(),
+  about: z.object({ heading: z.string(), paragraphs: z.array(z.string()) }).optional(),
+  video: z.object({
+    youtubeId: z.string().optional(), // empty = "video coming soon" placeholder
+    title: z.string(),
+    caption: z.string().optional(),
+  }).optional(),
+  cost: z.object({
+    heading: z.string(),
+    intro: z.string(),
+    factors: z.array(z.object({ title: z.string(), body: z.string() })),
+    note: z.string().optional(),
+  }).optional(),
+  sections: z.array(z.object({
+    heading: z.string(),
+    paragraphs: z.array(z.string()).default([]),
+    points: z.array(z.string()).optional(),
+  })).optional(),
+  areas: z.object({ heading: z.string(), intro: z.string().optional(), towns: z.array(z.string()) }).optional(),
+  downloads: z.array(z.object({ label: z.string(), href: z.string(), meta: z.string().optional() })).optional(),
+  reading: z.array(z.object({ title: z.string(), href: z.string() })).optional(),
 });
 
 const commercialSector = z.object({
