@@ -36,7 +36,7 @@ import hFlush from '../assets/photos/hero-power-flushing-domestic.webp'; // supp
 import hUfh from '../assets/photos/hero-underfloor-heating-flush.webp'; // supplied by Tony 4 Oct 2026; old: hero-underfloor-heating.webp
 import hLeak from '../assets/photos/hero-leak-detection-thermal.webp'; // supplied by Tony 4 Oct 2026; old: hero-leak-detection.webp
 import hDemin from '../assets/photos/hero-demineralisation.webp';
-import hOil from '../assets/photos/hero-oil-boiler-installs.webp';
+import hOil from '../assets/photos/hero-oil-boiler-outdoor.webp'; // supplied by Tony 4 Oct 2026; old: hero-oil-boiler-installs.webp
 import hPlumbing from '../assets/photos/hero-plumbing-heating.webp';
 import hDrinking from '../assets/photos/hero-drinking-water.webp';
 import hWater from '../assets/photos/hero-water-treatment.webp';
@@ -89,7 +89,7 @@ export const heroes = {
   underfloor: { src: hUfh, alt: 'Engineer testing system water beside an underfloor heating manifold, with a flushing and filtration unit connected' },
   leak: { src: hLeak, alt: 'Engineer using a thermal imaging camera to trace underfloor heating pipes beneath a tiled floor' },
   demin: { src: hDemin, alt: 'Stainless steel water treatment pipework and pumps' },
-  oil: { src: hOil, alt: 'Boiler room pipework with pumps, valves and gauges' },
+  oil: { src: hOil, alt: 'Engineer fitting a new outdoor oil boiler beside a house, with the old rusted boiler removed alongside' },
   plumbing: { src: hPlumbing, alt: 'Plumber fitting pipework under a sink' },
   drinking: { src: hDrinking, alt: 'Filling a glass of water at a kitchen tap' },
   water: { src: hWater, alt: 'Blue pipework and valves in a treatment plant' },
