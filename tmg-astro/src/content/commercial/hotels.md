@@ -1,7 +1,7 @@
 ---
 title: Power Flushing for Hotels
 h1: Hotel heating system power flushing
-seoTitle: Hotel Heating Power Flushing & Water Treatment Ireland | TMG
+seoTitle: Hotel Heating Power Flushing & Water Treatment | TMG
 metaDescription: Power flushing and demineralisation for hotel and B&B heating systems across Ireland. Steady heat for every guest room. Call TMG on 051 577089.
 heroSubheading: Steady heat and hot water in every guest room, without disturbing your guests.
 intro: A cold guest room can undo an otherwise perfect stay. TMG Plumbing & Heating Services provides commercial power flushing, demineralisation and water treatment for hotels, guesthouses and B&Bs across Ireland, restoring even heat throughout the building and bringing heating costs back under control.

@@ -1,7 +1,7 @@
 ---
 title: Power Flushing for Hospitals
 h1: Hospital heating system power flushing
-seoTitle: Hospital Heating Power Flushing & Water Treatment Ireland | TMG
+seoTitle: Hospital Heating Power Flushing & Water Treatment | TMG
 metaDescription: Power flushing and demineralisation for hospital and healthcare heating systems across Ireland. Planned around clinical areas. Call TMG on 051 577089.
 heroSubheading: Restoring reliable, even heat across wards, theatres and clinical areas, with work planned around patient care.
 intro: A hospital's heating system has to perform around the clock. TMG Plumbing & Heating Services provides commercial power flushing, demineralisation and water treatment for hospitals and healthcare facilities across Ireland, restoring heating efficiency and helping estates teams control rising energy costs.

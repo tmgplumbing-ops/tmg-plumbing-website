@@ -1,7 +1,7 @@
 ---
 title: Power Flushing for Offices
 h1: Power flushing for office buildings
-seoTitle: Office Heating Power Flushing & Water Treatment Ireland | TMG
+seoTitle: Office Heating Power Flushing & Water Treatment | TMG
 metaDescription: Cold offices and rising energy bills? Power flushing and demineralisation for office heating systems across Ireland. Call TMG on 051 577089.
 heroSubheading: A comfortable office for your team, and an end to paying for heat you never feel.
 intro: When a meeting room stays chilly or certain radiators refuse to warm up, people notice, and it quickly becomes a distraction. TMG Plumbing & Heating Services provides commercial power flushing for offices across Ireland, clearing the sludge and scale that restrict heat so the whole building stays comfortable.

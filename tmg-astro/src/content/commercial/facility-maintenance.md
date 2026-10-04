@@ -1,7 +1,7 @@
 ---
 title: Facility Maintenance
 h1: Plumbing and heating facility maintenance
-seoTitle: Facility Maintenance | Commercial Plumbing & Heating Contractors | TMG
+seoTitle: Facility Maintenance | Commercial Plumbing & Heating | TMG
 metaDescription: Planned and reactive plumbing and heating maintenance for commercial properties. Maintenance contracts and one-off works. Call TMG on 051 577089.
 heroSubheading: Planned maintenance contracts and one-off works for your plumbing and heating, from one experienced contractor.
 intro: TMG Plumbing & Heating Services provides a complete facility and property maintenance service for commercial buildings. As experienced plumbers and heating contractors, we look after your properties through an ongoing maintenance contract or as issues arise, including emergencies.

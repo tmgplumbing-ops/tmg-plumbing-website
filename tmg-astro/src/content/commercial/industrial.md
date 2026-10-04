@@ -1,7 +1,7 @@
 ---
 title: Industrial Power Flushing
 h1: Industrial power flushing
-seoTitle: Industrial Power Flushing for Heating Systems & Pipelines | TMG
+seoTitle: 'Industrial Power Flushing: Heating & Pipelines | TMG'
 metaDescription: Industrial power flushing for factory heating systems, pipelines and fan coil units across Ireland. Less downtime, lower energy costs. Call 051 577089.
 heroSubheading: Cleaner heating systems and pipelines, consistent temperatures and less unplanned downtime.
 intro: Is your factory's heating system or pipework not performing as it should? TMG Plumbing & Heating Services provides industrial power flushing across Ireland, restoring the efficiency of heating systems, pipelines and fan coil units so you control energy costs and keep production conditions where they need to be.
