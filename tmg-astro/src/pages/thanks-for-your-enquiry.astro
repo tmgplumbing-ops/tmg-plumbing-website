@@ -1,19 +1,50 @@
 ---
+// Thank-you page shown after the Zoho enquiry form is submitted. Same address
+// as on the old site (/thanks-for-your-enquiry), which the form's returnURL
+// already points to. Kept out of search results; also the natural place to
+// fire a Google Ads conversion once Ads is connected.
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const next = [
+  { title: 'We review your enquiry', body: 'One of the TMG team looks at the details and any photos you sent.' },
+  { title: 'We get in touch', body: 'We contact you by phone or email to discuss the work and arrange anything we need to see.' },
+  { title: 'You get a fixed price', body: 'We confirm a fixed price before any work begins, so you know exactly where you stand.' },
+];
 ---
 <BaseLayout
   title="Thanks for your enquiry | TMG Plumbing & Heating"
-  description="Thanks for getting in touch with TMG Plumbing & Heating Services. We'll be in touch as soon as we can."
+  description="Thank you for your enquiry to TMG Plumbing & Heating Services. One of our team will be back to you shortly."
+  noindex
 >
-  <section class="mx-auto max-w-2xl px-4 py-24 text-center">
-    <h1 class="text-3xl md:text-4xl font-medium text-navy mb-4">Thanks — that's with us.</h1>
-    <p class="text-navy/70 max-w-md mx-auto">
-      We've received your enquiry and will be in touch as soon as we can, Monday to
-      Friday. If it's urgent, call us directly on 051 577 089.
-    </p>
-    <div class="pt-8 flex justify-center gap-3">
-      <a href="/" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Back to homepage</a>
-      <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+  <section class="bg-navy">
+    <div class="mx-auto max-w-3xl px-4 py-20 text-center">
+      <span class="mx-auto w-16 h-16 rounded-full bg-orange flex items-center justify-center">
+        <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+      </span>
+      <h1 class="mt-6 text-3xl md:text-4xl font-medium text-white">Thanks for your enquiry</h1>
+      <p class="mt-4 text-white/75 max-w-xl mx-auto">
+        One of the TMG team will be back to you very shortly, by email or phone, to discuss your enquiry further.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-14">
+    <h2 class="text-xl font-medium text-navy mb-6 text-center">What happens next</h2>
+    <ol class="grid md:grid-cols-3 gap-4">
+      {next.map((n, i) => (
+        <li class="rounded-card bg-mist border border-navy/10 p-5">
+          <span class="w-8 h-8 rounded-full bg-orange text-white text-sm font-medium flex items-center justify-center">{i + 1}</span>
+          <p class="mt-3 text-navy font-medium">{n.title}</p>
+          <p class="mt-1 text-sm text-navy/65">{n.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-10 text-center text-navy/70">
+      <p>If it's urgent, call us on <a href="tel:051577089" class="text-orange">051 577 089</a>, or <a href="tel:0877175624" class="text-orange">087 717 5624</a> for emergencies.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="/" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Back to the homepage</a>
+        <a href="/blog" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Read our heating advice</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

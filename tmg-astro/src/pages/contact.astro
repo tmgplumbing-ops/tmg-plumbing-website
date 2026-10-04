@@ -3,14 +3,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 ---
 <BaseLayout
-  title="Contact TMG Plumbing & Heating | Waterford"
-  description="Request a quote from TMG Plumbing & Heating. Fixed price before we start. Call 051 577089 or email info@tmgplumbing.ie."
+  title="Contact TMG | Plumbers & Heating Contractors Waterford | Get a Quote"
+  description="Request a quote from TMG Plumbing & Heating, plumbers and heating contractors in Waterford. Fixed price before we start. Call 051 577089."
 >
   <section class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr_360px] gap-12">
     <!-- Left: enquiry form -->
     <div>
       <h1 class="text-3xl font-medium text-navy mb-2">Get a quote</h1>
-      <p class="text-navy/60 mb-8">Describe the issue and we'll get back to you as soon as we can.</p>
+      <p class="text-navy/70 mb-4">Tell us about the work you need and we'll get back to you as soon as we can with a fixed price.</p>
+      <div class="mb-8 rounded-card bg-mist border border-navy/10 p-5 text-sm text-navy/75">
+        <p class="text-navy font-medium mb-2">To help us quote accurately, please include:</p>
+        <ul class="space-y-1">
+          <li class="flex gap-2"><span class="text-orange">•</span>The number of radiators or underfloor heating manifolds</li>
+          <li class="flex gap-2"><span class="text-orange">•</span>Your boiler or heat pump type, and when it was last serviced</li>
+          <li class="flex gap-2"><span class="text-orange">•</span>Photos of the radiators, manifolds and boiler or heat pump, if you can</li>
+        </ul>
+      </div>
 
       <!--
         Submits directly into Zoho CRM as a Lead — the same pipeline the

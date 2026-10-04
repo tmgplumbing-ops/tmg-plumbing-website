@@ -1,43 +1,106 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Schema from '../components/Schema.astro';
+
+const values = [
+  { title: 'Done properly', body: "Tony's motto is that if a job is worth doing, it's worth doing well. We take pride in the quality of our work and don't take short cuts." },
+  { title: 'Fixed prices', body: 'Every job is quoted with a fixed price before work begins, so you know where you stand.' },
+  { title: 'Energy-efficient heating', body: 'We keep up with the latest heating technology and champion energy-efficient, environmentally friendly systems, from heat pumps to chemical-free water treatment.' },
+  { title: 'Safe and qualified', body: 'Our team all hold current Safe Pass and Manual Handling certificates, so we can work safely in homes, businesses and industrial sites.' },
+];
+const testimonials = [
+  { quote: 'Thanks to Tony for doing a great job on our heating system by servicing the boiler and getting all the radiators back working efficiently with the power flushing and demineralisation. Tony was also very helpful with his advice on all heating matters.', name: 'Dominic Carberry' },
+  { quote: "Found Tony to be very experienced and knowledgeable and the quality of his work was excellent. He will be the first person I call if I have any other plumbing or heating issues.", name: 'Mike Doody' },
+  { quote: "Worked and working with Tony on several heating projects. I can truly say that Tony's work is outstanding. Exactly the partner we (as a manufacturer of the used products) want to partner with. 5+ Stars.", name: 'Michael Grimm, Magnetic GmbH' },
+];
 ---
 <BaseLayout
-  title="About TMG Plumbing & Heating | Waterford"
-  description="TMG Plumbing & Heating Services has provided residential and commercial heating solutions across the South East of Ireland since 2006."
+  title="About TMG | Plumbers & Heating Contractors in Waterford Since 2006"
+  description="TMG Plumbing & Heating Services: plumbers and heating contractors in Waterford since 2006, for homes across the South East and commercial clients nationwide."
 >
   <Schema />
-  <section class="bg-mist border-b border-navy/10">
-    <div class="mx-auto max-w-4xl px-4 py-16">
-      <h1 class="text-3xl md:text-4xl font-medium text-navy">About TMG</h1>
-      <p class="mt-4 text-navy/70 max-w-2xl">
-        South East Ireland's plumbing and heating specialist since 2006.
+  <section class="bg-navy">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <p class="text-orange text-sm font-medium">About us</p>
+      <h1 class="mt-2 text-3xl md:text-5xl font-medium text-white max-w-3xl">Plumbers and heating contractors in Waterford since 2006</h1>
+      <p class="mt-4 text-white/70 max-w-2xl">
+        Over 20 years of plumbing and heating expertise in domestic, commercial and industrial work, in Ireland and abroad.
       </p>
     </div>
   </section>
 
-  <section class="mx-auto max-w-3xl px-4 py-16 space-y-6 text-navy/80 leading-relaxed">
-    <p>
-      TMG Plumbing & Heating Services was founded by Tony McGuinness in 2006.
-      Since then, the company has grown into the South East's leading
-      specialist in domestic and commercial heating, serving homeowners
-      across Waterford, Wexford, Kilkenny, Tipperary and Kildare, and
-      commercial clients nationwide.
-    </p>
-    <p>
-      Our work covers power flushing, underfloor heating, leak detection,
-      demineralisation, oil boiler installation, general plumbing and
-      heating, and drinking water filtration. We've worked with clients
-      including Guinness, Bulmers, SSE Airtricity and Waterford Distillery,
-      alongside thousands of domestic customers across the region.
-    </p>
-    <p>
-      Every job is quoted with a fixed price before work begins, and
-      emergency callouts are available outside standard office hours.
-    </p>
-    <div class="pt-4 flex gap-3">
-      <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
-      <a href="tel:051577089" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+  <section class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1.4fr_1fr] gap-12">
+    <div class="space-y-5 text-navy/80 leading-relaxed">
+      <h2 class="text-2xl font-medium text-navy">Our story</h2>
+      <p>
+        TMG Plumbing &amp; Heating Services was set up by Tony McGuinness in 2006. Tony is a second-generation plumber.
+        Since qualifying from Dundalk Institute of Technology he has worked in domestic, commercial and industrial
+        settings in Ireland, the United Kingdom and Africa, on large-scale projects and smaller contracts alike.
+      </p>
+      <p>
+        He has worked as a plumbing and maintenance contractor for companies including Guinness Brewery, Mintec,
+        Bulmers, Waterford Distillery and SSE Airtricity.
+      </p>
+      <p>
+        Based in Waterford, we work as plumbers and heating contractors across Waterford, Wexford, Kilkenny,
+        Tipperary and Kildare, alongside larger construction companies and individual homeowners. We've built strong,
+        lasting relationships with our customers by adapting to the specific needs of each one. Our commercial work,
+        including power flushing, demineralisation and water treatment, takes us to hospitals, hotels, schools,
+        offices and industrial sites across Ireland.
+      </p>
+      <p>
+        We believe in keeping up with the latest technology in the plumbing and heating industry, and in the energy-efficient,
+        environmentally friendly heating systems now being developed. Tony and the team are helping to build a more
+        sustainable future for plumbing and heating.
+      </p>
+    </div>
+    <aside class="space-y-4">
+      <div class="rounded-card bg-mist border border-navy/10 p-6">
+        <p class="text-navy font-medium">Tony McGuinness</p>
+        <p class="text-navy/60 text-sm mt-1">Second-generation plumber and Managing Director of TMG Plumbing &amp; Heating Services.</p>
+        <p class="mt-4 text-sm text-navy/70">Call Tony directly on <a href="tel:0868762710" class="text-orange">086 876 2710</a></p>
+      </div>
+      <div class="rounded-card bg-mist border border-navy/10 p-6 text-sm text-navy/70 space-y-1">
+        <p class="text-navy font-medium mb-2">TMG Plumbing &amp; Heating Services</p>
+        <p>Unit 17F, Six Cross Roads Business Park, Waterford, X91 KV09</p>
+        <p><a href="tel:051577089" class="text-orange">051 577 089</a> · <a href="mailto:info@tmgplumbing.ie" class="text-orange">info@tmgplumbing.ie</a></p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="bg-mist border-y border-navy/10">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl font-medium text-navy mb-8">How we work</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {values.map((v) => (
+          <div class="rounded-card bg-white border border-navy/10 p-5">
+            <p class="text-navy font-medium">{v.title}</p>
+            <p class="mt-2 text-sm text-navy/65 leading-relaxed">{v.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-medium text-navy mb-8">What our customers say</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      {testimonials.map((t) => (
+        <figure class="rounded-card border border-navy/10 bg-white p-6 flex flex-col">
+          <blockquote class="text-navy/80 leading-relaxed">“{t.quote}”</blockquote>
+          <figcaption class="mt-auto pt-4 text-sm text-orange font-medium">{t.name}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-navy">
+    <div class="mx-auto max-w-6xl px-4 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <p class="text-xl font-medium text-white">Talk to us about your plumbing or heating</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="/contact" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Get a quote</a>
+        <a href="tel:051577089" class="rounded border border-white/20 text-white px-6 py-3 hover:border-orange hover:text-orange">Call 051 577 089</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

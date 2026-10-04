@@ -9,6 +9,8 @@ import { heroes } from '../data/photos';
 import DeminDiagram from '../components/diagrams/DeminDiagram.astro';
 import AirPulseDiagram from '../components/diagrams/AirPulseDiagram.astro';
 import UltrasonicDiagram from '../components/diagrams/UltrasonicDiagram.astro';
+import HwrDiagram from '../components/diagrams/HwrDiagram.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
 
 const sections = [
   { id: 'demineralisation', name: 'Demineralisation', blurb: 'Mineral-free system water for boilers, radiators and underfloor heating.' },
@@ -69,7 +71,7 @@ const faqs = [
     <p class="text-navy/80 leading-relaxed max-w-3xl">
       Modern boilers are very efficient, but they have little tolerance for poor water. Untreated, a system can lose
       10–20% of its efficiency in the first year, and the minerals left in the water go on to cause scale, corrosion
-      and breakdowns. TMG Plumbing & Heating Services provides water treatment for homes across Waterford and the
+      and breakdowns. As plumbers and heating contractors specialising in heating water quality, TMG Plumbing & Heating Services provides water treatment for homes across Waterford and the
       South East, and for commercial buildings nationwide.
     </p>
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -158,6 +160,22 @@ const faqs = [
           <p class="text-navy/60 text-sm mt-2">Hold pressure and flow steady in systems that need frequent refilling, preventing air locks and low-pressure faults.</p>
         </div>
       </div>
+      <div class="mt-10 grid lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
+        <figure class="rounded-card border border-navy/10 bg-white p-4 md:p-6">
+          <HwrDiagram />
+        </figure>
+        <div class="space-y-5">
+          <div>
+            <h3 class="text-lg font-medium text-navy">What is a Heating Water Regulator?</h3>
+            <p class="mt-2 text-navy/70 text-sm leading-relaxed">A Heating Water Regulator is fitted permanently to the system. It removes oxygen and gases, regulates the pH of the water and captures magnetite and sludge, keeping pressure and flow stable. It is particularly important in systems that need regular topping up, where it helps prevent air locks, low pressure and system faults.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium text-navy">What is a refill station?</h3>
+            <p class="mt-2 text-navy/70 text-sm leading-relaxed">A refill station tops the system up with treated, demineralised water, usually through a demineralising cartridge. Only purified water enters the system, so pressure stays stable and fresh minerals never get back in.</p>
+          </div>
+          <a href="/heating-products" class="inline-block text-orange hover:underline text-sm">See the Heating Water Regulator and Refill Station →</a>
+        </div>
+      </div>
       <p class="mt-8 text-navy/70 text-sm max-w-3xl">
         We treat systems in hospitals, hotels, schools and colleges, offices, factories, care homes, leisure centres,
         apartment complexes and public buildings, anywhere in Ireland.
@@ -231,6 +249,28 @@ const faqs = [
         These methods suit hospitals, pharmaceutical and food sites, data centres and district heating, where downtime
         and chemical use both need to be kept to a minimum. We survey the system first and recommend the method that fits.
       </p>
+    </div>
+  </section>
+
+  <!-- Video + downloads -->
+  <section class="mx-auto max-w-6xl px-4 pt-14 grid lg:grid-cols-2 gap-8 items-start">
+    <VideoEmbed youtubeId="hLRkwE2Rdec" title="Our process: power flushing and demineralising a heating system" caption="See how we clean and treat a heating system, step by step." />
+    <div class="rounded-card bg-orange/10 border-2 border-orange/40 p-6 md:p-8">
+      <h2 class="text-xl font-medium text-navy">Download our guides</h2>
+      <p class="text-sm text-navy/65 mt-1">Free PDFs to read now or keep for later.</p>
+      <div class="mt-5 space-y-3">
+        {[
+          { label: 'Demineralising heating systems', href: '/s/TMG-Demineralising_EM.pdf' },
+          { label: 'Commercial power flushing brochure', href: '/s/Power-Flushing-Commercial_Digi.pdf' },
+          { label: 'Heating water treatment range (Magnetic)', href: '/s/ENG_magnetic_Heating_Water_Treatment_ES_web.pdf' },
+        ].map((d) => (
+          <a href={d.href} target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-card bg-white border border-navy/10 p-4 hover:border-orange hover:shadow-md transition">
+            <span class="flex-none w-10 h-12 rounded-md bg-navy text-white text-xs font-medium flex items-end justify-center pb-1.5 relative"><span class="absolute top-0 right-0 w-3.5 h-3.5 bg-orange rounded-bl-md rounded-tr-md"></span>PDF</span>
+            <span class="flex-1 text-navy font-medium group-hover:text-orange">{d.label}</span>
+            <span class="text-orange text-sm font-medium">Download</span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
