@@ -43,7 +43,7 @@ benefits:
 - Stronger, more even heat across the whole building
 - Lower energy bills when the system is working hardest
 - Less wear on boilers, pumps and valves
-- Fewer breakdowns and emergency call-outs
+- Fewer breakdowns and unplanned repairs
 - Water quality that meets manufacturer requirements (VDI 2035)
 - 'Minimal disruption: we work around your building and its occupants'
 faqs:

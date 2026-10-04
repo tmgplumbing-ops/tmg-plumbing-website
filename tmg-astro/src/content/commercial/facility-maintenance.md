@@ -4,7 +4,7 @@ h1: Plumbing and heating facility maintenance
 seoTitle: Facility Maintenance | Commercial Plumbing & Heating | TMG
 metaDescription: Planned and reactive plumbing and heating maintenance for commercial properties. Maintenance contracts and one-off works. Call TMG on 051 577089.
 heroSubheading: Planned maintenance contracts and one-off works for your plumbing and heating, from one experienced contractor.
-intro: TMG Plumbing & Heating Services provides a complete facility and property maintenance service for commercial buildings. As experienced plumbers and heating contractors, we look after your properties through an ongoing maintenance contract or as issues arise, including emergencies.
+intro: TMG Plumbing & Heating Services provides a complete facility and property maintenance service for commercial buildings. As experienced plumbers and heating contractors, we look after your properties through an ongoing maintenance contract or as issues arise.
 about:
   heading: One contractor for your plumbing and heating
   paragraphs:
@@ -26,8 +26,8 @@ steps:
   body: We look over your plumbing and heating and agree a maintenance plan, or quote for the one-off works you need.
 - title: Planned maintenance
   body: Regular visits keep systems running and catch small issues before they turn into breakdowns.
-- title: Reactive and emergency work
-  body: When something goes wrong, call us and we will get out to you as quickly as we can.
+- title: Reactive repairs
+  body: When something goes wrong, call us and we will arrange a visit to put it right.
 benefitsHeading: Why use TMG for facility maintenance
 benefits:
 - Over 20 years of commercial and industrial plumbing and heating experience
@@ -39,8 +39,6 @@ benefits:
 faqs:
 - q: Do you offer maintenance contracts?
   a: Yes. We can agree an ongoing maintenance plan for your business, or simply quote for one-off maintenance and upgrades as they come up.
-- q: Do you handle emergencies?
-  a: Yes. Maintenance clients can call us for emergency plumbing and heating issues, and we will get out to you as quickly as we can.
 - q: Can you work while the building is in use?
   a: Yes. Most of the work is done while the system is running, through a bypass into our filtration unit, and we plan around your timetable so occupants are disturbed as little as possible.
 - q: Do you need to drain the heating system?
