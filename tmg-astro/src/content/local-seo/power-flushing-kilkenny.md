@@ -1,8 +1,8 @@
 ---
 title: Power Flushing in Kilkenny
 h1: Power flushing in Kilkenny
-seoTitle: Power Flushing Kilkenny | Central Heating Power Flush | TMG Plumbers
-metaDescription: Power flushing for homes across Kilkenny city and county. Radiators and underfloor heating cleaned with a fixed price before we start. Call TMG on 051 577089.
+seoTitle: Power Flushing Kilkenny | Radiator & Heating Flush | TMG
+metaDescription: Power flushing for homes across Kilkenny city and county. Radiators and underfloor heating cleaned, with a fixed price before we start. Call 051 577089.
 county: Kilkenny
 canonicalService: power-flushing
 heroSubheading: Clearing sludge from radiators and underfloor heating in homes across Kilkenny city and county.

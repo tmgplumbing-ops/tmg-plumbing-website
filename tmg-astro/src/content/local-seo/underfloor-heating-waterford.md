@@ -1,7 +1,7 @@
 ---
 title: Underfloor Heating in Waterford
 h1: Underfloor heating in Waterford
-seoTitle: Underfloor Heating Waterford | Installation, Servicing & Flushing | TMG
+seoTitle: Underfloor Heating Waterford | Installation & Service | TMG
 metaDescription: Underfloor heating installation, servicing and power flushing in Waterford from local plumbers and heating contractors. Call TMG on 051 577089.
 county: Waterford
 canonicalService: underfloor-heating

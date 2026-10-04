@@ -1,7 +1,7 @@
 ---
 title: Power Flushing in Waterford
 h1: Power flushing in Waterford
-seoTitle: Power Flushing Waterford | Central Heating Power Flush | TMG Plumbers
+seoTitle: Power Flushing Waterford | Radiator & Heating Flush | TMG
 metaDescription: Power flushing for homes across Waterford city and county from TMG, local plumbers and heating contractors since 2006. Fixed price. Call 051 577089.
 county: Waterford
 canonicalService: power-flushing

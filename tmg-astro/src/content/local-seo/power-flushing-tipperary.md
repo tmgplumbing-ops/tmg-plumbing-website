@@ -1,8 +1,8 @@
 ---
 title: Power Flushing in Tipperary
 h1: Power flushing in Tipperary
-seoTitle: Power Flushing Tipperary | Central Heating Power Flush | TMG Plumbers
-metaDescription: 'Power flushing for homes across County Tipperary: radiators and underfloor heating cleaned, with a fixed price before we start. Call TMG on 051 577089.'
+seoTitle: Power Flushing Tipperary | Radiator & Heating Flush | TMG
+metaDescription: Power flushing for homes across County Tipperary. Radiators and underfloor heating cleaned, with a fixed price before we start. Call TMG on 051 577089.
 county: Tipperary
 canonicalService: power-flushing
 heroSubheading: Clearing sludge from radiators and underfloor heating in homes across County Tipperary.

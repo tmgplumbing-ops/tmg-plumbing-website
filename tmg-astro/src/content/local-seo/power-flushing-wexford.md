@@ -1,8 +1,8 @@
 ---
 title: Power Flushing in Wexford
 h1: Power flushing in Wexford
-seoTitle: Power Flushing Wexford | Central Heating Power Flush | TMG Plumbers
-metaDescription: 'Power flushing for homes across County Wexford: radiators and underfloor heating cleaned, with a fixed price before we start. Call TMG on 051 577089.'
+seoTitle: Power Flushing Wexford | Radiator & Heating Flush | TMG
+metaDescription: Power flushing for homes across County Wexford. Radiators and underfloor heating cleaned, with a fixed price before we start. Call TMG on 051 577089.
 county: Wexford
 canonicalService: power-flushing
 heroSubheading: Restoring even heat to radiators and underfloor heating in homes across County Wexford.

@@ -1,8 +1,8 @@
 ---
 title: Leak Detection in Waterford
 h1: Leak detection in Waterford
-seoTitle: Leak Detection Waterford | Underground & Heating Leaks | TMG Plumbers
-metaDescription: Leak detection in Waterford for heating systems, underground pipes and mains water. Thermal imaging and acoustic equipment. Call TMG on 051 577089.
+seoTitle: Leak Detection Waterford | Underground & Heating Leaks | TMG
+metaDescription: Leak detection in Waterford for heating systems, underground pipes and mains water, using thermal imaging and acoustic equipment. Call 051 577089.
 county: Waterford
 canonicalService: leak-detection
 heroSubheading: Locating hidden leaks in homes and businesses across Waterford, without unnecessary digging.
