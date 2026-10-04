@@ -41,14 +41,11 @@ const serviceLike = z.object({
   areas: z.object({ heading: z.string(), intro: z.string().optional(), towns: z.array(z.string()) }).optional(),
   downloads: z.array(z.object({ label: z.string(), href: z.string(), meta: z.string().optional() })).optional(),
   reading: z.array(z.object({ title: z.string(), href: z.string() })).optional(),
+  diagrams: z.array(z.string()).optional(), // keys: flush, flushProcess, ufh, ufhFlush, leak, leakSigns, demin, hwr, oil, heating, drinking
 });
 
-const commercialSector = z.object({
-  title: z.string(),
-  metaDescription: z.string().max(160),
-  intro: z.string(),
-  points: z.array(z.string()),
-});
+// Commercial sector pages share the service-page shape (Oct 2026 content rewrite).
+const commercialSector = serviceLike;
 
 const blogPost = z.object({
   title: z.string(), // on-page H1
