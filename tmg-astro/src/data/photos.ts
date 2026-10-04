@@ -33,7 +33,7 @@ import industrial from '../assets/photos/industrial-pipework.webp';
 // Earlier versions kept as hero-home-plantroom.webp and hero-home.webp.
 import hHome from '../assets/photos/hero-home-engineer.webp';
 import hFlush from '../assets/photos/hero-power-flushing-domestic.webp'; // supplied by Tony 4 Oct 2026; old: hero-power-flushing.webp
-import hUfh from '../assets/photos/hero-underfloor-heating.webp';
+import hUfh from '../assets/photos/hero-underfloor-heating-flush.webp'; // supplied by Tony 4 Oct 2026; old: hero-underfloor-heating.webp
 import hLeak from '../assets/photos/hero-leak-detection.webp';
 import hDemin from '../assets/photos/hero-demineralisation.webp';
 import hOil from '../assets/photos/hero-oil-boiler-installs.webp';
@@ -86,7 +86,7 @@ export const photos = {
 export const heroes = {
   home: { src: hHome, alt: 'Heating engineer with a tablet, between a modern home with a wall-mounted boiler and a commercial plant room' },
   powerFlushing: { src: hFlush, alt: 'Engineer testing heating system water beside a wall-mounted boiler, with a power flushing and filtration unit connected' },
-  underfloor: { src: hUfh, alt: 'Underfloor heating pipes laid across a floor, running into a manifold' },
+  underfloor: { src: hUfh, alt: 'Engineer testing system water beside an underfloor heating manifold, with a flushing and filtration unit connected' },
   leak: { src: hLeak, alt: 'Thermal heat-map style image in reds, yellows and blues' },
   demin: { src: hDemin, alt: 'Stainless steel water treatment pipework and pumps' },
   oil: { src: hOil, alt: 'Boiler room pipework with pumps, valves and gauges' },
