@@ -8,9 +8,10 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  noindex?: boolean; // keep a page out of search results (e.g. the thank-you page)
   canonical?: string; // absolute URL — set on local SEO pages to point at the parent service page
 }
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, noindex } = Astro.props;
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 
 const GTM_ID = 'GTM-5BF7S236';
@@ -23,6 +24,7 @@ const GTM_ID = 'GTM-5BF7S236';
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
