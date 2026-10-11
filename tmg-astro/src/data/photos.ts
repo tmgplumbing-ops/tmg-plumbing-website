@@ -55,6 +55,9 @@ import hIndustrial from '../assets/photos/hero-industrial-plantroom.webp'; // su
 import tileIndustrial from '../assets/photos/hero-industrial.webp';
 import hFacility from '../assets/photos/hero-facility-plantroom.webp'; // supplied by Tony 4 Oct 2026; old: hero-facility-maintenance.webp
 import tileFacility from '../assets/photos/hero-facility-maintenance.webp';
+// Pharmaceutical and data centre sector pages (11 Oct 2026): placeholder stock photos until Tony supplies his own.
+import hPharma from '../assets/photos/hero-commercial.webp';
+import hDataCentres from '../assets/photos/commercial-plant-room.webp';
 
 export type Photo = { src: ImageMetadata; alt: string; caption?: string; fit?: 'cover' | 'contain' };
 
@@ -107,6 +110,8 @@ export const heroes = {
   schools: { src: hSchools, alt: 'Engineer checking a school boiler plant room with wall-hung boilers, a buffer vessel and circulating pumps' },
   offices: { src: hOffices, alt: 'Engineer checking a bank of wall-hung boilers, a hot water cylinder and pumps in an office plant room' },
   industrial: { src: hIndustrial, alt: 'Engineer checking an industrial plant room with a buffer vessel, large pumps, insulated pipework and control panels' },
+  pharma: { src: hPharma, alt: 'Stainless steel process vessels and pipework on a manufacturing site' },
+  dataCentres: { src: hDataCentres, alt: 'Chilled-water pumps and large insulated pipework in a plant room' },
   facility: { src: hFacility, alt: 'Engineer reviewing a commercial plant room with a boiler, buffer vessel, pumps, controls and water treatment equipment' },
 } satisfies Record<string, Photo>;
 
@@ -129,6 +134,8 @@ export const sectorPhotos: Record<string, Photo> = {
   'office-buildings': heroes.offices,
   industrial: heroes.industrial,
   'facility-maintenance': heroes.facility,
+  pharmaceutical: heroes.pharma,
+  'data-centres': heroes.dataCentres,
 };
 
 // Photos for the small sector tiles on the home page and the commercial overview.
