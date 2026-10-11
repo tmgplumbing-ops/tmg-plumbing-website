@@ -31,7 +31,7 @@ steps:
 - title: Demineralisation
   body: The water is passed through a demineralisation unit, removing the minerals that cause scale and leaving it balanced and non-corrosive.
 - title: Refill and protect
-  body: The system is topped up with treated water to VDI 2035, and a Heating Water Regulator can be fitted to keep it protected long term.
+  body: The system is topped up with treated water, with reference to VDI 2035 and the manufacturer's water-quality requirements, and a Heating Water Regulator can be fitted to keep it protected long term.
 - title: Final check
   body: We test the water again and check heat distribution, flow rates, boiler performance and radiator recovery times.
 video:
@@ -44,7 +44,7 @@ benefits:
 - Lower energy bills when the system is working hardest
 - Less wear on boilers, pumps and valves
 - Fewer breakdowns and unplanned repairs
-- Water quality that meets manufacturer requirements (VDI 2035)
+- Water treated with reference to VDI 2035 and manufacturer requirements
 - 'Minimal disruption: we work around your building and its occupants'
 faqs:
 - q: Can the work be done during school holidays?
