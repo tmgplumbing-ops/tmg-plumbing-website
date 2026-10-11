@@ -100,8 +100,8 @@ downloads:
 - label: TMG power flushing brochure
   href: /s/TMG-A4-Folded-Brochure_Digi.pdf
   meta: PDF
-- label: Terms and conditions for power flushing
-  href: /s/250526-TMG-Full-Terms-and-Conditions.pdf
+- label: Terms and conditions of service
+  href: /s/TMG-Terms-and-Conditions-of-Service.pdf
   meta: PDF · 15 pages
 reading:
 - title: 'Power flushing: frequently asked questions'
