@@ -41,7 +41,7 @@ video:
 benefitsHeading: Benefits of power flushing
 benefits:
 - Faster heat-up and even heat in every room
-- Lower energy bills from a cleaner, more efficient system
+- A cleaner, more efficient system that can help reduce energy bills
 - Less wear on the boiler, pump and components
 - Fewer breakdowns and repair bills
 - Minimal disruption, usually done in a single visit
