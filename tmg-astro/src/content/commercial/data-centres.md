@@ -80,8 +80,6 @@ reading:
   href: /blog/why-commercial-buildings-need-regular-power-flushing
 - title: What is demineralising a heating system?
   href: /blog/what-is-demineralising-heating-system
-diagrams:
-- flushProcess
 relatedServices:
 - demineralisation
 - leak-detection

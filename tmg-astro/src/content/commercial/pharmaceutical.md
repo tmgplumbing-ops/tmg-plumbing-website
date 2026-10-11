@@ -90,8 +90,6 @@ reading:
   href: /blog/the-importance-of-industrial-power-flushing
 - title: What is demineralising a heating system?
   href: /blog/what-is-demineralising-heating-system
-diagrams:
-- flushProcess
 relatedServices:
 - demineralisation
 - leak-detection
