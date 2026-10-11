@@ -2,9 +2,9 @@
 title: Demineralisation
 h1: Heating system water treatment and demineralisation
 seoTitle: Heating System Demineralisation & Water Treatment | TMG
-metaDescription: Heating water treatment and demineralisation for homes. Prevent scale and corrosion, protect your boiler and lower heating bills. Book a water analysis.
-heroSubheading: Water demineralisation for lower heating bills, a warmer house and a boiler that lasts.
-intro: Modern boilers are incredibly efficient, but they have little tolerance for poor water quality. Untreated, a heating system can lose 10 to 20% of its efficiency in the first year alone, with higher bills and unnecessary wear on radiators, pumps and boilers. TMG Plumbing & Heating Services provides professional heating water treatment and demineralisation for homes across Waterford and the South East.
+metaDescription: Heating water treatment and demineralisation for homes. Prevent scale and corrosion, protect your boiler and help reduce heating bills. Book a water analysis.
+heroSubheading: Water demineralisation for a warmer house, a boiler that lasts and heating bills you can help bring down.
+intro: Modern boilers are incredibly efficient, but they have little tolerance for poor water quality. Poor system-water quality can reduce heat transfer, restrict flow and increase the load on pumps and boilers. TMG Plumbing & Heating Services provides professional heating water treatment and demineralisation for homes across Waterford and the South East.
 about:
   heading: Why demineralisation matters
   paragraphs:
@@ -40,7 +40,7 @@ benefits:
 - 'Corrosion reduction: mineral-free water stops acting like a battery'
 - Water tested and treated with reference to VDI 2035
 - Helps meet manufacturer water-quality requirements
-- Lower energy bills and better heat transfer
+- Better heat transfer, which can help reduce energy bills
 - A chemical-free way to protect the system for the long term
 sections:
 - heading: Sludge removal without the mess

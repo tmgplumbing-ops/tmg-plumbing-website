@@ -41,7 +41,7 @@ video:
 benefitsHeading: Benefits of power flushing
 benefits:
 - Faster heat-up and even heat across every radiator
-- Lower energy bills, as a clean system reaches temperature with less fuel
+- A clean system reaches temperature with less fuel, which can help reduce energy bills
 - Less strain on the boiler, heat pump and circulating pump, extending their life
 - Fewer breakdowns and repairs
 - Quieter running, with less banging and gurgling
