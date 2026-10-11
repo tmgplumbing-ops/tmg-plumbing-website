@@ -69,7 +69,7 @@ If your heating system is not balanced properly you could be over heating one ar
 
 #### 9. Clean your heating system
 
-Make sure that the water in your heating system is clean and free from sludge. If you have cold spots on your radiators or in your underfloor heating, the chances are that there is a build up of sludge in your heating system. This means that the heating system has to work harder to get the radiators or underfloor heating up to the correct temperature and makes your system inefficient, costly to run and can wear out your boiler. Research suggests that a heavily blocked heating system can increase your bills by up to 25%.
+Make sure that the water in your heating system is clean and free from sludge. If you have cold spots on your radiators or in your underfloor heating, the chances are that there is a build up of sludge in your heating system. This means that the heating system has to work harder to get the radiators or underfloor heating up to the correct temperature and makes your system inefficient, costly to run and can wear out your boiler. A heavily blocked heating system has to work harder for the same heat, which can push up your bills.
 
 By bleeding or removing the air from your radiators on a regular basis, this also helps to keep the radiators functioning efficiently. If your radiators gurgle when they are turned on, the chances are that their is air in them which stops the water from heating efficiently in your system.
 

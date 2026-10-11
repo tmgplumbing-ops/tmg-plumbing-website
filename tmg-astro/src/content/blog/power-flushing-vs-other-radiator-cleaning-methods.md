@@ -20,7 +20,7 @@ Power flushing is an intensive cleaning process that uses high velocity, low-pre
 - **Thorough Cleaning:** Power flushing provides a deep and comprehensive clean, effectively removing all types of debris from the system. This ensures optimal water flow and improves the overall efficiency of your heating system.
 - **Extended System Lifespan:** By removing harmful deposits, power flushing can significantly extend the life of your radiators and other components of your heating system.
 - **Improved Heating Performance:** After a power flush, you can expect a more evenly distributed heat throughout your property, leading to a more comfortable environment.
-- **Cost Savings:** While power flushing is an investment, the resulting efficiency improvements can lead to lower energy bills and reduced maintenance costs in the long run.
+- **Cost Savings:** While power flushing is an investment, the resulting efficiency improvements can help reduce energy bills and maintenance costs in the long run.
 
 **Cons of Power Flushing:**
 

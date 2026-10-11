@@ -79,6 +79,6 @@ Incorporating these tips into your regular maintenance routine will go a long wa
 
 And, while these steps might seem straightforward, never underestimate the peace of mind that comes from having a professional look at your system. TMG Plumbing is always ready to assist you. Let's face it, winter can be harsh, but with your heating system in top shape, it'll be nothing more than an opportunity to wear those comfortable jumpers and enjoy relaxing by the fireplace.
 
-As we brace ourselves for winter, ensuring the efficient working of our home's heating becomes essential. This not only guarantees comfort but also saves on energy bills, making our heating systems more efficient. So, give your heating system the care it deserves with regular maintenance, and here's to a warm and delightful winter!
+As we brace ourselves for winter, ensuring the efficient working of our home's heating becomes essential. This not only guarantees comfort but can also help reduce energy bills, making our heating systems more efficient. So, give your heating system the care it deserves with regular maintenance, and here's to a warm and delightful winter!
 
 If you would like TMG Plumbing to do a maintenance check on your heating system, power flush your radiators or underfloor heating or replace your oil boiler, please fill in our [contact form](/contact) or call 051 577089

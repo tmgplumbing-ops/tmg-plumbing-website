@@ -33,7 +33,7 @@ Given the negative impact of limescale on your heating system, regular maintenan
 
 ### 1. Restoring Efficiency
 
-By removing limescale buildup from the heat exchangers, radiators, and pipes, power flushing restores the efficiency of your heating system. Without the insulating layer of limescale, heat transfer becomes more efficient, meaning your boiler can heat water more quickly and with less energy. This leads to lower energy bills and a more comfortable home environment.
+By removing limescale buildup from the heat exchangers, radiators, and pipes, power flushing restores the efficiency of your heating system. Without the insulating layer of limescale, heat transfer becomes more efficient, meaning your boiler can heat water more quickly and with less energy. This can help reduce energy bills and makes for a more comfortable home.
 
 ### 2. Prolonging System Life
 
@@ -51,6 +51,6 @@ Using demineralized water in your heating system offers significant benefits by 
 
 If you live in an area with hard water, the impact of limescale on your heating system can be significant. Reduced efficiency, increased wear and tear, and poor water circulation are just some of the issues that can arise. However, with regular maintenance, including power flushing, you can mitigate these effects and keep your heating system running smoothly for years to come.
 
-Investing in power flushing is a smart move that can enhance the efficiency of your heating system, lower your energy bills, and extend the lifespan of your boiler and other components. Don’t let hard water ruin your heating system—take action today and ensure your home remains warm and comfortable throughout the year.
+Investing in power flushing is a smart move that can enhance the efficiency of your heating system, help reduce your energy bills, and extend the lifespan of your boiler and other components. Don’t let hard water ruin your heating system—take action today and ensure your home remains warm and comfortable throughout the year.
 
 To schedule a professional radiator power flushing or to learn more about the demineralising filtration with TMG Plumbing & Heating Services call [051 577089](tel:051577089) or fill in the form on our [contact page](/contact)

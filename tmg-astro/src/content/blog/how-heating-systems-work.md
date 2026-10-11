@@ -76,6 +76,6 @@ Both power flushing and underfloor heating can contribute significantly to the e
 
 Understanding these technical aspects helps homeowners appreciate the importance of regular maintenance and the choices available for home heating. Whether it’s the traditional radiator system enhanced by power flushing or the modern approach of underfloor heating, both systems, when well-maintained, can provide efficient, cost-effective heating solutions for your home.
 
-Remember, regular maintenance and understanding your home heating system can lead to significant savings on your energy bills and ensure a warm, comfortable home during the colder seasons.
+Remember, regular maintenance and understanding your home heating system can help reduce your energy bills and ensure a warm, comfortable home during the colder seasons.
 
 If you would like to enquire about getting your heating system maintained and power flushed please fill in our [contact form](/contact) and we will get back to you.
