@@ -8,7 +8,11 @@ import ServicePageBody from '../../components/ServicePageBody.astro';
 import { Image } from 'astro:assets';
 import { sectorTiles, heroes } from '../../data/photos';
 
-const order = ['hospitals', 'hotels', 'schools-colleges', 'office-buildings', 'industrial', 'facility-maintenance'];
+const order = ['hospitals', 'hotels', 'schools-colleges', 'office-buildings', 'industrial', 'pharmaceutical', 'data-centres', 'facility-maintenance'];
+const tileNames: Record<string, string> = {
+  hospitals: 'Hospitals', hotels: 'Hotels', 'schools-colleges': 'Schools & colleges', 'office-buildings': 'Offices',
+  industrial: 'Industrial sites', pharmaceutical: 'Pharmaceutical', 'data-centres': 'Data centres', 'facility-maintenance': 'Facility maintenance',
+};
 const sectors = (await getCollection('commercial')).sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
 
 const data = {
@@ -95,14 +99,14 @@ const data = {
   >
     <section slot="after-hero" class="mx-auto max-w-6xl px-4 pt-12">
       <h2 class="text-2xl font-medium text-navy mb-6">Sectors we work in</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {sectors.map((s) => (
           <a href={`/commercial/${s.slug}`} class="group relative rounded-card overflow-hidden aspect-[4/3] bg-navy">
             {sectorTiles[s.slug] && (
               <Image src={sectorTiles[s.slug].src} alt="" widths={[400, 700]} sizes="(min-width: 768px) 360px, 50vw" class="absolute inset-0 w-full h-full object-cover opacity-75 transition duration-300 group-hover:opacity-90 group-hover:scale-105" />
             )}
             <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
-            <p class="absolute left-4 bottom-4 right-4 text-white font-medium">{s.data.title.replace('Power Flushing for ', '').replace(/^\w/, (c) => c.toUpperCase())} →</p>
+            <p class="absolute left-4 bottom-4 right-4 text-white font-medium">{tileNames[s.slug] ?? s.data.title} →</p>
           </a>
         ))}
       </div>
