@@ -82,7 +82,7 @@ faqs:
 - q: How much does a power flush cost in Tipperary?
   a: The price depends mainly on how many radiators you have and the condition of the system. We confirm a fixed price before any work begins.
 - q: Should I power flush before fitting a heat pump?
-  a: Yes. A heat pump runs at lower temperatures and is sensitive to poor water quality, so cleaning and demineralising the system first helps it reach its efficiency and protects its warranty.
+  a: Yes. A heat pump runs at lower temperatures and is sensitive to poor water quality, so cleaning and demineralising the system first helps it reach its efficiency and meet the manufacturer's water-quality requirements.
 - q: How often should I power flush my heating system?
   a: We recommend every five to six years, or sooner if you notice cold spots on radiators or rising energy bills.
 - q: What is the difference between power flushing and chemical flushing?
