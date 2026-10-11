@@ -35,6 +35,8 @@ const sectors = [
   { slug: 'schools-colleges', name: 'Schools & colleges', href: '/commercial/schools-colleges' },
   { slug: 'office-buildings', name: 'Offices', href: '/commercial/office-buildings' },
   { slug: 'industrial', name: 'Industrial sites', href: '/commercial/industrial' },
+  { slug: 'pharmaceutical', name: 'Pharmaceutical', href: '/commercial/pharmaceutical' },
+  { slug: 'data-centres', name: 'Data centres', href: '/commercial/data-centres' },
   { slug: 'facility-maintenance', name: 'Facility maintenance', href: '/commercial/facility-maintenance' },
 ];
 const commercialServices = [
@@ -156,7 +158,7 @@ const latest = (await getCollection('blog'))
           <a href="/contact" class="rounded border border-white/20 text-white px-5 py-3 hover:border-orange hover:text-orange">Request a site survey</a>
         </div>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {sectors.map((c) => (
           <a href={c.href} class="group relative rounded-card overflow-hidden aspect-[4/3] bg-white/5">
             {sectorTiles[c.slug] && (
