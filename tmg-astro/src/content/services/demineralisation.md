@@ -17,7 +17,7 @@ signs:
 - Sludge and magnetite causing cold spots
 - Lost efficiency and higher heating bills
 - Breakdowns at the worst possible moment
-- Invalid boiler or heat pump warranties
+- Water that falls outside your boiler or heat pump manufacturer's requirements
 stepsHeading: Our 5-step process
 steps:
 - title: Initial analysis
@@ -38,8 +38,8 @@ benefitsHeading: Benefits of demineralised heating water
 benefits:
 - 'Limescale prevention: minerals removed at the source keep flow clear'
 - 'Corrosion reduction: mineral-free water stops acting like a battery'
-- Compliance with VDI 2035, the standard most manufacturers require
-- Protects your boiler or heat pump warranty
+- Water tested and treated with reference to VDI 2035
+- Helps meet manufacturer water-quality requirements
 - Lower energy bills and better heat transfer
 - A chemical-free way to protect the system for the long term
 sections:
@@ -47,9 +47,9 @@ sections:
   paragraphs:
   - 'When we power flush and demineralise a system we use Cleaning In Place (CIP) technology: an internal deep clean that clears built-up sludge, scale and magnetite from the inside, without taking down radiators or making a mess in your home.'
   - We remove the debris rather than just moving it around. That stops the same blockages returning a few months later and keeps your boiler and pipework protected for the long haul.
-- heading: Compliance with VDI 2035
+- heading: VDI 2035 and manufacturer requirements
   paragraphs:
-  - Most modern boiler and heat pump manufacturers set water quality limits based on VDI 2035, the German standard for heating water. Treating the water to that standard keeps the system running at peak performance and helps keep your warranty valid, so you are not left paying for repairs that could have been avoided.
+  - We test and treat heating water with reference to VDI 2035 and the water-quality requirements specified by the equipment manufacturer. VDI 2035 is the German guideline for heating water, and many boiler and heat pump manufacturers base their own limits on it. Treated water helps meet those requirements and keeps the system running efficiently.
 faqs:
 - q: What is demineralised water in a heating system?
   a: It is water with the calcium, magnesium and other dissolved minerals removed, so it cannot form scale and is far less corrosive. It is produced on site using ion exchange resin as the system is filled.
@@ -60,7 +60,7 @@ faqs:
 - q: Is demineralisation a chemical treatment?
   a: No. Demineralisation removes minerals from the water using resin, rather than adding chemicals to it, which makes it a chemical-free way to protect the system.
 - q: Do I need demineralisation for a new boiler or heat pump?
-  a: Most manufacturers now set water quality limits based on VDI 2035, and treating the water to that standard helps protect your warranty. It's the ideal time to do it.
+  a: It's the ideal time to do it. Many manufacturers set water-quality requirements for new boilers and heat pumps, often based on VDI 2035, and filling with treated water from the start helps meet them.
 downloads:
 - label: Demineralising heating systems
   href: /s/TMG-Demineralising_EM.pdf
