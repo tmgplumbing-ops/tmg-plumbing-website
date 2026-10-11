@@ -19,6 +19,11 @@
 // Zoho's own inline styles and wins on specificity — the markup and scripts
 // above it are untouched.
 //
+// 11 Oct 2026 changes (the only edits to Zoho's markup): removed the
+// optional "Email Opt Out" checkbox row (an unticked checkbox sends nothing,
+// so leads are created exactly as before), reworded the photo-upload hint,
+// hid the "?" tooltip icon, and added the privacy notice under the form.
+//
 // Optional `preselect`: pre-fills the "Enquiring About" dropdown with one of
 // its existing option values (done by a separate script below; the Zoho
 // markup itself is untouched).
@@ -88,10 +93,9 @@ const { preselect } = Astro.props;
     <div class="zcwf_row"><div class="zcwf_col_lab" style="font-size:16px; font-family: Tahoma;"><label for="Description">Additional Information</label></div><div class="zcwf_col_fld"><textarea style="font-family: Arial, sans-serif;" aria-multiline="true" id="Description" aria-required="false" aria-label="Description" name="Description"></textarea><div class="zcwf_col_help"></div></div></div>
     <div class="zcwf_row"><div class="zcwf_col_lab" id="imageUploadField" style="font-size:16px; font-family: Tahoma;">Upload Photos</div>
       <div class="zcwf_col_fld"><div class="cBoth"><input type="file" class="zcwf_file" name="theFile" aria-multiselectable="true" aria-labelledby="imageUploadField" id="theFile825275000000611457" multiple><div class="zcwf_col_help"><span title="Please supply pictures or photographs which may help us determine the scope of the work" style="cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #c0c6cc; color: #c1c1c1; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%;" onclick="tooltipShow825275000000611457(this)">?</span><div class="zcwf_tooltip_over" style="display: none;"><span class="zcwf_tooltip_ctn">Please supply pictures or photographs which may help us determine the scope of the work</span></div></div></div>
-      <p style="color: rgb(0, 32, 80); font-size: 11px; padding-left: 3px;" class="preFade">File(s) size limit is 20MB.</p>
+      <p style="color: rgb(0, 32, 80); font-size: 11px; padding-left: 3px;" class="preFade">Optional. Photos of the boiler, radiators or problem area help us quote. Up to 20MB in total.</p>
       </div>
     </div>
-    <div class="zcwf_row"><div class="zcwf_col_lab" style="font-size:16px; font-family: Tahoma;"><label for="Email_Opt_Out">Email Opt Out</label></div><div class="zcwf_col_fld"><input type="checkbox" aria-checked="false" class="zcwf_ckbox" id="Email_Opt_Out" aria-required="false" aria-label="Email Opt Out" name="Email Opt Out" aria-valuemax="50" maxlength="50" onclick="addAriaChecked825275000000611457()"><div class="zcwf_col_help"></div></div></div>
     <input type="text" style="display: none;" name="aG9uZXlwb3Q" value="">
     <div class="zcwf_row"><div class="zcwf_col_lab"></div><div class="zcwf_col_fld"><input type="submit" id="formsubmit" role="button" class="formsubmit zcwf_button" value="Submit" aria-label="Submit" title="Submit"><input type="reset" class="zcwf_button" role="button" name="reset" value="Reset" aria-label="Reset" title="Reset"></div></div>
     <script is:inline>
@@ -247,6 +251,11 @@ const { preselect } = Astro.props;
     <!-- Do not remove this --- Analytics Tracking code ends. -->
   </form>
 </div>
+<p class="mx-auto text-xs text-navy/60 max-w-[600px] px-[31px]">
+  We use your details only to reply to your enquiry and, if you go ahead, to carry out the work. We won't add you to a mailing list.
+  See our <a href="/privacy-policy" class="underline hover:text-orange">privacy policy</a>.
+</p>
+
 <style is:global>
   /* Brand overrides — layered on top of Zoho's own inline styles above,
      which load first in the DOM so these win on normal cascade order. */
@@ -282,6 +291,9 @@ const { preselect } = Astro.props;
   }
   #crmWebToEntityForm input[name="reset"] {
     display: none;
+  }
+  #crmWebToEntityForm .zcwf_col_help span[title] {
+    display: none !important;
   }
 </style>
 
