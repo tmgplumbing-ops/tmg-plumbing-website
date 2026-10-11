@@ -41,7 +41,7 @@ video:
 benefitsHeading: Benefits for your building
 benefits:
 - Stronger, more even heat across the whole building
-- Lower energy bills when the system is working hardest
+- Can help reduce energy bills when the system is working hardest
 - Less wear on boilers, pumps and valves
 - Fewer breakdowns and unplanned repairs
 - Water treated with reference to VDI 2035 and manufacturer requirements

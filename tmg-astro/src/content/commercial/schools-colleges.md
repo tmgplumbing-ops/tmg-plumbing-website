@@ -2,8 +2,8 @@
 title: Power Flushing for Schools and Colleges
 h1: Power flushing for schools and colleges
 seoTitle: Power Flushing for Schools & Colleges in Ireland | TMG
-metaDescription: Power flushing and demineralisation for school and college heating systems across Ireland. Warmer classrooms, lower energy bills. Call TMG on 051 577089.
-heroSubheading: Warm classrooms from morning to home time, and energy bills back under control.
+metaDescription: Power flushing and demineralisation for school and college heating systems across Ireland. Warmer classrooms, more efficient heating. Call TMG on 051 577089.
+heroSubheading: Warm classrooms from morning to home time, and a system that can help keep energy bills under control.
 intro: Are parts of your school or college cold no matter how high the heating is set, or are staff and students reporting radiators that don't work? TMG Plumbing & Heating Services provides commercial power flushing across Ireland to clear the sludge and limescale behind it, a fast, low-disruption way to bring the building back to an even temperature.
 about:
   heading: What a school heating system needs
@@ -41,7 +41,7 @@ video:
 benefitsHeading: Benefits for your building
 benefits:
 - Stronger, more even heat across the whole building
-- Lower energy bills when the system is working hardest
+- Can help reduce energy bills when the system is working hardest
 - Less wear on boilers, pumps and valves
 - Fewer breakdowns and unplanned repairs
 - Water treated with reference to VDI 2035 and manufacturer requirements
