@@ -45,7 +45,7 @@ Power flushing also helps to clear blockages in the pipes and radiators, improvi
 
 ## A Long Term Solution to Hard Water in Your Heating System
 
-Using demineralized water in your heating system offers significant benefits by preventing limescale build-up and reducing the risk of corrosion, both of which can extend the lifespan of your system and improve its efficiency. Additionally, installing a heating water regulator, helps maintain the correct pH and mineral levels in the water, further protecting your system from damage. This combination reduces energy consumption, lowers maintenance costs, and ensures consistent heating performance.
+Using demineralized water in your heating system offers significant benefits by preventing limescale build-up and reducing the risk of corrosion, both of which can extend the lifespan of your system and improve its efficiency. Fitting a heating water regulator adds chemical-free corrosion protection: it removes gases, helps stabilise the pH and captures magnetite and sludge, further protecting your system from damage. This combination reduces energy consumption, lowers maintenance costs, and ensures consistent heating performance.
 
 ### Conclusion
 

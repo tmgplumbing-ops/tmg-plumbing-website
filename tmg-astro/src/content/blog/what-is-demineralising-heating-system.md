@@ -21,9 +21,9 @@ Demineralisation of a heating system typically involves the use of demineralisin
 
 ## What Is a Heating Water Regulator?
 
-A heating water regulator is a device that controls the pressure and flow of water within a heating system. It ensures that the water pressure remains consistent, which is critical for the efficient operation of the system. If the water pressure fluctuates too much, it can lead to performance issues, inefficiencies, or even damage to the equipment.
+A heating water regulator is a unit fitted permanently to a heating system to protect it from corrosion, without chemicals. It works continuously while the system runs, doing three jobs in one vessel: it removes oxygen and other gases from the water, helps stabilise the pH, and captures magnetite and sludge before they can settle in radiators, pipes and the boiler.
 
-Heating water regulators are especially important in systems that rely on refilling, as they help to maintain balance within the system and prevent problems such as air locks, low-pressure issues, or system malfunctions.
+Fitted after a power flush and demineralisation, a heating water regulator helps keep the system water in the condition the work left it in. It is especially useful in systems that are topped up regularly, where fresh water would otherwise bring in more oxygen.
 
 ![](./images/what-is-demineralising-heating-system-03.webp)
 
