@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteForm from '../components/QuoteForm.astro';
+import { whatsappHref, whatsappDisplay } from '../data/whatsapp';
 ---
 <BaseLayout
   title="Contact TMG | Get a Quote from Plumbers in Waterford"
@@ -32,7 +33,7 @@ import QuoteForm from '../components/QuoteForm.astro';
       <div class="rounded-card bg-mist border border-navy/10 p-6">
         <p class="text-navy font-medium mb-2">Call now</p>
         <a href="tel:051577089" class="block text-orange">051 577 089</a>
-        <a href="https://wa.me/353877175624" class="block text-navy/60 text-sm mt-1">WhatsApp: 087 717 5624</a>
+        <a href={whatsappHref} target="_blank" rel="noopener" class="block text-navy/60 text-sm mt-1 hover:text-orange">WhatsApp: {whatsappDisplay}</a>
       </div>
       <div class="rounded-card bg-mist border border-navy/10 p-6">
         <p class="text-navy font-medium mb-2">Office hours</p>
