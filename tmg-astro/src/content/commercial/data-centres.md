@@ -2,7 +2,7 @@
 title: Data Centre Chilled-Water System Cleaning
 h1: Chilled-water system cleaning for data centres
 seoTitle: Data Centre Chilled-Water Cleaning & Water Treatment | TMG
-metaDescription: Filtration, cleaning and water-quality monitoring for data centre chilled-water loops across Ireland, done on live systems without shutting down cooling.
+metaDescription: Filtration, cleaning and water-quality monitoring for data centre chilled-water loops across Ireland, planned around uptime, usually on live systems.
 heroSubheading: Cleaner chilled-water loops, cleaned while they keep running, with regular water testing and clear reporting for your operations team.
 intro: In a data centre, the chilled-water system is part of your uptime. Dirty water fouls heat exchangers, strainers and control valves, and every intervention has to be planned so cooling is never put at risk. TMG Plumbing & Heating Services clean, filter and treat closed chilled-water and heating loops for commercial and industrial sites across Ireland, working on live systems and reporting on water quality over time.
 about:
@@ -18,14 +18,14 @@ signs:
 - Dirty, discoloured or cloudy water samples
 - Water results drifting out of the limits set by your equipment manufacturers
 - Higher pump energy or falling flow rates
-stepsHeading: How we work on live cooling systems
+stepsHeading: How we plan work on live cooling systems
 steps:
 - title: Survey and risk review
   body: We review the schematics, redundancy, isolation points and access with your facilities team, and agree method statements, risk assessments and change requests before any work starts.
 - title: Baseline water sampling
   body: Samples are analysed for pH, conductivity, hardness, corrosion products and suspended solids, giving a clear picture of the loop's condition.
 - title: Side-stream filtration
-  body: Water is taken through a bypass into our mobile filtration unit while the system keeps running, removing debris and magnetite without interrupting cooling.
+  body: Water is taken through a bypass into our mobile filtration unit while the system keeps running, removing debris and magnetite. Where this is approved for your site, cooling is not interrupted.
 - title: Targeted cleaning
   body: Where a strainer, heat exchanger or section needs more attention, we plan it around your maintenance windows and redundancy so cooling capacity is protected.
 - title: Treated top-up water
@@ -35,7 +35,7 @@ steps:
 benefitsHeading: What you get
 benefits:
 - Cleaner chilled-water loops with better heat transfer
-- Work carried out on live systems, without shutting down cooling
+- Side-stream filtration that can usually run while cooling stays on, subject to site approval
 - Fewer clogged strainers and fouled heat exchangers
 - Regular water-quality results with trends you can track
 - Method statements, risk assessments and change requests completed before work starts
@@ -45,7 +45,7 @@ sections:
   paragraphs:
   - Uptime comes first. We plan every job with your operations team, work within your change management process and only isolate equipment that has a backup in service. Most of the cleaning is done through side-stream filtration, which runs alongside the system rather than interrupting it.
   points:
-  - No shutdown needed for side-stream filtration
+  - Side-stream filtration can usually run without a shutdown, subject to site approval, isolation arrangements and risk assessment
   - Isolations agreed in advance and fitted around N+1 or 2N redundancy
   - Work timed around your maintenance windows
   - Clear communication with your operations team throughout
@@ -59,7 +59,7 @@ sections:
   - Trends over time and recommendations in plain language
 faqs:
 - q: Can you clean the system without shutting down cooling?
-  a: Yes, in most cases. Side-stream filtration cleans the water through a bypass while the loop keeps running. Anything that needs isolating is planned with your team around your redundancy.
+  a: Often, yes. Side-stream filtration cleans the water through a bypass while the loop keeps running, subject to your site's approval, the isolation arrangements, access and a risk assessment. Not every task can be done live; anything that needs isolating is planned with your team around your redundancy.
 - q: Do you work with glycol systems?
   a: Many cooling loops contain glycol. Tell us what's in your system and we'll confirm the right approach before any work is planned.
 - q: How often should chilled-water quality be tested?

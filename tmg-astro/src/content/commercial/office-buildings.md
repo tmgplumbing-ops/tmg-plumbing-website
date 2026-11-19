@@ -29,7 +29,7 @@ steps:
 - title: Power flushing
   body: Each section of the system is flushed at high velocity but low pressure, while magnetic filters capture the metal particles that cause future corrosion.
 - title: Demineralisation
-  body: The water is passed through a demineralisation unit, removing the minerals that cause scale and leaving it balanced and non-corrosive.
+  body: The water is passed through a demineralisation unit, removing the minerals that cause scale and reducing the risk of corrosion.
 - title: Refill and protect
   body: The system is topped up with treated water, with reference to VDI 2035 and the manufacturer's water-quality requirements, and a Heating Water Regulator can be fitted to keep it protected long term.
 - title: Final check
