@@ -58,8 +58,10 @@ import tileFacility from '../assets/photos/hero-facility-maintenance.webp';
 // Pharmaceutical and data centre sector pages (Tony's images, 11 Oct 2026).
 import hPharma from '../assets/photos/hero-pharmaceutical.webp';
 import hDataCentres from '../assets/photos/hero-data-centres.webp';
+// Heat pump page (Tony's image, 19 Nov 2026).
+import hHeatPumps from '../assets/photos/hero-heat-pumps.webp';
 
-export type Photo = { src: ImageMetadata; alt: string; caption?: string; fit?: 'cover' | 'contain' };
+export type Photo = { src: ImageMetadata; alt: string; caption?: string; fit?: 'cover' | 'contain'; position?: string };
 
 export const photos = {
   technician: { src: technician, alt: 'TMG technician beside a demineralising unit and hot water cylinder in a plant room' },
@@ -101,6 +103,7 @@ export const heroes = {
   leak: { src: hLeak, alt: 'Engineer using a thermal imaging camera to trace underfloor heating pipes beneath a tiled floor' },
   demin: { src: hDemin, alt: 'Mobile demineralisation and filtration units connected by hoses to heating pipework in a plant room' },
   oil: { src: hOil, alt: 'Engineer fitting a new outdoor oil boiler beside a house, with the old rusted boiler removed alongside' },
+  heatPumps: { src: hHeatPumps, alt: 'Engineer checking a heat pump controller in a plant room, with the hot water cylinder, pumps and expansion vessel beside it and the outdoor air source unit visible through the door', position: '90% 50%' },
   plumbing: { src: hPlumbing, alt: 'Engineer fitting a pump on the pipework of a hot water cylinder in a utility room, with a heat pump unit behind' },
   drinking: { src: hDrinking, alt: 'Glass being filled with clear water from a kitchen tap' },
   water: { src: hWater, alt: 'TMG engineer operating mobile filtration and demineralisation units connected to a commercial heating system' },
@@ -124,8 +127,7 @@ export const servicePhotos: Record<string, { hero: Photo; extra?: Photo }> = {
   demineralisation: { hero: heroes.demin, extra: photos.limescale },
   'oil-boiler-installs': { hero: heroes.oil, extra: photos.oilTank },
   'plumbing-heating': { hero: heroes.plumbing, extra: photos.plantManifolds },
-  // No dedicated heat pump photo yet: reuses the cylinder/heat pump shot until Tony supplies one.
-  'heat-pumps': { hero: heroes.plumbing, extra: photos.plantManifolds },
+  'heat-pumps': { hero: heroes.heatPumps, extra: photos.plantManifolds },
   'drinking-water': { hero: heroes.drinking, extra: photos.softener },
 };
 
