@@ -31,7 +31,7 @@ steps:
 - title: Magnetic filtration
   body: Powerful magnetic filters capture the metal oxide particles that cause pinhole leaks in radiators and damage boilers and pumps.
 - title: Demineralisation
-  body: The system is topped up where needed and the water passed through a demineralising unit, removing remaining contaminants so it is non-corrosive and future build-up is slowed. An inhibitor is added where appropriate.
+  body: The system is topped up where needed and the water passed through a demineralising unit, removing dissolved minerals so the risk of scale and corrosion is reduced and future build-up is slowed. An inhibitor is added where appropriate.
 - title: Final check
   body: We run the system, confirm every radiator heats evenly and check that the boiler or heat pump is operating efficiently before we leave.
 video:
@@ -85,7 +85,7 @@ faqs:
 - q: How long does a power flush take?
   a: Most homes take between four and eight hours, completed in a single visit. Larger or heavily sludged systems can take longer, and we'll tell you in advance.
 - q: How often should a heating system be power flushed?
-  a: We recommend every five to six years, or sooner if you notice cold spots, noisy pipes or rising energy bills. Fitting a new boiler or heat pump is also a good time to flush the system.
+  a: There is no fixed interval. It depends on the condition of the system, so we recommend a flush when the water test or the symptoms show it's needed, such as cold spots, noisy pipes or a system slow to heat up. Fitting a new boiler or heat pump is also a good time to flush the system.
 - q: Will a power flush fix my cold radiators?
   a: If the cause is sludge, it will in most cases. Cold radiators can also be caused by trapped air, a faulty valve or a pump problem, which we check during the initial inspection.
 - q: Is power flushing safe for older heating systems?

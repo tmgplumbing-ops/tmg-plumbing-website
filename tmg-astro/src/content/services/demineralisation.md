@@ -41,7 +41,7 @@ benefits:
 - Water tested and treated with reference to VDI 2035
 - Helps meet manufacturer water-quality requirements
 - Better heat transfer, which can help reduce energy bills
-- A chemical-free way to protect the system for the long term
+- Protects the system long term without adding cleaning chemicals
 sections:
 - heading: Sludge removal without the mess
   paragraphs:
@@ -58,7 +58,7 @@ faqs:
 - q: How often should the heating water be tested?
   a: We recommend testing every six months. Regular checks confirm the water is still within the recommended limits and catch any problems early.
 - q: Is demineralisation a chemical treatment?
-  a: No. Demineralisation removes minerals from the water using resin, rather than adding chemicals to it, which makes it a chemical-free way to protect the system.
+  a: No. Demineralisation removes minerals from the water using resin, rather than adding chemicals to it, so no treatment chemicals are needed for that step. Depending on the system, we may still recommend an inhibitor or other treatment, and demineralisation doesn't remove sludge on its own, which is why it follows a flush.
 - q: Do I need demineralisation for a new boiler or heat pump?
   a: It's the ideal time to do it. Many manufacturers set water-quality requirements for new boilers and heat pumps, often based on VDI 2035, and filling with treated water from the start helps meet them.
 downloads:
