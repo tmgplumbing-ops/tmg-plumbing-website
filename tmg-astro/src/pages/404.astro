@@ -1,0 +1,47 @@
+---
+// Custom "page not found" page (added 19 Nov 2026). Vercel serves this for any
+// address that has no page and no redirect. Kept out of search results.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const links = [
+  { href: '/services/power-flushing', label: 'Power flushing' },
+  { href: '/services/underfloor-heating', label: 'Underfloor heating' },
+  { href: '/services/leak-detection', label: 'Leak detection' },
+  { href: '/water-treatment', label: 'Heating water treatment' },
+  { href: '/commercial', label: 'Commercial' },
+  { href: '/blog', label: 'Heating advice blog' },
+];
+---
+<BaseLayout
+  title="Page not found | TMG Plumbing & Heating"
+  description="Sorry, we couldn't find that page. Find TMG's plumbing, heating and system-water treatment services from here."
+  noindex
+>
+  <section class="bg-navy">
+    <div class="mx-auto max-w-3xl px-4 py-20 text-center">
+      <p class="text-orange font-medium">Error 404</p>
+      <h1 class="mt-3 text-3xl md:text-4xl font-medium text-white">Sorry, we can't find that page</h1>
+      <p class="mt-4 text-white/75 max-w-xl mx-auto">
+        The page may have moved when we updated our website, or the link may be mistyped.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-14">
+    <h2 class="text-xl font-medium text-navy mb-6 text-center">You might be looking for</h2>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      {links.map((l) => (
+        <li>
+          <a href={l.href} class="block rounded-card bg-mist border border-navy/10 p-4 text-navy hover:border-orange hover:text-orange">{l.label} →</a>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-10 text-center text-navy/70">
+      <p>Or call us on <a href="tel:051577089" class="text-orange">051 577 089</a>.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="/" class="rounded bg-orange text-white font-medium px-6 py-3 hover:bg-orange-dark">Back to the homepage</a>
+        <a href="/contact" class="rounded border border-navy/20 text-navy px-6 py-3 hover:border-orange hover:text-orange">Get a quote</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
