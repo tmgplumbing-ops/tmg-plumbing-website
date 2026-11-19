@@ -44,6 +44,15 @@ const { name, class: cls = 'w-16 h-16' } = Astro.props;
       <path d="M32 48 c-6 -4 -6 -10 0 -16 c1 5 6 6 4 12 c3 -1 4 -3 4 -5 c2 6 -2 9 -8 9 z" stroke="#CE5600" stroke-width="2.5" />
     </g>
   )}
+  {name === 'heat-pumps' && (
+    <g>
+      <rect x="8" y="16" width="34" height="32" rx="4" stroke="#FFFFFF" stroke-width="2.5" />
+      <circle cx="25" cy="32" r="9" stroke="#FFFFFF" stroke-width="2.5" />
+      <path d="M25 26 v12 M19 32 h12" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M46 22 h8 M46 32 h8 M46 42 h8" stroke="#CE5600" stroke-width="2.5" />
+      <path d="M50 18 v-4 M50 50 v4" stroke="#CE5600" stroke-width="2.5" />
+    </g>
+  )}
   {name === 'plumbing-heating' && (
     <g>
       <path d="M8 44 h20 a6 6 0 0 0 6 -6 v-22" stroke="#FFFFFF" stroke-width="3" />
