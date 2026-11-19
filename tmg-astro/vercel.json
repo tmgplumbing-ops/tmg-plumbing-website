@@ -26,6 +26,221 @@
       "source": "/blog/bathroom-renovation-top-tips",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/domestic-powerflushing-wexford",
+      "destination": "/power-flushing-wexford",
+      "permanent": true
+    },
+    {
+      "source": "/power-flushing",
+      "destination": "/services/power-flushing",
+      "permanent": true
+    },
+    {
+      "source": "/leak-detection",
+      "destination": "/services/leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/under-floor-heating",
+      "destination": "/services/underfloor-heating",
+      "permanent": true
+    },
+    {
+      "source": "/domestic-powerflushing-kilkenny",
+      "destination": "/power-flushing-kilkenny",
+      "permanent": true
+    },
+    {
+      "source": "/oil-boiler-maintenance",
+      "destination": "/services/oil-boiler-installs",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/oil-tank-replacement",
+      "destination": "/services/oil-boiler-installs",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/power-flushing",
+      "destination": "/services/power-flushing",
+      "permanent": true
+    },
+    {
+      "source": "/plumbing-heating-services",
+      "destination": "/services/plumbing-heating",
+      "permanent": true
+    },
+    {
+      "source": "/domestic-powerflushing-waterford",
+      "destination": "/power-flushing-waterford",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-powerflushing",
+      "destination": "/commercial/industrial",
+      "permanent": true
+    },
+    {
+      "source": "/facility-maintenance",
+      "destination": "/commercial/facility-maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-powerflushing-hotels",
+      "destination": "/commercial/hotels",
+      "permanent": true
+    },
+    {
+      "source": "/demineralisation-commercial-buildings",
+      "destination": "/water-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/demineralising-heating-systems",
+      "destination": "/services/demineralisation",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-powerflushing-hospitals",
+      "destination": "/commercial/hospitals",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-powerflushing-office-buildings",
+      "destination": "/commercial/office-buildings",
+      "permanent": true
+    },
+    {
+      "source": "/power-flushing-commercial",
+      "destination": "/commercial",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/gift-voucher",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/drinking-water",
+      "destination": "/services/drinking-water",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-powerflushing-schools-colleges",
+      "destination": "/commercial/schools-colleges",
+      "permanent": true
+    },
+    {
+      "source": "/oil-boiler-installations",
+      "destination": "/services/oil-boiler-installs",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/oil-system-installation",
+      "destination": "/services/oil-boiler-installs",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/pressurised-heating-systems",
+      "destination": "/services/plumbing-heating",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/radiator-replacements",
+      "destination": "/services/plumbing-heating",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-power-flushing",
+      "destination": "/commercial/schools-colleges",
+      "permanent": true
+    },
+    {
+      "source": "/domestic-power-flushing",
+      "destination": "/services/power-flushing",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/condensing-boilers",
+      "destination": "/services/oil-boiler-installs",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/descaling-cleaning-of-central-heating-systems",
+      "destination": "/services/power-flushing",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/repair-maintenance-of-existing-systems",
+      "destination": "/services/plumbing-heating",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/thermostatic-radiator-valves-system-balancing",
+      "destination": "/services/plumbing-heating",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/underfloor-heating",
+      "destination": "/services/underfloor-heating",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/underfloor-heating-g57f2",
+      "destination": "/services/heat-pumps",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/Oil(.*)Tank(.*)Replacement",
+      "destination": "/blog/danger-of-single-skin-oil-tanks",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tag/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal/p/:path*",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/payment-portal",
+      "destination": "/contact",
+      "permanent": true
     }
   ]
 }
