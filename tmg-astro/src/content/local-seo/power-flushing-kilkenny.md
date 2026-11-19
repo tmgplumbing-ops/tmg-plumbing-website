@@ -31,7 +31,7 @@ steps:
 - title: Magnetic filtration
   body: Magnetic filters capture the metal oxide particles that cause pinhole leaks and damage boilers.
 - title: Demineralisation
-  body: The water is passed through a demineralising unit so it is non-corrosive, slowing future build-up.
+  body: The water is passed through a demineralising unit to remove dissolved minerals, reducing the risk of scale and corrosion and slowing future build-up.
 - title: Final check
   body: We confirm every radiator heats evenly and the boiler or heat pump is running efficiently.
 video:
@@ -87,7 +87,7 @@ faqs:
 - q: Do you travel to all parts of Kilkenny?
   a: Yes. We regularly work across Kilkenny city and county, from Ferrybank and Mooncoin in the south to Castlecomer and Urlingford in the north.
 - q: How often should I power flush my heating system?
-  a: We recommend every five to six years, or sooner if you notice cold spots on radiators or rising energy bills.
+  a: There is no fixed interval. It depends on the condition of the system, so we recommend a flush when a water test or symptoms such as cold spots on radiators show it's needed.
 - q: What is the difference between power flushing and chemical flushing?
   a: Power flushing uses high velocity at low pressure, with filters and magnets, to physically remove sludge. Chemical flushing relies on cleaning agents. Power flushing is more thorough and effective for heavily clogged systems.
 - q: Is power flushing safe for my heating system?
