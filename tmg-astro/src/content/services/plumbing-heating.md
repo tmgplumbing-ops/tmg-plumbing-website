@@ -42,7 +42,7 @@ sections:
   - '"Contacted Tony about our heating system not working properly; a number of radiators were not working upstairs. He completed a pressure flush and his service was first class. Found Tony to be very experienced and knowledgeable and the quality of his work was excellent. He will be the first person I call if I have any other plumbing or heating issues." Mike Doody'
 faqs:
 - q: What areas do you cover?
-  a: We carry out domestic plumbing and heating across Waterford, Wexford, Kilkenny, Tipperary and Kildare, and commercial work anywhere in Ireland.
+  a: We carry out domestic plumbing and heating across Waterford, Wexford, Kilkenny, Tipperary and Carlow, and commercial work anywhere in Ireland.
 - q: Do you install heat pumps?
   a: Yes. We install air-to-water heat pump systems, often paired with underfloor heating for the best efficiency.
 - q: Can you repair an existing heating system?

@@ -2,7 +2,7 @@
 title: Drinking Water Systems
 metaDescription: Water softeners and limescale prevention for homes and businesses in Waterford and the South East, supplied and fitted by TMG. Call 051 577089.
 heroSubheading: Filtration and treatment systems for cleaner, safer drinking water.
-intro: Water quality varies across private and mains supplies in the South East. TMG installs and services drinking water filtration and treatment systems for domestic and commercial properties across Waterford, Wexford, Kilkenny, Tipperary and Kildare.
+intro: Water quality varies across private and mains supplies in the South East. TMG installs and services drinking water filtration and treatment systems for domestic and commercial properties across Waterford, Wexford, Kilkenny, Tipperary and Carlow.
 signs:
 - Discoloured or cloudy tap water
 - Unpleasant taste or odour from the water supply

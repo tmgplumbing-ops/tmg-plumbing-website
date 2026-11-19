@@ -3,7 +3,7 @@ title: Heat Pumps
 h1: Air source heat pump installation in Waterford and the South East
 seoTitle: Air Source Heat Pump Installation | TMG Waterford
 metaDescription: Air to water heat pump installation from TMG Plumbing & Heating in Waterford and the South East. Book a site visit to see if a heat pump suits your home.
-heroSubheading: Air to water heat pump systems for new builds and well-insulated homes, designed and installed by specialists.
+heroSubheading: Air to water heat pump systems for new builds and well-insulated homes, designed by a specialist heat pump designer and installed by TMG.
 intro: 'A heat pump heats your home and hot water using electricity and the warmth in the outside air, rather than burning oil. TMG Plumbing & Heating Services specialises in air source heat pumps and installs air to water heat pump systems for new builds and renovations across Waterford and the South East. We start with a site visit, so you know whether a heat pump suits your home before you decide anything.'
 about:
   heading: How an air source heat pump works
@@ -23,7 +23,7 @@ steps:
 - title: Site visit
   body: We visit the property to look at the building, the existing heating and where the outdoor unit could go. Tell us about your project through the contact form and we will arrange a time.
 - title: Design and sizing
-  body: A heat pump has to be sized correctly for the space it heats. We size the system to your home and match it to your radiators or underfloor heating.
+  body: A heat pump has to be sized correctly for the space it heats. The system is designed and sized for your home by our specialist heat pump design partner, matched to your radiators or underfloor heating, and we install it to that design.
 - title: Installation
   body: We install the outdoor unit, the indoor pipework and controls, and connect a hot water cylinder where you want hot water from the heat pump as well.
 - title: Commissioning and handover

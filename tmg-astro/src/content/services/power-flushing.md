@@ -78,7 +78,7 @@ sections:
   - Professional flushing units with magnetic filtration and demineralising equipment
   - A fixed price agreed before any work begins
   - A clean, low-disruption process, usually finished in a single visit
-  - Covering Waterford, Wexford, Kilkenny, Tipperary and Kildare, and commercial sites nationwide
+  - Covering Waterford, Wexford, Kilkenny, Tipperary and Carlow, and commercial sites nationwide
 faqs:
 - q: How much does a power flush cost in Ireland?
   a: It depends mainly on the number of radiators and the condition of the system. We give you a fixed price before any work begins. Tell us your radiator count and we'll come back to you with a quote.
