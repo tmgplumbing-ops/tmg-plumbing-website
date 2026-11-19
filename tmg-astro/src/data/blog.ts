@@ -12,7 +12,7 @@ export const CATEGORIES = [
   { name: 'Water treatment', service: { name: 'Water treatment', href: '/water-treatment' }, fallback: photos.deminUnit },
   { name: 'Oil heating', service: { name: 'Oil boiler installs', href: '/services/oil-boiler-installs' }, fallback: photos.oilBoiler },
   { name: 'Leak detection', service: { name: 'Leak detection', href: '/services/leak-detection' }, fallback: photos.thermalLeak },
-  { name: 'Heat pumps', service: { name: 'Plumbing & heating', href: '/services/plumbing-heating' }, fallback: photos.plantManifolds },
+  { name: 'Heat pumps', service: { name: 'Heat pumps', href: '/services/heat-pumps' }, fallback: photos.plantManifolds },
   { name: 'Home heating tips', service: { name: 'Plumbing & heating', href: '/services/plumbing-heating' }, fallback: photos.plantCylinder },
 ] as const;
 export type Category = (typeof CATEGORIES)[number];

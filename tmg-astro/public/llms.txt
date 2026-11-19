@@ -12,6 +12,7 @@ Address: Unit 17F, Six Cross Roads Business Park, Waterford, X91KV09
 ## Services
 - Power flushing: /services/power-flushing
 - Underfloor heating: /services/underfloor-heating
+- Heat pumps: /services/heat-pumps
 - Leak detection: /services/leak-detection
 - Demineralisation: /services/demineralisation
 - Oil boiler installs: /services/oil-boiler-installs

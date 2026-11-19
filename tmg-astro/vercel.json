@@ -21,6 +21,11 @@
       "source": "/s/250526-TMG-Full-Terms-and-Conditions.pdf",
       "destination": "/s/TMG-Terms-and-Conditions-of-Service.pdf",
       "permanent": true
+    },
+    {
+      "source": "/blog/bathroom-renovation-top-tips",
+      "destination": "/blog",
+      "permanent": true
     }
   ]
 }

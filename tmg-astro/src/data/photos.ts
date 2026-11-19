@@ -124,6 +124,8 @@ export const servicePhotos: Record<string, { hero: Photo; extra?: Photo }> = {
   demineralisation: { hero: heroes.demin, extra: photos.limescale },
   'oil-boiler-installs': { hero: heroes.oil, extra: photos.oilTank },
   'plumbing-heating': { hero: heroes.plumbing, extra: photos.plantManifolds },
+  // No dedicated heat pump photo yet: reuses the cylinder/heat pump shot until Tony supplies one.
+  'heat-pumps': { hero: heroes.plumbing, extra: photos.plantManifolds },
   'drinking-water': { hero: heroes.drinking, extra: photos.softener },
 };
 
