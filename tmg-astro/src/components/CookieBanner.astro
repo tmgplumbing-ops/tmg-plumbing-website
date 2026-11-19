@@ -67,8 +67,14 @@
       try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
       banner.classList.add('hidden');
       if (window.tmgApplyConsent) window.tmgApplyConsent(c);
-      // Withdrawing consent after tags have loaded: reload so nothing keeps running.
-      if (prev && ((prev.analytics && !analytics) || (prev.marketing && !marketing))) location.reload();
+      // Withdrawing consent after tags have loaded: delete the cookies those tags set,
+      // then reload so nothing keeps running.
+      if (prev && ((prev.analytics && !analytics) || (prev.marketing && !marketing))) {
+        var drop = (!analytics ? ['_ga', '_gid', '_gat'] : []).concat(!marketing ? ['_gcl', 'li_', 'lidc', 'AnalyticsSyncHistory', 'UserMatchHistory'] : []);
+        var host = location.hostname, doms = ['', host, '.' + host, '.' + host.split('.').slice(-2).join('.')];
+        document.cookie.split('; ').forEach(function (kv) { var n = kv.split('=')[0]; if (drop.some(function (d) { return n.indexOf(d) === 0; })) doms.forEach(function (d) { document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : ''); }); });
+        location.reload();
+      }
     }
     banner.addEventListener('click', function (e) {
       var a = e.target.closest('[data-cookie]'); if (!a) return;
