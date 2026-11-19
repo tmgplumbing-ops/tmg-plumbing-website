@@ -43,8 +43,10 @@ interface Props {
   enquiry?: string;
   coverage?: string;
   badges?: string[];
+  // Sidebar quote wording; commercial pages quote after a site survey rather than a fixed price.
+  quoteNote?: string;
 }
-const { data, noticeSlug, photo, enquiry, coverage, badges } = Astro.props;
+const { data, noticeSlug, photo, enquiry, coverage, badges, quoteNote } = Astro.props;
 const notice = noticeSlug ? serviceNotices[noticeSlug] : undefined;
 const pics = photo ? { hero: photo } : noticeSlug ? servicePhotos[noticeSlug] : undefined;
 // Diagrams: a page can list its own (`diagrams` in the content file); otherwise the service default.
@@ -333,7 +335,7 @@ const related = await Promise.all(
   <aside class="md:sticky md:top-24 h-fit space-y-4">
     <div class="rounded-card bg-mist border border-navy/10 p-6">
       <p class="text-navy font-medium mb-3">Request a quote</p>
-      <p class="text-navy/60 text-sm mb-4">Tell us what you need and we'll come back to you with a fixed price.</p>
+      <p class="text-navy/60 text-sm mb-4">{quoteNote ?? "Tell us what you need and we'll come back to you with a fixed price."}</p>
       <a href="#quote" class="block text-center rounded bg-orange text-white font-medium px-4 py-2.5 hover:bg-orange-dark">Get a free quote</a>
       <a href="tel:051577089" class="mt-2 block text-center rounded border border-navy/20 text-navy px-4 py-2.5 hover:border-orange hover:text-orange">Call 051 577 089</a>
     </div>
