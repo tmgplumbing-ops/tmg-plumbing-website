@@ -126,7 +126,7 @@ const related = await Promise.all(
     </div>
     {pics && (
       <div class={`rounded-card overflow-hidden aspect-[4/3] ${pics.hero.fit === 'contain' ? 'bg-white p-6' : 'bg-white/5'}`}>
-        <Image src={pics.hero.src} alt={pics.hero.alt} widths={[480, 840]} sizes="(min-width: 768px) 420px, 100vw" loading="eager" class={`w-full h-full ${pics.hero.fit === 'contain' ? 'object-contain' : 'object-cover'}`} />
+        <Image src={pics.hero.src} alt={pics.hero.alt} widths={[480, 840]} sizes="(min-width: 768px) 420px, 100vw" loading="eager" class={`w-full h-full ${pics.hero.fit === 'contain' ? 'object-contain' : 'object-cover'}`} style={pics.hero.position ? `object-position: ${pics.hero.position}` : undefined} />
       </div>
     )}
   </div>
