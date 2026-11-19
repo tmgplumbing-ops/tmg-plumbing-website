@@ -22,7 +22,7 @@ const localBusiness = {
     postalCode: 'X91KV09',
     addressCountry: 'IE',
   },
-  areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'],
+  areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Carlow'],
   url: 'https://www.tmgplumbing.ie',
 };
 
@@ -33,7 +33,7 @@ const serviceSchema = service
       serviceType: service.name,
       description: service.description,
       provider: { '@type': 'LocalBusiness', name: 'TMG Plumbing & Heating Services' },
-      areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Kildare'],
+      areaServed: ['Waterford', 'Wexford', 'Kilkenny', 'Tipperary', 'Carlow'],
     }
   : null;
 
